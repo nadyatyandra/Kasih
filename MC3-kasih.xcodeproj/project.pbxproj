@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */; };
+		04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63D2A8B3392009BACC5 /* ContentView.swift */; };
+		04DCE6402A8B3392009BACC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE63F2A8B3392009BACC5 /* Assets.xcassets */; };
+		04DCE6432A8B3392009BACC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE6422A8B3392009BACC5 /* Preview Assets.xcassets */; };
+		04DCE64D2A8B3392009BACC5 /* MC3_kasihTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE64C2A8B3392009BACC5 /* MC3_kasihTests.swift */; };
+		04DCE6572A8B3392009BACC5 /* MC3_kasihUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */; };
+		04DCE6592A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04DCE6492A8B3392009BACC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04DCE6302A8B3392009BACC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04DCE6372A8B3392009BACC5;
+			remoteInfo = "MC3-kasih";
+		};
+		04DCE6532A8B3392009BACC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04DCE6302A8B3392009BACC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04DCE6372A8B3392009BACC5;
+			remoteInfo = "MC3-kasih";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04DCE6382A8B3392009BACC5 /* MC3-kasih.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-kasih.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihApp.swift; sourceTree = "<group>"; };
+		04DCE63D2A8B3392009BACC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04DCE63F2A8B3392009BACC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04DCE6422A8B3392009BACC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04DCE6482A8B3392009BACC5 /* MC3-kasihTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MC3-kasihTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DCE64C2A8B3392009BACC5 /* MC3_kasihTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihTests.swift; sourceTree = "<group>"; };
+		04DCE6522A8B3392009BACC5 /* MC3-kasihUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MC3-kasihUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihUITests.swift; sourceTree = "<group>"; };
+		04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04DCE6352A8B3392009BACC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DCE6452A8B3392009BACC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DCE64F2A8B3392009BACC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04DCE62F2A8B3392009BACC5 = {
+			isa = PBXGroup;
+			children = (
+				04DCE63A2A8B3392009BACC5 /* MC3-kasih */,
+				04DCE64B2A8B3392009BACC5 /* MC3-kasihTests */,
+				04DCE6552A8B3392009BACC5 /* MC3-kasihUITests */,
+				04DCE6392A8B3392009BACC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04DCE6392A8B3392009BACC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04DCE6382A8B3392009BACC5 /* MC3-kasih.app */,
+				04DCE6482A8B3392009BACC5 /* MC3-kasihTests.xctest */,
+				04DCE6522A8B3392009BACC5 /* MC3-kasihUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04DCE63A2A8B3392009BACC5 /* MC3-kasih */ = {
+			isa = PBXGroup;
+			children = (
+				04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */,
+				04DCE63D2A8B3392009BACC5 /* ContentView.swift */,
+				04DCE63F2A8B3392009BACC5 /* Assets.xcassets */,
+				04DCE6412A8B3392009BACC5 /* Preview Content */,
+			);
+			path = "MC3-kasih";
+			sourceTree = "<group>";
+		};
+		04DCE6412A8B3392009BACC5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				04DCE6422A8B3392009BACC5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04DCE64B2A8B3392009BACC5 /* MC3-kasihTests */ = {
+			isa = PBXGroup;
+			children = (
+				04DCE64C2A8B3392009BACC5 /* MC3_kasihTests.swift */,
+			);
+			path = "MC3-kasihTests";
+			sourceTree = "<group>";
+		};
+		04DCE6552A8B3392009BACC5 /* MC3-kasihUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */,
+				04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */,
+			);
+			path = "MC3-kasihUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04DCE6372A8B3392009BACC5 /* MC3-kasih */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DCE65C2A8B3392009BACC5 /* Build configuration list for PBXNativeTarget "MC3-kasih" */;
+			buildPhases = (
+				04DCE6342A8B3392009BACC5 /* Sources */,
+				04DCE6352A8B3392009BACC5 /* Frameworks */,
+				04DCE6362A8B3392009BACC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MC3-kasih";
+			productName = "MC3-kasih";
+			productReference = 04DCE6382A8B3392009BACC5 /* MC3-kasih.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04DCE6472A8B3392009BACC5 /* MC3-kasihTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DCE65F2A8B3392009BACC5 /* Build configuration list for PBXNativeTarget "MC3-kasihTests" */;
+			buildPhases = (
+				04DCE6442A8B3392009BACC5 /* Sources */,
+				04DCE6452A8B3392009BACC5 /* Frameworks */,
+				04DCE6462A8B3392009BACC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04DCE64A2A8B3392009BACC5 /* PBXTargetDependency */,
+			);
+			name = "MC3-kasihTests";
+			productName = "MC3-kasihTests";
+			productReference = 04DCE6482A8B3392009BACC5 /* MC3-kasihTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04DCE6512A8B3392009BACC5 /* MC3-kasihUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DCE6622A8B3392009BACC5 /* Build configuration list for PBXNativeTarget "MC3-kasihUITests" */;
+			buildPhases = (
+				04DCE64E2A8B3392009BACC5 /* Sources */,
+				04DCE64F2A8B3392009BACC5 /* Frameworks */,
+				04DCE6502A8B3392009BACC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04DCE6542A8B3392009BACC5 /* PBXTargetDependency */,
+			);
+			name = "MC3-kasihUITests";
+			productName = "MC3-kasihUITests";
+			productReference = 04DCE6522A8B3392009BACC5 /* MC3-kasihUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04DCE6302A8B3392009BACC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					04DCE6372A8B3392009BACC5 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					04DCE6472A8B3392009BACC5 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 04DCE6372A8B3392009BACC5;
+					};
+					04DCE6512A8B3392009BACC5 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 04DCE6372A8B3392009BACC5;
+					};
+				};
+			};
+			buildConfigurationList = 04DCE6332A8B3392009BACC5 /* Build configuration list for PBXProject "MC3-kasih" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04DCE62F2A8B3392009BACC5;
+			productRefGroup = 04DCE6392A8B3392009BACC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04DCE6372A8B3392009BACC5 /* MC3-kasih */,
+				04DCE6472A8B3392009BACC5 /* MC3-kasihTests */,
+				04DCE6512A8B3392009BACC5 /* MC3-kasihUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04DCE6362A8B3392009BACC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DCE6432A8B3392009BACC5 /* Preview Assets.xcassets in Resources */,
+				04DCE6402A8B3392009BACC5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DCE6462A8B3392009BACC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DCE6502A8B3392009BACC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04DCE6342A8B3392009BACC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
+				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DCE6442A8B3392009BACC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DCE64D2A8B3392009BACC5 /* MC3_kasihTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DCE64E2A8B3392009BACC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DCE6572A8B3392009BACC5 /* MC3_kasihUITests.swift in Sources */,
+				04DCE6592A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04DCE64A2A8B3392009BACC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04DCE6372A8B3392009BACC5 /* MC3-kasih */;
+			targetProxy = 04DCE6492A8B3392009BACC5 /* PBXContainerItemProxy */;
+		};
+		04DCE6542A8B3392009BACC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04DCE6372A8B3392009BACC5 /* MC3-kasih */;
+			targetProxy = 04DCE6532A8B3392009BACC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04DCE65A2A8B3392009BACC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04DCE65B2A8B3392009BACC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04DCE65D2A8B3392009BACC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MC3-kasih/Preview Content\"";
+				DEVELOPMENT_TEAM = MTL5N7KWYL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nadya-Tyandra.MC3-kasih";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04DCE65E2A8B3392009BACC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MC3-kasih/Preview Content\"";
+				DEVELOPMENT_TEAM = MTL5N7KWYL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nadya-Tyandra.MC3-kasih";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04DCE6602A8B3392009BACC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MTL5N7KWYL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nadya-Tyandra.MC3-kasihTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MC3-kasih.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MC3-kasih";
+			};
+			name = Debug;
+		};
+		04DCE6612A8B3392009BACC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MTL5N7KWYL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nadya-Tyandra.MC3-kasihTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MC3-kasih.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MC3-kasih";
+			};
+			name = Release;
+		};
+		04DCE6632A8B3392009BACC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MTL5N7KWYL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nadya-Tyandra.MC3-kasihUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MC3-kasih";
+			};
+			name = Debug;
+		};
+		04DCE6642A8B3392009BACC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MTL5N7KWYL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Nadya-Tyandra.MC3-kasihUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MC3-kasih";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04DCE6332A8B3392009BACC5 /* Build configuration list for PBXProject "MC3-kasih" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DCE65A2A8B3392009BACC5 /* Debug */,
+				04DCE65B2A8B3392009BACC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DCE65C2A8B3392009BACC5 /* Build configuration list for PBXNativeTarget "MC3-kasih" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DCE65D2A8B3392009BACC5 /* Debug */,
+				04DCE65E2A8B3392009BACC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DCE65F2A8B3392009BACC5 /* Build configuration list for PBXNativeTarget "MC3-kasihTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DCE6602A8B3392009BACC5 /* Debug */,
+				04DCE6612A8B3392009BACC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DCE6622A8B3392009BACC5 /* Build configuration list for PBXNativeTarget "MC3-kasihUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DCE6632A8B3392009BACC5 /* Debug */,
+				04DCE6642A8B3392009BACC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04DCE6302A8B3392009BACC5 /* Project object */;
+}
