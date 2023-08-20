@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04D662312A91FAF700A4D23C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D662302A91FAF700A4D23C /* CoreDataManager.swift */; };
+		04D662372A91FC7200A4D23C /* Models.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04D662352A91FC7200A4D23C /* Models.xcdatamodeld */; };
+		04D6623B2A92142B00A4D23C /* AddNewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6623A2A92142B00A4D23C /* AddNewUserView.swift */; };
+		04D6623D2A92144600A4D23C /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6623C2A92144600A4D23C /* UserDetailView.swift */; };
+		04D6623F2A92229900A4D23C /* AddNewAsiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6623E2A92229900A4D23C /* AddNewAsiView.swift */; };
+		04D662412A92236400A4D23C /* AsiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D662402A92236400A4D23C /* AsiDetailView.swift */; };
 		04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */; };
-		04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63D2A8B3392009BACC5 /* ContentView.swift */; };
+		04DCE63E2A8B3392009BACC5 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63D2A8B3392009BACC5 /* UserListView.swift */; };
 		04DCE6402A8B3392009BACC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE63F2A8B3392009BACC5 /* Assets.xcassets */; };
 		04DCE6432A8B3392009BACC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE6422A8B3392009BACC5 /* Preview Assets.xcassets */; };
 		04DCE64D2A8B3392009BACC5 /* MC3_kasihTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE64C2A8B3392009BACC5 /* MC3_kasihTests.swift */; };
@@ -34,9 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04D662302A91FAF700A4D23C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		04D662362A91FC7200A4D23C /* Models.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Models.xcdatamodel; sourceTree = "<group>"; };
+		04D6623A2A92142B00A4D23C /* AddNewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUserView.swift; sourceTree = "<group>"; };
+		04D6623C2A92144600A4D23C /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		04D6623E2A92229900A4D23C /* AddNewAsiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAsiView.swift; sourceTree = "<group>"; };
+		04D662402A92236400A4D23C /* AsiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsiDetailView.swift; sourceTree = "<group>"; };
 		04DCE6382A8B3392009BACC5 /* MC3-kasih.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-kasih.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihApp.swift; sourceTree = "<group>"; };
-		04DCE63D2A8B3392009BACC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04DCE63D2A8B3392009BACC5 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		04DCE63F2A8B3392009BACC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DCE6422A8B3392009BACC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04DCE6482A8B3392009BACC5 /* MC3-kasihTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MC3-kasihTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +83,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04D6622B2A91FAA700A4D23C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		04D6622C2A91FAAF00A4D23C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				04D6622E2A91FAD800A4D23C /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		04D6622D2A91FAB200A4D23C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				04D662322A91FC1800A4D23C /* Models */,
+				04D662332A91FC1D00A4D23C /* ViewModels */,
+				04D662342A91FC2E00A4D23C /* Presenters */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		04D6622E2A91FAD800A4D23C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				04D6622F2A91FAE600A4D23C /* CoreData */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		04D6622F2A91FAE600A4D23C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				04D662302A91FAF700A4D23C /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		04D662322A91FC1800A4D23C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04D662352A91FC7200A4D23C /* Models.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04D662332A91FC1D00A4D23C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04D662342A91FC2E00A4D23C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				04D662382A91FFAA00A4D23C /* DetailViews */,
+				04D662392A91FFB200A4D23C /* AddNewViews */,
+				04DCE63D2A8B3392009BACC5 /* UserListView.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		04D662382A91FFAA00A4D23C /* DetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				04D6623C2A92144600A4D23C /* UserDetailView.swift */,
+				04D662402A92236400A4D23C /* AsiDetailView.swift */,
+			);
+			path = DetailViews;
+			sourceTree = "<group>";
+		};
+		04D662392A91FFB200A4D23C /* AddNewViews */ = {
+			isa = PBXGroup;
+			children = (
+				04D6623A2A92142B00A4D23C /* AddNewUserView.swift */,
+				04D6623E2A92229900A4D23C /* AddNewAsiView.swift */,
+			);
+			path = AddNewViews;
+			sourceTree = "<group>";
+		};
 		04DCE62F2A8B3392009BACC5 = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +191,9 @@
 		04DCE63A2A8B3392009BACC5 /* MC3-kasih */ = {
 			isa = PBXGroup;
 			children = (
-				04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */,
-				04DCE63D2A8B3392009BACC5 /* ContentView.swift */,
+				04D6622B2A91FAA700A4D23C /* Application */,
+				04D6622C2A91FAAF00A4D23C /* Core */,
+				04D6622D2A91FAB200A4D23C /* Features */,
 				04DCE63F2A8B3392009BACC5 /* Assets.xcassets */,
 				04DCE6412A8B3392009BACC5 /* Preview Content */,
 			);
@@ -257,8 +355,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
+				04D662312A91FAF700A4D23C /* CoreDataManager.swift in Sources */,
+				04D662412A92236400A4D23C /* AsiDetailView.swift in Sources */,
+				04D6623F2A92229900A4D23C /* AddNewAsiView.swift in Sources */,
+				04D6623D2A92144600A4D23C /* UserDetailView.swift in Sources */,
+				04D6623B2A92142B00A4D23C /* AddNewUserView.swift in Sources */,
+				04DCE63E2A8B3392009BACC5 /* UserListView.swift in Sources */,
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
+				04D662372A91FC7200A4D23C /* Models.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +687,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		04D662352A91FC7200A4D23C /* Models.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				04D662362A91FC7200A4D23C /* Models.xcdatamodel */,
+			);
+			currentVersion = 04D662362A91FC7200A4D23C /* Models.xcdatamodel */;
+			path = Models.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 04DCE6302A8B3392009BACC5 /* Project object */;
 }
