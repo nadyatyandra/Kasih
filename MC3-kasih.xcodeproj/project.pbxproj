@@ -33,6 +33,7 @@
 		C486FF8E2A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF862A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift */; };
 		C486FF8F2A9424ED004112E9 /* Child+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF872A9424ED004112E9 /* Child+CoreDataClass.swift */; };
 		C486FF902A9424ED004112E9 /* Child+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF882A9424ED004112E9 /* Child+CoreDataProperties.swift */; };
+		C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF942A94263F004112E9 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		C486FF862A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lifestyle+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C486FF872A9424ED004112E9 /* Child+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C486FF882A9424ED004112E9 /* Child+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C486FF942A94263F004112E9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 		C486FF4D2A942277004112E9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C486FF942A94263F004112E9 /* CoreDataStack.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				C486FF692A942350004112E9 /* Location+CoreDataClass.swift in Sources */,
 				C486FF652A942350004112E9 /* TransactionStatus+CoreDataClass.swift in Sources */,
 				C486FF8E2A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift in Sources */,
+				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
 				C486FF6B2A942350004112E9 /* TestResult+CoreDataClass.swift in Sources */,
 				C486FF8F2A9424ED004112E9 /* Child+CoreDataClass.swift in Sources */,
 				C486FF8B2A9424ED004112E9 /* MedicalScreen+CoreDataClass.swift in Sources */,
