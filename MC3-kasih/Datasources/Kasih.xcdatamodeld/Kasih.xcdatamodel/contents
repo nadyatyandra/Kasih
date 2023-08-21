@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F82" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Asi" representedClassName="Asi" syncable="YES">
+        <attribute name="dateProd" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="photo" optional="YES" attributeType="Binary"/>
+        <attribute name="pouchSize" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="asi" inverseEntity="Transaction"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="asiList" inverseEntity="User"/>
+    </entity>
+    <entity name="Child" representedClassName="Child" syncable="YES">
+        <attribute name="bloodType" optional="YES" attributeType="String"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="weekOfBirth" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weightOfBirth" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="childs" inverseEntity="User"/>
+    </entity>
+    <entity name="Lifestyle" representedClassName="Lifestyle" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="lifestyles" inverseEntity="User"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="zipCode" optional="YES" attributeType="String"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="location" inverseEntity="User"/>
+    </entity>
+    <entity name="MedicalScreen" representedClassName="MedicalScreen" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="idHepatitis" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isBloodTrans" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isDiet" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isDrug" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isHIV" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isIgM" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isOrganTrans" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isSyphilis" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="medHistory" optional="YES" attributeType="String"/>
+        <attribute name="vitamins" optional="YES" attributeType="String"/>
+        <relationship name="documents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TestResult" inverseName="medicalScreen" inverseEntity="TestResult"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="medicalScreen" inverseEntity="User"/>
+    </entity>
+    <entity name="TestResult" representedClassName="TestResult" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="document" optional="YES" attributeType="Binary"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="medicalScreen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicalScreen" inverseName="documents" inverseEntity="MedicalScreen"/>
+    </entity>
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="pickUpDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="asi" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Asi" inverseName="transaction" inverseEntity="Asi"/>
+        <relationship name="buyer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="transactions" inverseEntity="User"/>
+        <relationship name="statusList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TransactionStatus" inverseName="transaction" inverseEntity="TransactionStatus"/>
+    </entity>
+    <entity name="TransactionStatus" representedClassName="TransactionStatus" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="statusList" inverseEntity="Transaction"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="babyGender" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="ktpImg" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="phoneNum" optional="YES" attributeType="String"/>
+        <attribute name="profileImg" optional="YES" attributeType="Binary"/>
+        <attribute name="religion" optional="YES" attributeType="String"/>
+        <attribute name="role" optional="YES" attributeType="String"/>
+        <attribute name="selfieImg" optional="YES" attributeType="Binary"/>
+        <relationship name="asiList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Asi" inverseName="user" inverseEntity="Asi"/>
+        <relationship name="childs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Child" inverseName="user" inverseEntity="Child"/>
+        <relationship name="lifestyles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lifestyle" inverseName="user" inverseEntity="Lifestyle"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="user" inverseEntity="Location"/>
+        <relationship name="medicalScreen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicalScreen" inverseName="user" inverseEntity="MedicalScreen"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="buyer" inverseEntity="Transaction"/>
+    </entity>
+</model>
