@@ -15,25 +15,9 @@
 		04DCE6572A8B3392009BACC5 /* MC3_kasihUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */; };
 		04DCE6592A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */; };
 		C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C486FF482A94134A004112E9 /* Kasih.xcdatamodeld */; };
-		C486FF652A942350004112E9 /* TransactionStatus+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF532A942350004112E9 /* TransactionStatus+CoreDataClass.swift */; };
-		C486FF662A942350004112E9 /* TransactionStatus+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF542A942350004112E9 /* TransactionStatus+CoreDataProperties.swift */; };
-		C486FF692A942350004112E9 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF572A942350004112E9 /* Location+CoreDataClass.swift */; };
-		C486FF6A2A942350004112E9 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF582A942350004112E9 /* Location+CoreDataProperties.swift */; };
-		C486FF6B2A942350004112E9 /* TestResult+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF592A942350004112E9 /* TestResult+CoreDataClass.swift */; };
-		C486FF6C2A942350004112E9 /* TestResult+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF5A2A942350004112E9 /* TestResult+CoreDataProperties.swift */; };
-		C486FF6F2A942350004112E9 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF5D2A942350004112E9 /* Transaction+CoreDataClass.swift */; };
-		C486FF702A942350004112E9 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF5E2A942350004112E9 /* Transaction+CoreDataProperties.swift */; };
-		C486FF752A942350004112E9 /* Asi+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF632A942350004112E9 /* Asi+CoreDataClass.swift */; };
-		C486FF762A942350004112E9 /* Asi+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF642A942350004112E9 /* Asi+CoreDataProperties.swift */; };
-		C486FF892A9424ED004112E9 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF812A9424ED004112E9 /* User+CoreDataClass.swift */; };
-		C486FF8A2A9424ED004112E9 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF822A9424ED004112E9 /* User+CoreDataProperties.swift */; };
-		C486FF8B2A9424ED004112E9 /* MedicalScreen+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF832A9424ED004112E9 /* MedicalScreen+CoreDataClass.swift */; };
-		C486FF8C2A9424ED004112E9 /* MedicalScreen+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF842A9424ED004112E9 /* MedicalScreen+CoreDataProperties.swift */; };
-		C486FF8D2A9424ED004112E9 /* Lifestyle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF852A9424ED004112E9 /* Lifestyle+CoreDataClass.swift */; };
-		C486FF8E2A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF862A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift */; };
-		C486FF8F2A9424ED004112E9 /* Child+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF872A9424ED004112E9 /* Child+CoreDataClass.swift */; };
-		C486FF902A9424ED004112E9 /* Child+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF882A9424ED004112E9 /* Child+CoreDataProperties.swift */; };
 		C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF942A94263F004112E9 /* CoreDataStack.swift */; };
+		C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF962A94549F004112E9 /* BloodTypeEnum.swift */; };
+		C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF9A2A9457E7004112E9 /* UserExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,25 +49,9 @@
 		04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihUITests.swift; sourceTree = "<group>"; };
 		04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C486FF492A94134A004112E9 /* Kasih.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kasih.xcdatamodel; sourceTree = "<group>"; };
-		C486FF532A942350004112E9 /* TransactionStatus+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionStatus+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF542A942350004112E9 /* TransactionStatus+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransactionStatus+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C486FF572A942350004112E9 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF582A942350004112E9 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C486FF592A942350004112E9 /* TestResult+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestResult+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF5A2A942350004112E9 /* TestResult+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestResult+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C486FF5D2A942350004112E9 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF5E2A942350004112E9 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C486FF632A942350004112E9 /* Asi+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Asi+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF642A942350004112E9 /* Asi+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Asi+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C486FF812A9424ED004112E9 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF822A9424ED004112E9 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C486FF832A9424ED004112E9 /* MedicalScreen+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicalScreen+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF842A9424ED004112E9 /* MedicalScreen+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedicalScreen+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C486FF852A9424ED004112E9 /* Lifestyle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lifestyle+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF862A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lifestyle+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		C486FF872A9424ED004112E9 /* Child+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C486FF882A9424ED004112E9 /* Child+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Child+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C486FF942A94263F004112E9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C486FF962A94549F004112E9 /* BloodTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypeEnum.swift; sourceTree = "<group>"; };
+		C486FF9A2A9457E7004112E9 /* UserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserExtension.swift; path = "MC3-kasih/Datasources/Constants/UserExtension.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,28 +141,12 @@
 		C486FF4B2A941352004112E9 /* Datasources */ = {
 			isa = PBXGroup;
 			children = (
+				C486FF982A945793004112E9 /* Models */,
 				C486FF502A94229D004112E9 /* Constants */,
-				C486FF4C2A941363004112E9 /* Models */,
 				C486FF912A94253E004112E9 /* Repositories */,
 				C486FF482A94134A004112E9 /* Kasih.xcdatamodeld */,
 			);
 			path = Datasources;
-			sourceTree = "<group>";
-		};
-		C486FF4C2A941363004112E9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF792A942367004112E9 /* Asi */,
-				C486FF802A9423F7004112E9 /* Child */,
-				C486FF7D2A9423BF004112E9 /* Lifestyle */,
-				C486FF7E2A9423D7004112E9 /* Location */,
-				C486FF7A2A94236D004112E9 /* MedicalScreen */,
-				C486FF7F2A9423EB004112E9 /* TestResult */,
-				C486FF782A94235D004112E9 /* Transaction */,
-				C486FF7C2A9423A9004112E9 /* TransactionStatus */,
-				C486FF772A942357004112E9 /* User */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		C486FF4D2A942277004112E9 /* Utilities */ = {
@@ -215,90 +167,9 @@
 		C486FF502A94229D004112E9 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				C486FF962A94549F004112E9 /* BloodTypeEnum.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		C486FF772A942357004112E9 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF812A9424ED004112E9 /* User+CoreDataClass.swift */,
-				C486FF822A9424ED004112E9 /* User+CoreDataProperties.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
-		C486FF782A94235D004112E9 /* Transaction */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF5D2A942350004112E9 /* Transaction+CoreDataClass.swift */,
-				C486FF5E2A942350004112E9 /* Transaction+CoreDataProperties.swift */,
-			);
-			path = Transaction;
-			sourceTree = "<group>";
-		};
-		C486FF792A942367004112E9 /* Asi */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF632A942350004112E9 /* Asi+CoreDataClass.swift */,
-				C486FF642A942350004112E9 /* Asi+CoreDataProperties.swift */,
-			);
-			path = Asi;
-			sourceTree = "<group>";
-		};
-		C486FF7A2A94236D004112E9 /* MedicalScreen */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF832A9424ED004112E9 /* MedicalScreen+CoreDataClass.swift */,
-				C486FF842A9424ED004112E9 /* MedicalScreen+CoreDataProperties.swift */,
-			);
-			path = MedicalScreen;
-			sourceTree = "<group>";
-		};
-		C486FF7C2A9423A9004112E9 /* TransactionStatus */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF532A942350004112E9 /* TransactionStatus+CoreDataClass.swift */,
-				C486FF542A942350004112E9 /* TransactionStatus+CoreDataProperties.swift */,
-			);
-			path = TransactionStatus;
-			sourceTree = "<group>";
-		};
-		C486FF7D2A9423BF004112E9 /* Lifestyle */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF852A9424ED004112E9 /* Lifestyle+CoreDataClass.swift */,
-				C486FF862A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift */,
-			);
-			name = Lifestyle;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		C486FF7E2A9423D7004112E9 /* Location */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF572A942350004112E9 /* Location+CoreDataClass.swift */,
-				C486FF582A942350004112E9 /* Location+CoreDataProperties.swift */,
-			);
-			path = Location;
-			sourceTree = "<group>";
-		};
-		C486FF7F2A9423EB004112E9 /* TestResult */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF592A942350004112E9 /* TestResult+CoreDataClass.swift */,
-				C486FF5A2A942350004112E9 /* TestResult+CoreDataProperties.swift */,
-			);
-			path = TestResult;
-			sourceTree = "<group>";
-		};
-		C486FF802A9423F7004112E9 /* Child */ = {
-			isa = PBXGroup;
-			children = (
-				C486FF872A9424ED004112E9 /* Child+CoreDataClass.swift */,
-				C486FF882A9424ED004112E9 /* Child+CoreDataProperties.swift */,
-			);
-			path = Child;
 			sourceTree = "<group>";
 		};
 		C486FF912A94253E004112E9 /* Repositories */ = {
@@ -306,6 +177,22 @@
 			children = (
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C486FF982A945793004112E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF992A9457AA004112E9 /* Asi */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C486FF992A9457AA004112E9 /* Asi */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF9A2A9457E7004112E9 /* UserExtension.swift */,
+			);
+			path = Asi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,28 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C486FF902A9424ED004112E9 /* Child+CoreDataProperties.swift in Sources */,
-				C486FF702A942350004112E9 /* Transaction+CoreDataProperties.swift in Sources */,
-				C486FF6C2A942350004112E9 /* TestResult+CoreDataProperties.swift in Sources */,
-				C486FF6F2A942350004112E9 /* Transaction+CoreDataClass.swift in Sources */,
-				C486FF762A942350004112E9 /* Asi+CoreDataProperties.swift in Sources */,
-				C486FF662A942350004112E9 /* TransactionStatus+CoreDataProperties.swift in Sources */,
+				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
-				C486FF8D2A9424ED004112E9 /* Lifestyle+CoreDataClass.swift in Sources */,
-				C486FF752A942350004112E9 /* Asi+CoreDataClass.swift in Sources */,
-				C486FF8A2A9424ED004112E9 /* User+CoreDataProperties.swift in Sources */,
-				C486FF892A9424ED004112E9 /* User+CoreDataClass.swift in Sources */,
-				C486FF6A2A942350004112E9 /* Location+CoreDataProperties.swift in Sources */,
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
-				C486FF692A942350004112E9 /* Location+CoreDataClass.swift in Sources */,
-				C486FF652A942350004112E9 /* TransactionStatus+CoreDataClass.swift in Sources */,
-				C486FF8E2A9424ED004112E9 /* Lifestyle+CoreDataProperties.swift in Sources */,
 				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
-				C486FF6B2A942350004112E9 /* TestResult+CoreDataClass.swift in Sources */,
-				C486FF8F2A9424ED004112E9 /* Child+CoreDataClass.swift in Sources */,
-				C486FF8B2A9424ED004112E9 /* MedicalScreen+CoreDataClass.swift in Sources */,
-				C486FF8C2A9424ED004112E9 /* MedicalScreen+CoreDataProperties.swift in Sources */,
+				C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
