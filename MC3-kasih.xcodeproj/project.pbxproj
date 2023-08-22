@@ -31,6 +31,9 @@
 		C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB12A94BDBB004112E9 /* StepIndicator.swift */; };
 		C486FFB62A94CCCD004112E9 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB52A94CCCD004112E9 /* BackButton.swift */; };
 		C486FFB92A94D566004112E9 /* AppButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB82A94D566004112E9 /* AppButtonStyle.swift */; };
+		C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBA2A94E51F004112E9 /* FinishFormView.swift */; };
+		C486FFBD2A94F365004112E9 /* AppTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */; };
+		C486FFC02A95013B004112E9 /* InputFieldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		C486FFB12A94BDBB004112E9 /* StepIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepIndicator.swift; sourceTree = "<group>"; };
 		C486FFB52A94CCCD004112E9 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		C486FFB82A94D566004112E9 /* AppButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButtonStyle.swift; sourceTree = "<group>"; };
+		C486FFBA2A94E51F004112E9 /* FinishFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFormView.swift; sourceTree = "<group>"; };
+		C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldStyle.swift; sourceTree = "<group>"; };
+		C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +361,7 @@
 			children = (
 				C486FFAE2A94BDBB004112E9 /* SignUpStepper */,
 				C486FFB52A94CCCD004112E9 /* BackButton.swift */,
+				C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -366,6 +373,7 @@
 				C486FFA42A94BB0F004112E9 /* BiodataFormView.swift */,
 				C486FFA62A94BB74004112E9 /* SkriningFormView.swift */,
 				C486FFA82A94BBB5004112E9 /* VerificationFormView.swift */,
+				C486FFBA2A94E51F004112E9 /* FinishFormView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,6 +392,7 @@
 			isa = PBXGroup;
 			children = (
 				C486FFB82A94D566004112E9 /* AppButtonStyle.swift */,
+				C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -520,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C486FFAD2A94BC50004112E9 /* SignUpStepper.swift in Sources */,
+				C486FFBD2A94F365004112E9 /* AppTextFieldStyle.swift in Sources */,
 				C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */,
 				C486FFA92A94BBB5004112E9 /* VerificationFormView.swift in Sources */,
 				C486FFB92A94D566004112E9 /* AppButtonStyle.swift in Sources */,
@@ -528,12 +538,14 @@
 				C486FFA52A94BB0F004112E9 /* BiodataFormView.swift in Sources */,
 				C486FFB62A94CCCD004112E9 /* BackButton.swift in Sources */,
 				C486FFAB2A94BBDA004112E9 /* SignUpFormView.swift in Sources */,
+				C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */,
 				C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
 				C486FFB22A94BDBB004112E9 /* StepDivider.swift in Sources */,
 				04A0B8F52A94707F00B1E58B /* Colors.swift in Sources */,
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
 				C486FFA72A94BB74004112E9 /* SkriningFormView.swift in Sources */,
+				C486FFC02A95013B004112E9 /* InputFieldWrapper.swift in Sources */,
 				C486FFA32A94B76C004112E9 /* SignUpViewModels.swift in Sources */,
 				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
 				C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */,

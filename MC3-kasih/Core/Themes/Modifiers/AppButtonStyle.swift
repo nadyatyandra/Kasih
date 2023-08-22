@@ -12,11 +12,11 @@ struct AppButtonStyle: ButtonStyle {
     var isDisable: Bool = false
 
     private var backgroundColor: Color {
-        return isSecondary ? Colors.white : (isDisable ? .gray : Colors.pp400)
+        return isSecondary ? Colors.white : (isDisable ? Color(uiColor: .systemGray4) : Colors.pp400)
     }
 
     private var foregroundColor: Color {
-        return isSecondary ? (isDisable ? .gray : Colors.pp400) : Colors.white
+        return isSecondary ? (isDisable ? Color(uiColor: .systemGray4) : Colors.pp400) : Colors.white
     }
 
     func makeBody(configuration: Configuration) -> some View {
@@ -29,7 +29,7 @@ struct AppButtonStyle: ButtonStyle {
             configuration.label
                 .foregroundColor(foregroundColor)
                 .typography(.large)
-                .opacity(configuration.isPressed ? 0.4 : 1)
+                .opacity(configuration.isPressed && !isDisable ? 0.4 : 1)
                 .animation(.easeInOut(duration: 0), value: configuration.isPressed)
                 .padding()
         }
