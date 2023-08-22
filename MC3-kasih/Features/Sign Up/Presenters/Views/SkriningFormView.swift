@@ -9,13 +9,33 @@ import SwiftUI
 
 struct SkriningFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
+    @StateObject var selfiePicker = ImagePickerManager()
+    @StateObject var ktpPicker = ImagePickerManager()
 
     var body: some View {
-        Section(header: Text(SignUpStep.documentScreening.rawValue)) {
-            DatePicker("Date of Birth", selection: $viewModel.dateOfBirth, displayedComponents: .date)
-            TextField("Sex", text: $viewModel.sex)
-            TextField("Religion", text: $viewModel.religion)
-            TextField("Blood Type", text: $viewModel.bloodType)
+        VStack(spacing: 24) {
+            InputFieldWrapper(
+                label: "Foto Muka",
+                inputField: AnyView(
+                    EditableScreeningImage(imagePicker: selfiePicker)
+                )
+            )
+            InputFieldWrapper(
+                label: "Foto KTP",
+                inputField: AnyView(
+                    EditableScreeningImage(imagePicker: ktpPicker)
+                )
+            )
+        }
+        .onChange(of: selfiePicker.imageState) { state in
+            if case .success(let uiImage) = state {
+                viewModel.selfie = uiImage
+            }
+        }
+        .onChange(of: ktpPicker.imageState) { state in
+            if case .success(let uiImage) = state {
+                viewModel.ktp = uiImage
+            }
         }
     }
 }

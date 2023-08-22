@@ -34,6 +34,9 @@
 		C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBA2A94E51F004112E9 /* FinishFormView.swift */; };
 		C486FFBD2A94F365004112E9 /* AppTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */; };
 		C486FFC02A95013B004112E9 /* InputFieldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */; };
+		C486FFC22A951124004112E9 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFC12A951124004112E9 /* ImagePickerManager.swift */; };
+		C486FFC52A951193004112E9 /* ScreeningImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFC42A951193004112E9 /* ScreeningImagePicker.swift */; };
+		C486FFC82A95127B004112E9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFC72A95127B004112E9 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		C486FFBA2A94E51F004112E9 /* FinishFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFormView.swift; sourceTree = "<group>"; };
 		C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldStyle.swift; sourceTree = "<group>"; };
 		C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldWrapper.swift; sourceTree = "<group>"; };
+		C486FFC12A951124004112E9 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		C486FFC42A951193004112E9 /* ScreeningImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreeningImagePicker.swift; sourceTree = "<group>"; };
+		C486FFC72A95127B004112E9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +290,7 @@
 		C486FF4D2A942277004112E9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C486FFC32A95112A004112E9 /* Picker */,
 				04A0B8EF2A946FE600B1E58B /* CoreData */,
 			);
 			path = Utilities;
@@ -362,6 +369,7 @@
 				C486FFAE2A94BDBB004112E9 /* SignUpStepper */,
 				C486FFB52A94CCCD004112E9 /* BackButton.swift */,
 				C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */,
+				C486FFC42A951193004112E9 /* ScreeningImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -395,6 +403,23 @@
 				C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		C486FFC32A95112A004112E9 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFC62A95126F004112E9 /* ImagePicker */,
+				C486FFC12A951124004112E9 /* ImagePickerManager.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		C486FFC62A95126F004112E9 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFC72A95127B004112E9 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,6 +560,7 @@
 				C486FFB92A94D566004112E9 /* AppButtonStyle.swift in Sources */,
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
+				C486FFC22A951124004112E9 /* ImagePickerManager.swift in Sources */,
 				C486FFA52A94BB0F004112E9 /* BiodataFormView.swift in Sources */,
 				C486FFB62A94CCCD004112E9 /* BackButton.swift in Sources */,
 				C486FFAB2A94BBDA004112E9 /* SignUpFormView.swift in Sources */,
@@ -542,11 +568,13 @@
 				C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
 				C486FFB22A94BDBB004112E9 /* StepDivider.swift in Sources */,
+				C486FFC52A951193004112E9 /* ScreeningImagePicker.swift in Sources */,
 				04A0B8F52A94707F00B1E58B /* Colors.swift in Sources */,
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
 				C486FFA72A94BB74004112E9 /* SkriningFormView.swift in Sources */,
 				C486FFC02A95013B004112E9 /* InputFieldWrapper.swift in Sources */,
 				C486FFA32A94B76C004112E9 /* SignUpViewModels.swift in Sources */,
+				C486FFC82A95127B004112E9 /* ImagePicker.swift in Sources */,
 				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
 				C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */,
 			);

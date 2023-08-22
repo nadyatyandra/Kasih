@@ -11,7 +11,11 @@ struct VerificationFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
 
     var body: some View {
-        Section(header: Text(SignUpStep.verification.rawValue)) {
+        VStack(spacing: 24) {
+            DatePicker("Date of Birth", selection: $viewModel.dateOfBirth, displayedComponents: .date)
+            TextField("Sex", text: $viewModel.sex)
+            TextField("Religion", text: $viewModel.religion)
+            TextField("Blood Type", text: $viewModel.bloodType)
         }
     }
 }

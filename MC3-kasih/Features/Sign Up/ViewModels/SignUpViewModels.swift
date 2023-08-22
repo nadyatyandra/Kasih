@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import PhotosUI
 
 enum SignUpStep: String, CaseIterable {
     case biodata = "Biodata"
@@ -25,6 +26,9 @@ class SignUpViewModel: ObservableObject {
     @Published var sex = ""
     @Published var religion = ""
     @Published var bloodType = ""
+    @Published var selfie: UIImage? = nil
+    @Published var ktp: UIImage? = nil
+
 
     let steps: [SignUpStep] = [.biodata, .documentScreening, .verification, .finish]
     @Published var currentStepIndex = 0
@@ -34,9 +38,9 @@ class SignUpViewModel: ObservableObject {
         case .biodata:
             return !name.isEmpty && !location.isEmpty && !phoneNumber.isEmpty && !email.isEmpty
         case .documentScreening:
-            return !sex.isEmpty && !religion.isEmpty && !bloodType.isEmpty
+            return selfie != nil && ktp != nil
         case .verification:
-            return true
+            return !sex.isEmpty && !religion.isEmpty && !bloodType.isEmpty
         case .finish:
             return true
         }
@@ -52,11 +56,19 @@ class SignUpViewModel: ObservableObject {
 
     func previousStep() {
         if currentStepIndex > 0 {
+            if currentStepIndex >= 1 {
+                resetImagePickers()
+            }
             currentStepIndex -= 1
         }
     }
 
-    func submitForm() {
+    private func resetImagePickers() {
+        selfie = nil
+        ktp = nil
+    }
+
+    private func submitForm() {
         // Implement your form submission logic here
         print("Submitted")
     }
