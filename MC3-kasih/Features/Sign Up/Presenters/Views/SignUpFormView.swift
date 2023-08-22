@@ -16,44 +16,49 @@ struct SignUpFormView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
-            BackButton {
-                if viewModel.currentStepIndex > 0 {
-                    viewModel.previousStep()
-                } else {
-                    dismiss()
+        VStack() {
+            if !viewModel.isSuccess {
+                HStack {
+                    BackButton {
+                        if viewModel.currentStepIndex > 0 {
+                            viewModel.previousStep()
+                        } else {
+                            dismiss()
+                        }
+                    }
+                    Spacer()
                 }
             }
             SignUpStepper(currentStep: viewModel.currentStepIndex + 1,
                           totalSteps: viewModel.steps.count)
             .padding(.top, 4)
-            Text(stepState.rawValue)
-                .typography(.heading2)
-                .padding(.top, 8)
-            Group {
-                switch stepState {
-                case .biodata:
-                    BiodataFormView(viewModel: viewModel)
-                case .documentScreening:
-                    SkriningFormView(viewModel: viewModel)
-                case .verification:
-                    VerificationFormView(viewModel: viewModel)
+            if !viewModel.isSuccess {
+                Text(stepState.rawValue)
+                    .typography(.heading2)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 8)
+                Group {
+                    switch stepState {
+                    case .biodata:
+                        BiodataFormView(viewModel: viewModel)
+                    case .documentScreening:
+                        SkriningFormView(viewModel: viewModel)
+                    case .verification:
+                        VerificationFormView(viewModel: viewModel)
+                    }
                 }
-            }
-            .padding(.top, 24)
-            Spacer()
-            if viewModel.currentStepIndex < viewModel.steps.count - 1 {
-                Button("Next") {
-                    viewModel.nextStep()
-                }
-                .disabled(!viewModel.isValidStep)
-                .padding()
+                .padding(.top, 24)
             } else {
-                Button("Done") {
-                    viewModel.submitForm()
-                }
-                .padding()
+                Spacer()
+                Text("Kamu sudah terdaftar sebagai Resipien")
+                    .multilineTextAlignment(.center)
+                    .typography(.heading2)
             }
+            Spacer()
+            Button(viewModel.isSuccess ? "Lanjutkan Permintaan" : "Selanjutnya") {
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .buttonStyle(.app)
         }
         .padding()
         .navigationBarBackButtonHidden()

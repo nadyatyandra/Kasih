@@ -30,6 +30,7 @@
 		C486FFB22A94BDBB004112E9 /* StepDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFAF2A94BDBB004112E9 /* StepDivider.swift */; };
 		C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB12A94BDBB004112E9 /* StepIndicator.swift */; };
 		C486FFB62A94CCCD004112E9 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB52A94CCCD004112E9 /* BackButton.swift */; };
+		C486FFB92A94D566004112E9 /* AppButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB82A94D566004112E9 /* AppButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		C486FFAF2A94BDBB004112E9 /* StepDivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDivider.swift; sourceTree = "<group>"; };
 		C486FFB12A94BDBB004112E9 /* StepIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepIndicator.swift; sourceTree = "<group>"; };
 		C486FFB52A94CCCD004112E9 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		C486FFB82A94D566004112E9 /* AppButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 		04A0B8F02A94700C00B1E58B /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				C486FFB72A94D55B004112E9 /* Modifiers */,
 				04A0B8F32A94706C00B1E58B /* Colors */,
 				04A0B8F22A94702600B1E58B /* Typography */,
 			);
@@ -377,6 +380,14 @@
 			path = SignUpStepper;
 			sourceTree = "<group>";
 		};
+		C486FFB72A94D55B004112E9 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFB82A94D566004112E9 /* AppButtonStyle.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -511,6 +522,7 @@
 				C486FFAD2A94BC50004112E9 /* SignUpStepper.swift in Sources */,
 				C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */,
 				C486FFA92A94BBB5004112E9 /* VerificationFormView.swift in Sources */,
+				C486FFB92A94D566004112E9 /* AppButtonStyle.swift in Sources */,
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				C486FFA52A94BB0F004112E9 /* BiodataFormView.swift in Sources */,
