@@ -22,6 +22,4 @@ struct Colors {
     static let ab300 = Color("ab-300")
     static let ab400 = Color("ab-400")
     static let ab500 = Color("ab-500")
-
-    private init() {}
 }

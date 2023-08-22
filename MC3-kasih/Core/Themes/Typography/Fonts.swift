@@ -21,7 +21,7 @@ enum TypographyStyle {
     case small
     
     var defaultColor: Color {
-        return Colors.black
+        return Colors.ab400
     }
     
     var size: CGFloat {
