@@ -7,20 +7,27 @@
 
 import SwiftUI
 
-extension ButtonStyle where Self == AppButtonStyle {
-    static var app: AppButtonStyle { .init() }
-}
-
 struct AppButtonStyle: ButtonStyle {
-    let radius: CGFloat = 8
-    let color: Color = Colors.pp400
+    var isSecondary: Bool = false
+    var isDisable: Bool = false
+
+    private var backgroundColor: Color {
+        return isSecondary ? Colors.white : (isDisable ? .gray : Colors.pp400)
+    }
+
+    private var foregroundColor: Color {
+        return isSecondary ? (isDisable ? .gray : Colors.pp400) : Colors.white
+    }
 
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
-            RoundedRectangle(cornerRadius: radius, style: .continuous)
-                .fill(color)
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .stroke(foregroundColor, lineWidth: 1)
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .fill(backgroundColor)
+
             configuration.label
-                .foregroundColor(Colors.white)
+                .foregroundColor(foregroundColor)
                 .typography(.large)
                 .opacity(configuration.isPressed ? 0.4 : 1)
                 .animation(.easeInOut(duration: 0), value: configuration.isPressed)
@@ -29,12 +36,27 @@ struct AppButtonStyle: ButtonStyle {
     }
 }
 
-struct AppButtonStyle_Previews: PreviewProvider {
-    static var previews: some View {
-        Button("Selanjutnya"){}
-            .fixedSize(horizontal: false, vertical: true)
-            .buttonStyle(.app)
-            .previewLayout(.sizeThatFits)
-    }
+extension ButtonStyle where Self == AppButtonStyle {
+    static var appPrimary: AppButtonStyle { .init() }
+    static var appPrimaryDisable: AppButtonStyle { .init(isDisable: true) }
+    static var appSecondary: AppButtonStyle { .init(isSecondary: true) }
+    static var appSecondaryDisable: AppButtonStyle { .init(isSecondary: true, isDisable: true) }
 }
 
+struct AppButtonStyle_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            Button("Primary") {}
+                .buttonStyle(.appPrimary)
+            Button("Primary Disable") {}
+                .buttonStyle(.appPrimaryDisable)
+            Button("Secondary") {}
+                .buttonStyle(.appSecondary)
+            Button("Secondary Disable") {}
+                .buttonStyle(.appSecondaryDisable)
+        }
+        .fixedSize(horizontal: false, vertical: true)
+        .padding()
+        .previewLayout(.sizeThatFits)
+    }
+}
