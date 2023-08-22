@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A0B8F52A94707F00B1E58B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0B8F42A94707F00B1E58B /* Colors.swift */; };
+		04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0B8F62A9473D500B1E58B /* Fonts.swift */; };
+		04A0B8F92A94746F00B1E58B /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A0B8F82A94746F00B1E58B /* Nunito.ttf */; };
 		04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */; };
 		04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63D2A8B3392009BACC5 /* ContentView.swift */; };
 		04DCE6402A8B3392009BACC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE63F2A8B3392009BACC5 /* Assets.xcassets */; };
@@ -38,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A0B8F42A94707F00B1E58B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		04A0B8F62A9473D500B1E58B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		04A0B8F82A94746F00B1E58B /* Nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nunito.ttf; sourceTree = "<group>"; };
+		04A0B8FA2A9474AC00B1E58B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04DCE6382A8B3392009BACC5 /* MC3-kasih.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-kasih.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihApp.swift; sourceTree = "<group>"; };
 		04DCE63D2A8B3392009BACC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +86,105 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A0B8E42A946E1500B1E58B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				04A0B8F02A94700C00B1E58B /* Themes */,
+				04A0B8EE2A946FBD00B1E58B /* Resources */,
+				C486FF4D2A942277004112E9 /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		04A0B8E52A946E1E00B1E58B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		04A0B8E62A946E9100B1E58B /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				04A0B8EC2A946F2000B1E58B /* Components */,
+				04A0B8E92A946EEB00B1E58B /* Views */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		04A0B8E82A946EB200B1E58B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		04A0B8E92A946EEB00B1E58B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04A0B8EC2A946F2000B1E58B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		04A0B8ED2A946F4C00B1E58B /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				04A0B8E82A946EB200B1E58B /* View Models */,
+				04A0B8E62A946E9100B1E58B /* Presenters */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		04A0B8EE2A946FBD00B1E58B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04DCE63F2A8B3392009BACC5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04A0B8EF2A946FE600B1E58B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF942A94263F004112E9 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		04A0B8F02A94700C00B1E58B /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				04A0B8F32A94706C00B1E58B /* Colors */,
+				04A0B8F22A94702600B1E58B /* Typography */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		04A0B8F22A94702600B1E58B /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				04A0B8F82A94746F00B1E58B /* Nunito.ttf */,
+				04A0B8F62A9473D500B1E58B /* Fonts.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		04A0B8F32A94706C00B1E58B /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				04A0B8F42A94707F00B1E58B /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		04DCE62F2A8B3392009BACC5 = {
 			isa = PBXGroup;
 			children = (
@@ -102,11 +208,11 @@
 		04DCE63A2A8B3392009BACC5 /* MC3-kasih */ = {
 			isa = PBXGroup;
 			children = (
-				04DCE63F2A8B3392009BACC5 /* Assets.xcassets */,
-				04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */,
+				04A0B8FA2A9474AC00B1E58B /* Info.plist */,
 				04DCE63D2A8B3392009BACC5 /* ContentView.swift */,
+				04A0B8E52A946E1E00B1E58B /* Application */,
+				04A0B8E42A946E1500B1E58B /* Core */,
 				C486FF4E2A942280004112E9 /* Features */,
-				C486FF4D2A942277004112E9 /* Utilities */,
 				C486FF4B2A941352004112E9 /* Datasources */,
 				04DCE6412A8B3392009BACC5 /* Preview Content */,
 			);
@@ -144,7 +250,6 @@
 				C486FF982A945793004112E9 /* Models */,
 				C486FF502A94229D004112E9 /* Constants */,
 				C486FF912A94253E004112E9 /* Repositories */,
-				C486FF482A94134A004112E9 /* Kasih.xcdatamodeld */,
 			);
 			path = Datasources;
 			sourceTree = "<group>";
@@ -152,7 +257,7 @@
 		C486FF4D2A942277004112E9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				C486FF942A94263F004112E9 /* CoreDataStack.swift */,
+				04A0B8EF2A946FE600B1E58B /* CoreData */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -160,6 +265,7 @@
 		C486FF4E2A942280004112E9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				04A0B8ED2A946F4C00B1E58B /* Demo */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -182,17 +288,18 @@
 		C486FF982A945793004112E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C486FF992A9457AA004112E9 /* Asi */,
+				C486FF482A94134A004112E9 /* Kasih.xcdatamodeld */,
+				C486FF992A9457AA004112E9 /* User */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C486FF992A9457AA004112E9 /* Asi */ = {
+		C486FF992A9457AA004112E9 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				C486FF9A2A9457E7004112E9 /* UserExtension.swift */,
 			);
-			path = Asi;
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DCE6432A8B3392009BACC5 /* Preview Assets.xcassets in Resources */,
+				04A0B8F92A94746F00B1E58B /* Nunito.ttf in Resources */,
 				04DCE6402A8B3392009BACC5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,9 +433,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
+				04A0B8F52A94707F00B1E58B /* Colors.swift in Sources */,
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
 				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
 				C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */,
@@ -492,6 +602,7 @@
 				DEVELOPMENT_TEAM = MTL5N7KWYL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MC3-kasih/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -521,6 +632,7 @@
 				DEVELOPMENT_TEAM = MTL5N7KWYL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MC3-kasih/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
