@@ -12,12 +12,6 @@ struct VerificationFormView: View {
 
     var body: some View {
         Section(header: Text(SignUpStep.verification.rawValue)) {
-            if viewModel.isSuccess {
-                Text("Sign Up Successful!")
-                    .font(.title)
-                    .foregroundColor(.green)
-                    .padding()
-            }
         }
     }
 }

@@ -23,10 +23,14 @@ struct AppTextFieldStyle: TextFieldStyle {
     }
 }
 
+extension TextFieldStyle where Self == AppTextFieldStyle {
+    static var app: AppTextFieldStyle { .init() }
+}
+
 struct AppTextFieldStyle_Previews: PreviewProvider {
     static var previews: some View {
-        TextField("Enter Text", text: .constant("dsasdsad"))
-            .textFieldStyle(AppTextFieldStyle())
+        TextField("Enter Text", text: .constant("xxzaa"))
+            .textFieldStyle(.app)
             .padding()
             .previewLayout(.sizeThatFits)
     }

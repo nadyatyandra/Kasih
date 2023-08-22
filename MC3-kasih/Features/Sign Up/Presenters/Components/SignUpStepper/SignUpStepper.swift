@@ -8,19 +8,15 @@
 import SwiftUI
 
 struct SignUpStepper: View {
-    var currentStep: Int
-    var totalSteps: Int
-
-    private func isActive(_ step: Int) -> Bool {
-        return step <= currentStep
-    }
+    let currentStep: Int
+    let totalSteps: Int
 
     var body: some View {
         HStack(spacing: 0) {
             ForEach(1...totalSteps, id: \.self) { step in
-                    StepIndicator(index: step, isActive: isActive(step))
+                StepIndicator(currentStep: currentStep, index: step)
                 if step < totalSteps {
-                    StepDivider(isActive: isActive(step))
+                    StepDivider(isActive: step+1 <= currentStep)
                         .padding(.horizontal, 8)
                 }
             }

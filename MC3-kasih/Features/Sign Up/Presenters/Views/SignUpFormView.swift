@@ -15,9 +15,13 @@ struct SignUpFormView: View {
         viewModel.steps[viewModel.currentStepIndex]
     }
 
+    private var isFinish: Bool {
+        stepState == .finish
+    }
+
     var body: some View {
         VStack() {
-            if !viewModel.isSuccess {
+            if !isFinish {
                 HStack {
                     BackButton {
                         if viewModel.currentStepIndex > 0 {
@@ -30,35 +34,34 @@ struct SignUpFormView: View {
                 }
             }
             SignUpStepper(currentStep: viewModel.currentStepIndex + 1,
-                          totalSteps: viewModel.steps.count)
+                          totalSteps: viewModel.steps.count - 1)
             .padding(.top, 4)
-            if !viewModel.isSuccess {
+            if !isFinish {
                 Text(stepState.rawValue)
                     .typography(.heading2)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 8)
-                Group {
-                    switch stepState {
-                    case .biodata:
-                        BiodataFormView(viewModel: viewModel)
-                    case .documentScreening:
-                        SkriningFormView(viewModel: viewModel)
-                    case .verification:
-                        VerificationFormView(viewModel: viewModel)
-                    }
+            }
+            Group {
+                switch stepState {
+                case .biodata:
+                    BiodataFormView(viewModel: viewModel)
+                case .documentScreening:
+                    SkriningFormView(viewModel: viewModel)
+                case .verification:
+                    VerificationFormView(viewModel: viewModel)
+                case .finish:
+                    FinishFormView()
                 }
-                .padding(.top, 24)
-            } else {
-                Spacer()
-                Text("Kamu sudah terdaftar sebagai Resipien")
-                    .multilineTextAlignment(.center)
-                    .typography(.heading2)
             }
+            .padding(.top, 24)
             Spacer()
-            Button(viewModel.isSuccess ? "Lanjutkan Permintaan" : "Selanjutnya") {
+            Button(isFinish ? "Lanjutkan Permintaan" : "Selanjutnya") {
+                viewModel.nextStep()
             }
+            .disabled(!viewModel.isValidStep)
             .fixedSize(horizontal: false, vertical: true)
-            .buttonStyle(.app)
+            .buttonStyle(viewModel.isValidStep ? .appPrimary : .appPrimaryDisable)
         }
         .padding()
         .navigationBarBackButtonHidden()

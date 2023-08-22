@@ -12,6 +12,7 @@ enum SignUpStep: String, CaseIterable {
     case biodata = "Biodata"
     case documentScreening = "Skrining Dokumen"
     case verification = "Verifikasi Resipien"
+    case finish = "Kamu berhasil mendaftar sebagai Resipien"
 
 }
 
@@ -25,11 +26,9 @@ class SignUpViewModel: ObservableObject {
     @Published var religion = ""
     @Published var bloodType = ""
 
-    let steps: [SignUpStep] = [.biodata, .documentScreening, .verification]
+    let steps: [SignUpStep] = [.biodata, .documentScreening, .verification, .finish]
     @Published var currentStepIndex = 0
-    @Published var isSuccess = false
 
-    // Validation logic
     var isValidStep: Bool {
         switch steps[currentStepIndex] {
         case .biodata:
@@ -38,13 +37,16 @@ class SignUpViewModel: ObservableObject {
             return !sex.isEmpty && !religion.isEmpty && !bloodType.isEmpty
         case .verification:
             return true
+        case .finish:
+            return true
         }
     }
 
-    // Navigation logic
     func nextStep() {
         if currentStepIndex < steps.count - 1 {
             currentStepIndex += 1
+        } else if currentStepIndex == steps.count - 1 {
+            submitForm()
         }
     }
 
@@ -54,9 +56,8 @@ class SignUpViewModel: ObservableObject {
         }
     }
 
-    // Submission logic
     func submitForm() {
         // Implement your form submission logic here
-        isSuccess = true
+        print("Submitted")
     }
 }

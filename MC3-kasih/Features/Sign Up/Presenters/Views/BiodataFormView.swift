@@ -11,13 +11,33 @@ struct BiodataFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
 
     var body: some View {
-        Section(header: Text(SignUpStep.biodata.rawValue)) {
-            TextField("Name", text: $viewModel.name)
-            TextField("Location", text: $viewModel.location)
-            TextField("Phone Number", text: $viewModel.phoneNumber)
-                .keyboardType(.numberPad)
-            TextField("Email", text: $viewModel.email)
-                .keyboardType(.emailAddress)
+        VStack(spacing: 24) {
+            InputFieldWrapper(
+                label: "Nama",
+                inputField: AnyView(
+                    TextField("Nama", text: $viewModel.name)
+                        .textFieldStyle(.app))
+            )
+            InputFieldWrapper(
+                label: "Nomor Telepon",
+                inputField: AnyView(
+                    TextField("Email", text: $viewModel.email)
+                        .keyboardType(.emailAddress)
+                        .textFieldStyle(.app))
+            )
+            InputFieldWrapper(
+                label: "Nomor Telepon",
+                inputField: AnyView(
+                    TextField("Nomor Telepon", text: $viewModel.phoneNumber)
+                        .keyboardType(.numberPad)
+                        .textFieldStyle(.app))
+            )
+            InputFieldWrapper(
+                label: "Lokasi",
+                inputField: AnyView(
+                    TextField("Lokasi", text: $viewModel.location)
+                        .textFieldStyle(.app))
+            )
         }
     }
 }

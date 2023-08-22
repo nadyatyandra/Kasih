@@ -31,7 +31,8 @@ struct AppButtonStyle: ButtonStyle {
                 .typography(.large)
                 .opacity(configuration.isPressed && !isDisable ? 0.4 : 1)
                 .animation(.easeInOut(duration: 0), value: configuration.isPressed)
-                .padding()
+                .padding(.vertical, 12)
+                .padding(.horizontal)
         }
     }
 }

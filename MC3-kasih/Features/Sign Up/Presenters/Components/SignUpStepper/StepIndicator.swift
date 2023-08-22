@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct StepIndicator: View {
-    var index: Int
-    var isActive: Bool
+    let currentStep: Int
+    let index: Int
+    
+
+    private var isActive: Bool {
+        index <= currentStep
+    }
 
     var body: some View {
         Circle()
@@ -18,9 +23,15 @@ struct StepIndicator: View {
             .overlay {
                 Circle()
                     .strokeBorder(Colors.ab400, lineWidth: 2)
-                Text("\(index)")
-                    .foregroundColor(isActive ? Colors.white : Colors.ab400)
-                    .typography(.smallBold)
+                Group {
+                    if currentStep > index {
+                        Image(systemName: "checkmark")
+                    } else {
+                        Text("\(index)")
+                    }
+                }
+                .foregroundColor(isActive ? Colors.white : Colors.ab400)
+                .typography(.smallBold)
             }
     }
 }
@@ -28,8 +39,9 @@ struct StepIndicator: View {
 struct StepIndicator_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            StepIndicator(index: 1, isActive: true)
-            StepIndicator(index: 2, isActive: false)
+            StepIndicator(currentStep: 2, index: 1)
+            StepIndicator(currentStep: 2, index: 2)
+            StepIndicator(currentStep: 2, index: 3)
         }
         .previewLayout(.sizeThatFits)
     }
