@@ -14,6 +14,10 @@
 		04DCE64D2A8B3392009BACC5 /* MC3_kasihTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE64C2A8B3392009BACC5 /* MC3_kasihTests.swift */; };
 		04DCE6572A8B3392009BACC5 /* MC3_kasihUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */; };
 		04DCE6592A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */; };
+		C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C486FF482A94134A004112E9 /* Kasih.xcdatamodeld */; };
+		C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF942A94263F004112E9 /* CoreDataStack.swift */; };
+		C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF962A94549F004112E9 /* BloodTypeEnum.swift */; };
+		C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF9A2A9457E7004112E9 /* UserExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		04DCE6522A8B3392009BACC5 /* MC3-kasihUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MC3-kasihUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihUITests.swift; sourceTree = "<group>"; };
 		04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C486FF492A94134A004112E9 /* Kasih.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kasih.xcdatamodel; sourceTree = "<group>"; };
+		C486FF942A94263F004112E9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C486FF962A94549F004112E9 /* BloodTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypeEnum.swift; sourceTree = "<group>"; };
+		C486FF9A2A9457E7004112E9 /* UserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserExtension.swift; path = "MC3-kasih/Datasources/Constants/UserExtension.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +102,12 @@
 		04DCE63A2A8B3392009BACC5 /* MC3-kasih */ = {
 			isa = PBXGroup;
 			children = (
+				04DCE63F2A8B3392009BACC5 /* Assets.xcassets */,
 				04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */,
 				04DCE63D2A8B3392009BACC5 /* ContentView.swift */,
-				04DCE63F2A8B3392009BACC5 /* Assets.xcassets */,
+				C486FF4E2A942280004112E9 /* Features */,
+				C486FF4D2A942277004112E9 /* Utilities */,
+				C486FF4B2A941352004112E9 /* Datasources */,
 				04DCE6412A8B3392009BACC5 /* Preview Content */,
 			);
 			path = "MC3-kasih";
@@ -125,6 +136,63 @@
 				04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */,
 			);
 			path = "MC3-kasihUITests";
+			sourceTree = "<group>";
+		};
+		C486FF4B2A941352004112E9 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF982A945793004112E9 /* Models */,
+				C486FF502A94229D004112E9 /* Constants */,
+				C486FF912A94253E004112E9 /* Repositories */,
+				C486FF482A94134A004112E9 /* Kasih.xcdatamodeld */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		C486FF4D2A942277004112E9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF942A94263F004112E9 /* CoreDataStack.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C486FF4E2A942280004112E9 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C486FF502A94229D004112E9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF962A94549F004112E9 /* BloodTypeEnum.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C486FF912A94253E004112E9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C486FF982A945793004112E9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF992A9457AA004112E9 /* Asi */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C486FF992A9457AA004112E9 /* Asi */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF9A2A9457E7004112E9 /* UserExtension.swift */,
+			);
+			path = Asi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
+				C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
+				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
+				C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +655,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C486FF482A94134A004112E9 /* Kasih.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C486FF492A94134A004112E9 /* Kasih.xcdatamodel */,
+			);
+			currentVersion = C486FF492A94134A004112E9 /* Kasih.xcdatamodel */;
+			path = Kasih.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 04DCE6302A8B3392009BACC5 /* Project object */;
 }
