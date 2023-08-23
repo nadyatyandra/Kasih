@@ -19,7 +19,7 @@ struct ASITersediaView: View {
             }
             
             ForEach(0 ..< 15) { item in
-                ASICardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Susi Susanti", distance: 3.0, status: "Kirim Permintaan")
+                ASICardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Susi Susanti", distance: 3.0)
             }
         }
         .sheet(isPresented: $rincianPermintaanSheet) {
