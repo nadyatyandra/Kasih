@@ -9,22 +9,27 @@ import SwiftUI
 
 struct DatePickerSheet: View {
     @Binding var isPickerVisible: Bool
-    @Binding var selectedDate: Date
+    @Binding var selectedDate: Date?
     var isPast: Bool = false
 
     var body: some View {
-        Group {
+        let nonOptionalDateBinding = Binding<Date>(
+            get: { selectedDate ?? Date() },
+            set: { selectedDate = $0 }
+        )
+
+        return Group {
             if isPast {
                 DatePicker(
                     "",
-                    selection: $selectedDate,
+                    selection: nonOptionalDateBinding,
                     in: ...Date(),
                     displayedComponents: .date
                 )
             } else {
                 DatePicker(
                     "",
-                    selection: $selectedDate,
+                    selection: nonOptionalDateBinding,
                     in: Date()...,
                     displayedComponents: .date
                 )

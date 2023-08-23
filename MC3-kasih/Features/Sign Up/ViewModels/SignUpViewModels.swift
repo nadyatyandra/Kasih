@@ -13,22 +13,28 @@ enum SignUpStep: String, CaseIterable {
     case biodata = "Biodata"
     case documentScreening = "Skrining Dokumen"
     case verification = "Verifikasi Resipien"
-    case finish = "Kamu berhasil mendaftar sebagai Resipien"
-
+    case finish = "Kamu berhasil mendaftar sebagai "
 }
 
 class SignUpViewModel: ObservableObject {
+    @Published var role: UserRoleEnum?
     @Published var name = ""
-    @Published var location = ""
-    @Published var phoneNumber = ""
     @Published var email = ""
-    @Published var dateOfBirth = Date()
-    @Published var sex = ""
+    @Published var phoneNumber = ""
+    @Published var city = ""
+
+    @Published var selfie: UIImage?
+    @Published var ktp: UIImage?
+
+    @Published var babyDOB: Date?
+    @Published var babyGender = ""
     @Published var religion = ""
     @Published var bloodType = ""
-    @Published var selfie: UIImage? = nil
-    @Published var ktp: UIImage? = nil
-    @Published var lifeStyle: [Chip] = [
+    @Published var lifestyle: [String] = []
+    @Published var needScreening: Bool?
+    @Published var recipientReason = ""
+
+    @Published var lifestyleChips: [Chip] = [
         Chip(value: "Halal", isSelected: false),
         Chip(value: "Produk Susu", isSelected: false),
         Chip(value: "Telur", isSelected: false),
@@ -50,11 +56,11 @@ class SignUpViewModel: ObservableObject {
     var isValidStep: Bool {
         switch steps[currentStepIndex] {
         case .biodata:
-            return !name.isEmpty && !location.isEmpty && !phoneNumber.isEmpty && !email.isEmpty
+            return !name.isEmpty && !email.isEmpty && !phoneNumber.isEmpty && !city.isEmpty
         case .documentScreening:
-            return selfie != nil && ktp != nil
+            return ktp != nil && selfie != nil
         case .verification:
-            return !sex.isEmpty && !religion.isEmpty && !bloodType.isEmpty
+            return babyDOB != nil && !babyGender.isEmpty && !religion.isEmpty && !bloodType.isEmpty && !lifestyle.isEmpty && needScreening != nil && recipientReason.isEmpty
         case .finish:
             return true
         }

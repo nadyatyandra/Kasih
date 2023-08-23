@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Religion: String, CaseIterable {
+enum ReligionEnum: String, CaseIterable {
     case katolik = "Katolik"
     case islam = "Islam"
     case protestan = "Protestan"
@@ -16,8 +16,8 @@ enum Religion: String, CaseIterable {
     case konghucu = "Konghucu"
 }
 
-extension Religion {
-    static func fromString(_ string: String?) -> Religion? {
-        return Religion(rawValue: string ?? "")
+extension ReligionEnum {
+    static func fromString(_ string: String?) -> ReligionEnum? {
+        return ReligionEnum(rawValue: string ?? "")
     }
 }

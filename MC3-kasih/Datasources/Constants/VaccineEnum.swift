@@ -9,7 +9,7 @@ import Foundation
 
 import Foundation
 
-enum Vaccine: String, CaseIterable {
+enum VaccineEnum: String, CaseIterable {
     case vaksin1 = "Vaksin 1"
     case vaksin2 = "Vaksin 2"
     case vaksin3 = "Vaksin 3"
@@ -18,8 +18,8 @@ enum Vaccine: String, CaseIterable {
     case booster3 = "Booster 3"
 }
 
-extension Vaccine {
-    static func fromString(_ string: String?) -> Vaccine? {
-        return Vaccine(rawValue: string ?? "")
+extension VaccineEnum {
+    static func fromString(_ string: String?) -> VaccineEnum? {
+        return VaccineEnum(rawValue: string ?? "")
     }
 }

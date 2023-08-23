@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpFormView: View {
-    @StateObject private var viewModel = SignUpViewModel()
+    @ObservedObject var viewModel: SignUpViewModel
     @Environment(\.dismiss) private var dismiss
     
     private var stepState: SignUpStep {
@@ -46,8 +46,7 @@ struct SignUpFormView: View {
                 Group {
                     switch stepState {
                     case .biodata:
-                        VerificationFormView(viewModel: viewModel)
-//                        BiodataFormView(viewModel: viewModel)
+                        BiodataFormView(viewModel: viewModel)
                     case .documentScreening:
                         SkriningFormView(viewModel: viewModel)
                     case .verification:
@@ -75,6 +74,6 @@ struct SignUpFormView: View {
 
 struct SignUpFormView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpFormView()
+        SignUpFormView(viewModel: SignUpViewModel())
     }
 }

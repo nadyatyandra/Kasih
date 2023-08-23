@@ -35,7 +35,7 @@ struct BiodataFormView: View {
             InputFieldWrapper(
                 label: "Lokasi",
                 inputField: AnyView(
-                    TextField("Lokasi", text: $viewModel.location)
+                    TextField("Lokasi", text: $viewModel.city)
                         .textFieldStyle(.app))
             )
         }

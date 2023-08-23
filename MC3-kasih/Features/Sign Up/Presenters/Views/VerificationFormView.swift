@@ -16,19 +16,19 @@ struct VerificationFormView: View {
             InputFieldWrapper(
                 label: "Tanggal lahir bayi",
                 inputField: AnyView(
-                    StaticTextField(value: viewModel.dateOfBirth.formattedString())
+                    StaticTextField(value: viewModel.babyDOB?.formattedString() ?? "")
                     {
                         showDatePicker.toggle()
                     }
                 )
             )
             .sheet(isPresented: $showDatePicker){
-                DatePickerSheet(isPickerVisible: $showDatePicker, selectedDate: $viewModel.dateOfBirth, isPast: true)
+                DatePickerSheet(isPickerVisible: $showDatePicker, selectedDate: $viewModel.babyDOB, isPast: true)
             }
             InputFieldWrapper(
                 label: "Gaya Hidup Donatur",
                 inputField: AnyView(
-                    ChipsWrapper(chips: viewModel.lifeStyle))
+                    ChipsWrapper(chips: viewModel.lifestyleChips))
             )
         }
     }

@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum Gender: String, CaseIterable {
+enum GenderEnum: String, CaseIterable {
     case male = "Laki-laki"
     case female = "Perempuan"
 }
 
-extension Gender {
-    static func fromString(_ string: String?) -> Gender? {
-        return Gender(rawValue: string ?? "")
+extension GenderEnum {
+    static func fromString(_ string: String?) -> GenderEnum? {
+        return GenderEnum(rawValue: string ?? "")
     }
 }

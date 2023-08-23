@@ -8,16 +8,28 @@
 import Foundation
 
 extension User {
+    var genderEnum: GenderEnum? {
+        GenderEnum.fromString(religion)
+    }
+
+    var religionEnum: ReligionEnum? {
+        ReligionEnum.fromString(religion)
+    }
+
+    var bloodTypeEnum: BloodTypeEnum? {
+        BloodTypeEnum.fromString(baby?.bloodType)
+    }
+
+    var vaccineEnum: VaccineEnum? {
+        VaccineEnum.fromString(vaksin)
+    }
+
     var asiList: [Asi] {
         asiSet?.allObjects as? [Asi] ?? []
     }
 
-    var bloodTypeEnum: BloodType? {
-        BloodType.fromString(baby?.bloodType)
-    }
-
-    var religionEnum: BloodType? {
-        BloodType.fromString(baby?.bloodType)
+    var lifestyleList: [Lifestyle] {
+        lifestyles?.allObjects as? [Lifestyle] ?? []
     }
 }
 

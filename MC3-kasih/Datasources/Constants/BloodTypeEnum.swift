@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BloodType: String, CaseIterable {
+enum BloodTypeEnum: String, CaseIterable {
     case typeA = "A"
     case typeB = "B"
     case typeAB = "AB"
@@ -22,8 +22,8 @@ enum BloodType: String, CaseIterable {
     case typeONegative = "O-"
 }
 
-extension BloodType {
-    static func fromString(_ string: String?) -> BloodType? {
-        return BloodType(rawValue: string ?? "")
+extension BloodTypeEnum {
+    static func fromString(_ string: String?) -> BloodTypeEnum? {
+        return BloodTypeEnum(rawValue: string ?? "")
     }
 }

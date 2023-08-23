@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BackButton: View {
-    let onTap : () -> ()
+    let onTap : () -> Void
 
     var body: some View {
         Button(action: onTap) {

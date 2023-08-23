@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StaticTextField: View {
     let value: String
-    let onTap: () -> ()
+    let onTap: () -> Void
 
     var body: some View {
         Text(value)
@@ -23,9 +23,7 @@ struct StaticTextField: View {
                 .stroke(Colors.ab200, lineWidth: 2)
             }
             .foregroundColor(Colors.ab500)
-            .onTapGesture {
-                onTap()
-            }
+            .onTapGesture(perform: onTap)
     }
 }
 
