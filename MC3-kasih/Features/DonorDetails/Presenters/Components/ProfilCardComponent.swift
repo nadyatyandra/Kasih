@@ -16,6 +16,14 @@ struct ProfilCardComponent: View {
             Group {
                 Text("Golongan Darah")
                     .typography(.baseBold())
+                ZStack {
+                    Capsule()
+                    Text("AB+")
+                        .typography(.small())
+                        .padding(.horizontal)
+                        .padding(.vertical, 4)
+                }
+                .fixedSize(horizontal: true, vertical: true)
                 Text("AB+")
                     .typography(.small())
                     .padding(.horizontal, 8)
