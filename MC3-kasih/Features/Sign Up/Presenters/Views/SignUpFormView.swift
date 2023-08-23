@@ -46,7 +46,8 @@ struct SignUpFormView: View {
                 Group {
                     switch stepState {
                     case .biodata:
-                        BiodataFormView(viewModel: viewModel)
+                        VerificationFormView(viewModel: viewModel)
+//                        BiodataFormView(viewModel: viewModel)
                     case .documentScreening:
                         SkriningFormView(viewModel: viewModel)
                     case .verification:

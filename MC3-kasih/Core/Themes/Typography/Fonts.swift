@@ -50,8 +50,8 @@ struct BaseTypography: ViewModifier {
     func body(content: Content) -> some View {
         content
             .fontWeight(type.weight)
-            .font(.system(size: type.size))
             .foregroundColor(type.defaultColor)
+            .font(.system(size: type.size))
     }
 }
 

@@ -9,13 +9,27 @@ import SwiftUI
 
 struct VerificationFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
+    @State private var showDatePicker = false
 
     var body: some View {
         VStack(spacing: 24) {
-            DatePicker("Date of Birth", selection: $viewModel.dateOfBirth, displayedComponents: .date)
-            TextField("Sex", text: $viewModel.sex)
-            TextField("Religion", text: $viewModel.religion)
-            TextField("Blood Type", text: $viewModel.bloodType)
+            InputFieldWrapper(
+                label: "Tanggal lahir bayi",
+                inputField: AnyView(
+                    StaticTextField(value: viewModel.dateOfBirth.formattedString())
+                    {
+                        showDatePicker.toggle()
+                    }
+                )
+            )
+            .sheet(isPresented: $showDatePicker){
+                DatePickerSheet(isPickerVisible: $showDatePicker, selectedDate: $viewModel.dateOfBirth, isPast: true)
+            }
+            InputFieldWrapper(
+                label: "Gaya Hidup Donatur",
+                inputField: AnyView(
+                    ChipsWrapper(chips: viewModel.lifeStyle))
+            )
         }
     }
 }

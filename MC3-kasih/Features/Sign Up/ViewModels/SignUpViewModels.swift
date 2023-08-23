@@ -28,6 +28,20 @@ class SignUpViewModel: ObservableObject {
     @Published var bloodType = ""
     @Published var selfie: UIImage? = nil
     @Published var ktp: UIImage? = nil
+    @Published var lifeStyle: [Chip] = [
+        Chip(value: "Halal", isSelected: false),
+        Chip(value: "Produk Susu", isSelected: false),
+        Chip(value: "Telur", isSelected: false),
+        Chip(value: "Gluten", isSelected: false),
+        Chip(value: "Vegan", isSelected: false),
+        Chip(value: "Vegetarian", isSelected: false),
+        Chip(value: "Kacang-kacangan", isSelected: false),
+        Chip(value: "Kafein", isSelected: false),
+        Chip(value: "Seafood", isSelected: false),
+        Chip(value: "Tempe dan Tahu", isSelected: false),
+        Chip(value: "Merokok", isSelected: false),
+        Chip(value: "Alkohol", isSelected: false),
+    ]
 
 
     let steps: [SignUpStep] = [.biodata, .documentScreening, .verification, .finish]

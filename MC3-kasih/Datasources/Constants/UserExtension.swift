@@ -9,6 +9,15 @@ import Foundation
 
 extension User {
     var asiList: [Asi] {
-        return  asiSet?.allObjects as? [Asi] ?? []
+        asiSet?.allObjects as? [Asi] ?? []
+    }
+
+    var bloodTypeEnum: BloodType? {
+        BloodType.fromString(baby?.bloodType)
+    }
+
+    var religionEnum: BloodType? {
+        BloodType.fromString(baby?.bloodType)
     }
 }
+
