@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Progress {
+enum ProgressEnum {
     case previous
     case current
     
@@ -27,7 +27,7 @@ enum Progress {
 }
 
 struct ProgressTypography: ViewModifier {
-    let progress: Progress
+    let progress: ProgressEnum
     
     func body(content: Content) -> some View {
         HStack(alignment: .firstTextBaseline) {
@@ -42,7 +42,7 @@ struct ProgressTypography: ViewModifier {
 }
 
 extension View {
-    func progressStatus(_ progress: Progress) -> some View {
+    func progressStatus(_ progress: ProgressEnum) -> some View {
         self.modifier(ProgressTypography(progress: progress))
     }
 }
