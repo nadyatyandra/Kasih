@@ -51,7 +51,7 @@ struct SignUpFormView: View {
             case .verification:
                 VerificationFormView(viewModel: viewModel)
             case .healthScreening:
-                SkriningFormView(viewModel: viewModel)
+                SkriningKesehatanView(viewModel: viewModel)
             case .finish:
                 FinishFormView(role: viewModel.role?.rawValue ?? "")
             }

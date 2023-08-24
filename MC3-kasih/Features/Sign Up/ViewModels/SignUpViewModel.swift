@@ -51,7 +51,6 @@ class SignUpViewModel: ObservableObject {
     @Published var drugs = ""
     @Published var donatorReason = ""
 
-
     @Published var lifestyleChips: [Chip] = [
         Chip(value: "Halal", isSelected: false),
         Chip(value: "Produk Susu", isSelected: false),
