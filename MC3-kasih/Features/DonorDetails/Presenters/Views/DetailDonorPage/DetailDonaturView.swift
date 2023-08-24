@@ -9,9 +9,11 @@ import SwiftUI
 
 struct DetailDonaturView: View {
     var body: some View {
-        VStack {
-            ProfilCardComponent()
-            ProfilCardComponent()
+        ScrollView {
+            VStack(spacing: 20) {
+                ProfilCardComponent()
+                ProfilCardComponent()
+            }
         }
     }
 }
