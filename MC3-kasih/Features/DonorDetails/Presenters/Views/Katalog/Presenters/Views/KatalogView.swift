@@ -9,6 +9,7 @@ import SwiftUI
 
 struct KatalogView: View {
     @StateObject var viewModel = KatalogViewModel(userRepo: UserRepository())
+    @State private var showPreferensiComponent: Bool = false
     @State private var showLocationPicker = false
     @State private var showTempUsers = false
 
@@ -103,6 +104,7 @@ struct KatalogView: View {
                         .typography(.heading2)
                     Spacer()
                     Button {
+                        showPreferensiComponent.toggle()
                     } label: {
                         HStack {
                             Image(systemName: "line.3.horizontal.decrease.circle")
@@ -132,6 +134,11 @@ struct KatalogView: View {
         }
         .navigationBarBackButtonHidden()
         .toolbar(.hidden)
+        .sheet(isPresented: $showPreferensiComponent) {
+            PreferensiComponent()
+                .presentationDetents([.medium, .large])
+                .padding()
+        }
     }
 }
 

@@ -27,6 +27,9 @@
 		04A0B8F92A94746F00B1E58B /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A0B8F82A94746F00B1E58B /* Nunito.ttf */; };
 		04C520352A97A6840060322B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C520342A97A6840060322B /* SignInViewModel.swift */; };
 		04C520372A97A6940060322B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C520362A97A6940060322B /* SignInView.swift */; };
+		04C520392A97BE130060322B /* PreferensiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C520382A97BE130060322B /* PreferensiComponent.swift */; };
+		04C5203B2A97C2380060322B /* PreferensiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5203A2A97C2380060322B /* PreferensiViewModel.swift */; };
+		04C5203D2A97C9080060322B /* KeperluanEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C5203C2A97C9080060322B /* KeperluanEnum.swift */; };
 		04D5FAA62A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */; };
 		04D5FAAB2A974ECE00063926 /* TambahASIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAAA2A974ECE00063926 /* TambahASIView.swift */; };
 		04D5FAAF2A97504A00063926 /* TambahASIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */; };
@@ -117,6 +120,9 @@
 		04A0B8FA2A9474AC00B1E58B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04C520342A97A6840060322B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		04C520362A97A6940060322B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		04C520382A97BE130060322B /* PreferensiComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreferensiComponent.swift; path = "MC3-kasih/Features/Sign In/Presenters/Views/PreferensiComponent.swift"; sourceTree = SOURCE_ROOT; };
+		04C5203A2A97C2380060322B /* PreferensiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferensiViewModel.swift; sourceTree = "<group>"; };
+		04C5203C2A97C9080060322B /* KeperluanEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeperluanEnum.swift; sourceTree = "<group>"; };
 		04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RincianPermintaanSheetComponentViewModel.swift; sourceTree = "<group>"; };
 		04D5FAAA2A974ECE00063926 /* TambahASIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahASIView.swift; sourceTree = "<group>"; };
 		04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahASIViewModel.swift; sourceTree = "<group>"; };
@@ -557,6 +563,7 @@
 				C486FFDB2A962E14004112E9 /* GenderEnum.swift */,
 				C486FFDD2A962E53004112E9 /* VaccineEnum.swift */,
 				C486FFE32A963AE0004112E9 /* UserRoleEnum.swift */,
+				04C5203C2A97C9080060322B /* KeperluanEnum.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -728,6 +735,7 @@
 			isa = PBXGroup;
 			children = (
 				C4FB5D152A979D5C0052C349 /* KatalogViewModel.swift */,
+				04C5203A2A97C2380060322B /* PreferensiViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -744,6 +752,7 @@
 		C4FB5D142A979D490052C349 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				04C520382A97BE130060322B /* PreferensiComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -883,6 +892,7 @@
 				C4FB5D092A97526E0052C349 /* UserRepository.swift in Sources */,
 				C486FFAD2A94BC50004112E9 /* SignUpStepper.swift in Sources */,
 				C486FFBD2A94F365004112E9 /* AppTextFieldStyle.swift in Sources */,
+				04C520392A97BE130060322B /* PreferensiComponent.swift in Sources */,
 				C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */,
 				C486FFA92A94BBB5004112E9 /* VerificationFormView.swift in Sources */,
 				C486FFE82A96516F004112E9 /* RoleOptionCard.swift in Sources */,
@@ -907,6 +917,7 @@
 				C486FFDE2A962E53004112E9 /* VaccineEnum.swift in Sources */,
 				C4FB5D162A979D5C0052C349 /* KatalogViewModel.swift in Sources */,
 				C486FFE42A963AE0004112E9 /* UserRoleEnum.swift in Sources */,
+				04C5203B2A97C2380060322B /* PreferensiViewModel.swift in Sources */,
 				C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */,
 				04D5FAAB2A974ECE00063926 /* TambahASIView.swift in Sources */,
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
@@ -915,6 +926,7 @@
 				040795052A96F81A00718B3F /* RiwayatComponent.swift in Sources */,
 				C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */,
 				C486FFCF2A96072B004112E9 /* StaticTextField.swift in Sources */,
+				04C5203D2A97C9080060322B /* KeperluanEnum.swift in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
 				04667A682A96693D008E333D /* Progress.swift in Sources */,
 				04C520372A97A6940060322B /* SignInView.swift in Sources */,
