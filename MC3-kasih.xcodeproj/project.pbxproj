@@ -28,6 +28,7 @@
 		04D5FAA62A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */; };
 		04D5FAAB2A974ECE00063926 /* TambahASIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAAA2A974ECE00063926 /* TambahASIView.swift */; };
 		04D5FAAF2A97504A00063926 /* TambahASIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */; };
+		04D5FAB12A975D1F00063926 /* SkriningKesehatanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAB02A975D1F00063926 /* SkriningKesehatanView.swift */; };
 		04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */; };
 		04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63D2A8B3392009BACC5 /* ContentView.swift */; };
 		04DCE6402A8B3392009BACC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE63F2A8B3392009BACC5 /* Assets.xcassets */; };
@@ -113,6 +114,7 @@
 		04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RincianPermintaanSheetComponentViewModel.swift; sourceTree = "<group>"; };
 		04D5FAAA2A974ECE00063926 /* TambahASIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahASIView.swift; sourceTree = "<group>"; };
 		04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahASIViewModel.swift; sourceTree = "<group>"; };
+		04D5FAB02A975D1F00063926 /* SkriningKesehatanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkriningKesehatanView.swift; sourceTree = "<group>"; };
 		04DCE6382A8B3392009BACC5 /* MC3-kasih.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-kasih.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihApp.swift; sourceTree = "<group>"; };
 		04DCE63D2A8B3392009BACC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -579,6 +581,7 @@
 				C486FFA42A94BB0F004112E9 /* BiodataFormView.swift */,
 				C486FFA62A94BB74004112E9 /* SkriningFormView.swift */,
 				C486FFA82A94BBB5004112E9 /* VerificationFormView.swift */,
+				04D5FAB02A975D1F00063926 /* SkriningKesehatanView.swift */,
 				C486FFBA2A94E51F004112E9 /* FinishFormView.swift */,
 			);
 			path = Views;
@@ -821,6 +824,7 @@
 				C486FFD82A960D98004112E9 /* Chip.swift in Sources */,
 				C486FFDC2A962E14004112E9 /* GenderEnum.swift in Sources */,
 				04D5FAA62A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift in Sources */,
+				04D5FAB12A975D1F00063926 /* SkriningKesehatanView.swift in Sources */,
 				C486FFB22A94BDBB004112E9 /* StepDivider.swift in Sources */,
 				C486FFC52A951193004112E9 /* ScreeningImagePicker.swift in Sources */,
 				048AAF522A94E25A00B4652C /* RiwayatView.swift in Sources */,

@@ -40,7 +40,8 @@ class SignUpViewModel: ObservableObject {
     @Published var vacinne: VaccineEnum = .none
     @Published var donatorReason = ""
     @Published var drugs = ""
-
+    
+    @Published var isScreening: Bool = false
 
     @Published var lifestyleChips: [Chip] = [
         Chip(value: "Halal", isSelected: false),
