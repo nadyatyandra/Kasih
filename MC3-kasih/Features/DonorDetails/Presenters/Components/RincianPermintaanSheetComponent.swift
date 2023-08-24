@@ -8,42 +8,55 @@
 import SwiftUI
 
 struct RincianPermintaanSheetComponent: View {
+    @StateObject var viewModel = RincianPermintaanSheetComponentViewModel()
+    @State private var showJumlahProdukPicker = false
+    @State private var showTanggalPengambilanPicker = false
+    
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(spacing: 24) {
             Text("Rincian Permintaan")
                 .typography(.large)
-            Group {
-                Text("Jumlah Produk")
-                    .typography(.baseBold)
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(Colors.white)
-                    .border(Colors.ab500)
-                    .frame(width: 324, height: 25)
-                    .cornerRadius(12)
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            InputFieldWrapper(
+                label: "Jumlah Produk",
+                inputField: AnyView(
+                    StaticTextField(value: viewModel.jumlahProdukString())
+                    {
+                        showJumlahProdukPicker.toggle()
+                    }
+                )
+            )
+            .sheet(isPresented: $showJumlahProdukPicker){
+                Picker("Jumlah Produk", selection: $viewModel.jumlahProduk) {
+                    ForEach(0 ..< 10) { number in
+                        Text("\(number)")
+                            .tag(number)
+                    }
+                }
+                .appWheelPicker()
             }
-            Group {
-                Text("Tanggal Pengambilan")
-                    .typography(.baseBold)
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(Colors.white)
-                    .border(Colors.ab500)
-                    .frame(width: 324, height: 25)
-                    .cornerRadius(12)
+
+            InputFieldWrapper(
+                label: "Tanggal Pengambilan",
+                inputField: AnyView(
+                    StaticTextField(value: viewModel.tanggalPengambilan?.formattedString() ?? "")
+                    {
+                        showTanggalPengambilanPicker.toggle()
+                    }
+                )
+            )
+            .sheet(isPresented: $showTanggalPengambilanPicker){
+                DatePickerSheet(isPickerVisible: $showTanggalPengambilanPicker, selectedDate: $viewModel.tanggalPengambilan)
             }
-            Group {
-                Text("Waktu Pengambilan")
-                    .typography(.baseBold)
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(Colors.white)
-                    .border(Colors.ab500)
-                    .frame(width: 324, height: 25)
-                    .cornerRadius(12)
+            Button("Kirim Permintaan") {
+                
             }
-            Button("Kirim Permintaan") {}
-                .fixedSize(horizontal: false, vertical: true)
-                .buttonStyle(.appPrimary)
+            .disabled(!viewModel.isValidStep)
+            .fixedSize(horizontal: false, vertical: true)
+            .buttonStyle(viewModel.isValidStep ? .appPrimary : .appPrimaryDisable)
+            .padding(.top)
         }
-        .padding()
     }
 }
 

@@ -10,13 +10,16 @@ import SwiftUI
 struct ChipComponent: View {
     let value: String
     @State var isSelected: Bool
-
+    var isDisabled: Bool = false
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .stroke(Colors.ab500, lineWidth: 1.5)
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .fill(isSelected ? Colors.ab500 : Colors.white)
+            if !isDisabled {
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(isSelected ? Colors.ab500 : Colors.white)
+            }
             Text(value)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
@@ -26,7 +29,9 @@ struct ChipComponent: View {
         }
         .fixedSize()
         .onTapGesture {
-            isSelected.toggle()
+            if !isDisabled {
+                isSelected.toggle()
+            }
         }
     }
 }

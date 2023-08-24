@@ -70,14 +70,16 @@ struct VerificationFormView: View {
                 InputFieldWrapper(
                     label: "Gaya Hidup \(isDonator ? "" : "Donatur")",
                     inputField: AnyView(
-                        ChipsWrapper(alignment: .leading) {
-                            ForEach(viewModel.lifestyleChips) { data in
-                                ChipComponent(value: data.value, isSelected: data.isSelected)
+                        HStack {
+                            ChipsWrapper(alignment: .leading) {
+                                ForEach(viewModel.lifestyleChips) { data in
+                                    ChipComponent(value: data.value, isSelected: data.isSelected)
+                                }
                             }
+                            Spacer()
                         }
                     )
                 )
-                .offset(x: -5)
 
                 if isDonator {
                     InputFieldWrapper(

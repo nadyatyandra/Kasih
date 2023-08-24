@@ -24,28 +24,38 @@ struct ASICardComponent: View {
                 .cornerRadius(4)
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text("\(Int(quantity)) Kantong (\(Int(pouchSize))mL)")
+                    Text("\(Int(quantity)) Kantong")
                         .typography(.baseBold)
+                    Text("Ukuran \(Int(pouchSize))mL")
+                        .typography(.smallBold)
                     Text("Produksi \(dateProd)")
                         .typography(.small)
                     Spacer()
-                    if user == nil {
-                        Button {
-                            
-                        } label: {
-                            Text("Kirim Permintaan")
-                                .foregroundColor(Colors.white)
-                                .typography(.small)
-                                .background(Colors.pp400)
-                                .cornerRadius(4)
-                                .padding(.top, 2)
-                        }
-                    }
                 }
                 Spacer()
                 if let distance = distance {
                     Text("\(Int(distance))km")
                         .typography(.small)
+                }
+                if user == nil {
+                    VStack {
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 8)
+                                    .foregroundColor(Colors.ab500)
+                                Image(systemName: "plus")
+                                    .font(.system(size: 24))
+                                    .foregroundColor(Colors.white)
+                                    .padding(4)
+                            }
+                            .fixedSize()
+                        }
+                        Spacer()
+                    }
+                    .padding(8)
                 }
             }
             .padding(.leading, 16)

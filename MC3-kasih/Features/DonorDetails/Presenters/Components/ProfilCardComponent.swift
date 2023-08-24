@@ -9,91 +9,71 @@ import SwiftUI
 
 struct ProfilCardComponent: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Profil Ibu")
-                .typography(.large)
-                .padding(.bottom, 2)
-            VStack {
-                Text("Golongan Darah")
-                    .typography(.baseBold)
-                ZStack {
-                    Capsule()
-                    Text("AB+")
-                        .typography(.small)
-                        .padding(.horizontal)
-                        .padding(.vertical, 4)
+        ZStack {
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .stroke(Colors.ab500, lineWidth: 1)
+            VStack(alignment: .leading) {
+                Text("Profil Ibu")
+                    .typography(.large)
+                    .padding(.bottom, 2)
+                VStack(alignment: .leading) {
+                    Text("Golongan Darah")
+                        .typography(.baseBold)
+                    HStack {
+                        ChipComponent(value: "AB+", isSelected: false, isDisabled: true)
+                        Spacer()
+                    }
+                    .offset(y: -8)
                 }
-                .fixedSize(horizontal: true, vertical: true)
-                Text("AB+")
-                    .typography(.small)
-                    .padding(.horizontal, 8)
-                    .background(Colors.white)
-                    .border(Colors.ab500)
-                    .cornerRadius(16)
-            }
-            VStack {
-                Text("Agama")
-                    .typography(.baseBold)
-                Text("Katolik")
-                    .typography(.small)
-                    .padding(.horizontal, 8)
-                    .background(Colors.white)
-                    .border(Colors.ab500)
-                    .cornerRadius(16)
-            }
-            VStack {
-                Text("Gaya Hidup")
-                    .typography(.baseBold)
-                HStack {
-                    Text("Kacang-kacangan")
-                        .typography(.small)
-                        .padding(.horizontal, 8)
-                        .background(Colors.white)
-                        .border(Colors.ab500)
-                        .cornerRadius(16)
-                    Text("Gluten")
-                        .typography(.small)
-                        .padding(.horizontal, 8)
-                        .background(Colors.white)
-                        .border(Colors.ab500)
-                        .cornerRadius(16)
-                    Text("Seafood")
-                        .typography(.small)
-                        .padding(.horizontal, 8)
-                        .background(Colors.white)
-                        .border(Colors.ab500)
-                        .cornerRadius(16)
-                    Text("Merokok")
-                        .typography(.small)
-                        .padding(.horizontal, 8)
-                        .background(Colors.white)
-                        .border(Colors.ab500)
-                        .cornerRadius(16)
+                VStack(alignment: .leading) {
+                    Text("Agama")
+                        .typography(.baseBold)
+                    HStack {
+                        ChipComponent(value: "Katolik", isSelected: false, isDisabled: true)
+                        Spacer()
+                    }
+                    .offset(y: -8)
+                }
+                VStack(alignment: .leading) {
+                    Text("Gaya Hidup")
+                        .typography(.baseBold)
+                    HStack {
+                        ChipsWrapper(alignment: .leading) {
+                            ForEach(0 ..< 5) { data in
+                                ChipComponent(value: "Kacang-kacangan", isSelected: false, isDisabled: true)
+                            }
+                        }
+                        Spacer()
+                    }
+                    .offset(y: -8)
+                }
+                VStack(alignment: .leading) {
+                    Text("Obat dan Suplemen")
+                        .typography(.baseBold)
+                    Text("Vitamin C, Paracetamol, ASI Booster")
+                        .typography(.base)
+                        .padding(.bottom, 2)
+                }
+                VStack(alignment: .leading) {
+                    Text("Alasan Mendonor")
+                        .typography(.baseBold)
+                    Text("Produksi ASI berlebih dan kulkas penuh")
+                        .typography(.base)
+                        .padding(.bottom, 2)
                 }
             }
-            VStack {
-                Text("Obat dan Suplemen")
-                    .typography(.baseBold)
-                Text("Vitamin C, Paracetamol, ASI Booster")
-                    .typography(.small)
-                    .padding(.bottom, 2)
-            }
-            VStack {
-                Text("Alasan Mendonor")
-                    .typography(.baseBold)
-                Text("Produksi ASI berlebih dan kulkas penuh")
-                    .typography(.small)
-                    .padding(.bottom, 2)
-            }
+            .padding(16)
         }
         .background(Colors.white)
-        .cornerRadius(8)
-        .shadow(radius: 16)
+        .fixedSize(horizontal: false, vertical: true)
     }
 }
 
 struct ProfilCardComponent_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilCardComponent()
+        VStack {
+            ProfilCardComponent()
+        }
     }
 }
+

@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct ASITersediaView: View {
-    @State var rincianPermintaanSheet: Bool = false
+    @State var showRincianPermintaanSheet: Bool = false
     
     var body: some View {
-        VStack {
-            Button {
-                rincianPermintaanSheet = true
-            } label: {
-                Text("placeholder button")
+        ScrollView {
+            VStack {
+                Button {
+                    showRincianPermintaanSheet = true
+                } label: {
+                    Text("placeholder button")
+                }
+                ForEach(0 ..< 15) { item in
+                    ASICardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Susi Susanti", distance: 3.0)
+                }
             }
-            
-            ForEach(0 ..< 15) { item in
-                ASICardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Susi Susanti", distance: 3.0)
+            .sheet(isPresented: $showRincianPermintaanSheet) {
+                RincianPermintaanSheetComponent()
+                    .presentationDetents([.medium])
+                    .padding()
             }
-        }
-        .sheet(isPresented: $rincianPermintaanSheet) {
-            RincianPermintaanSheetComponent()
         }
     }
 }

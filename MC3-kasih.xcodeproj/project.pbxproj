@@ -26,6 +26,7 @@
 		04A0B8F52A94707F00B1E58B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0B8F42A94707F00B1E58B /* Colors.swift */; };
 		04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0B8F62A9473D500B1E58B /* Fonts.swift */; };
 		04A0B8F92A94746F00B1E58B /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A0B8F82A94746F00B1E58B /* Nunito.ttf */; };
+		04D5FAA62A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */; };
 		04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */; };
 		04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63D2A8B3392009BACC5 /* ContentView.swift */; };
 		04DCE6402A8B3392009BACC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE63F2A8B3392009BACC5 /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		04A0B8F62A9473D500B1E58B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		04A0B8F82A94746F00B1E58B /* Nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nunito.ttf; sourceTree = "<group>"; };
 		04A0B8FA2A9474AC00B1E58B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RincianPermintaanSheetComponentViewModel.swift; sourceTree = "<group>"; };
 		04DCE6382A8B3392009BACC5 /* MC3-kasih.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-kasih.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihApp.swift; sourceTree = "<group>"; };
 		04DCE63D2A8B3392009BACC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 		04A0B8E82A946EB200B1E58B /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -435,7 +438,6 @@
 		C486FF4D2A942277004112E9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				C486FFC32A95112A004112E9 /* Picker */,
 				04A0B8EF2A946FE600B1E58B /* CoreData */,
 			);
 			path = Utilities;
@@ -598,6 +600,7 @@
 		C486FFEF2A96FEFD004112E9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C486FFC32A95112A004112E9 /* Picker */,
 				C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */,
 				C486FFCC2A9604B5004112E9 /* DatePickerSheet.swift */,
 				C486FFCE2A96072B004112E9 /* StaticTextField.swift */,
@@ -773,6 +776,7 @@
 				04667A682A96693D008E333D /* Progress.swift in Sources */,
 				C486FFD82A960D98004112E9 /* Chip.swift in Sources */,
 				C486FFDC2A962E14004112E9 /* GenderEnum.swift in Sources */,
+				04D5FAA62A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift in Sources */,
 				C486FFB22A94BDBB004112E9 /* StepDivider.swift in Sources */,
 				C486FFC52A951193004112E9 /* ScreeningImagePicker.swift in Sources */,
 				048AAF522A94E25A00B4652C /* RiwayatView.swift in Sources */,
