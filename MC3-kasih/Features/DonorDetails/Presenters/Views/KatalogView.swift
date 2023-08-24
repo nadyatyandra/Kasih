@@ -90,7 +90,9 @@ struct KatalogView: View {
                 .padding(.top, 32)
                 ScrollView {
                     ForEach(0 ..< 15) { item in
-                        ASICardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Susi Susanti", distance: 3.0)
+                        NavigationLink(destination: DetailDonorView()) {
+                            ASICardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Susi Susanti", distance: 3.0)
+                        }
                     }
                 }
                 Spacer()

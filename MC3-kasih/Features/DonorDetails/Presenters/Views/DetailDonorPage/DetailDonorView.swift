@@ -60,6 +60,8 @@ struct DetailDonorView: View {
             }
             .padding(.horizontal)
         }
+        .navigationBarBackButtonHidden()
+        .toolbar(.hidden)
     }
 }
 

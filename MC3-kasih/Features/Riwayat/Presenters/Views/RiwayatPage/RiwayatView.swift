@@ -60,12 +60,6 @@ struct RiwayatView: View {
                 }
             }
             .padding(.horizontal, 16)
-            GeometryReader { geometry in
-                Rectangle()
-                    .foregroundColor(Colors.pp300)
-                    .frame(width: .infinity, height: geometry.size.height)
-                    .offset(y: geometry.size.height * 0.99)
-            }
         }
     }
 }
