@@ -57,7 +57,7 @@ struct KatalogView: View {
                         }
                     }
                     Spacer()
-                    NavigationLink(destination: SelectUserRoleView()) {
+                    NavigationLink(destination: SignInView(viewModel: SignInViewModel())) {
                         Image(systemName: "person.crop.circle")
                             .font(.system(size: 40))
                             .foregroundColor(Colors.ab500)

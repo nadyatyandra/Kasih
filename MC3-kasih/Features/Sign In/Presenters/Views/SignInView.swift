@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignInView: View {
-    @ObservedObject var viewModel: SignInViewModel
+    @StateObject var viewModel: SignInViewModel
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -54,11 +54,12 @@ struct SignInView: View {
                     }
                     Spacer()
                 }
-                Button("Daftar") {}
-                    .disabled(!viewModel.isValidStep)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .buttonStyle(viewModel.isValidStep ? .appPrimary : .appPrimaryDisable)
-                    .padding(.top)
+                NavigationLink(destination: SelectUserRoleView()) {
+                    Text("Daftar")
+                }
+                .fixedSize(horizontal: false, vertical: true)
+                .buttonStyle(.appPrimary)
+                .padding(.top)
                 HStack {
                     Text("Sudah punya akun?")
                         .typography(.smallBold)
@@ -103,6 +104,8 @@ struct SignInView: View {
             }
             .padding(.horizontal)
         }
+        .navigationBarBackButtonHidden()
+        .toolbar(.hidden)
     }
 }
 
