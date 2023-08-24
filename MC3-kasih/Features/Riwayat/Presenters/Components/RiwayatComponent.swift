@@ -15,7 +15,7 @@ struct RiwayatComponent: View {
             Collapsible(
                 label: {
                     AnyView(
-                        SmallExpandableRiwayatCardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Putri Marino")
+                        SmallExpandableRiwayatCardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Putri Marino", status: "Menunggu Persetujuan")
                     )
                 }(),
                 content: {

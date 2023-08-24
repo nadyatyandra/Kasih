@@ -9,7 +9,6 @@ import SwiftUI
 
 struct KatalogView: View {
     @StateObject var viewModel = KatalogViewModel(userRepo: UserRepository())
-    @State private var showPreferensiComponent: Bool = false
     @State private var showLocationPicker = false
     @State private var showTempUsers = false
 
@@ -103,9 +102,7 @@ struct KatalogView: View {
                     Text("Donatur ASI")
                         .typography(.heading2)
                     Spacer()
-                    Button {
-                        showPreferensiComponent.toggle()
-                    } label: {
+                    NavigationLink(destination: PreferensiComponent()) {
                         HStack {
                             Image(systemName: "line.3.horizontal.decrease.circle")
                                 .foregroundColor(Colors.white)
@@ -114,11 +111,11 @@ struct KatalogView: View {
                                 .foregroundColor(Colors.white)
                                 .typography(.small)
                         }
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 2)
-                        .background(Colors.ab500)
-                        .cornerRadius(18)
                     }
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 2)
+                    .background(Colors.ab500)
+                    .cornerRadius(18)
                 }
                 .padding(.top, 32)
                 ScrollView {
@@ -134,11 +131,6 @@ struct KatalogView: View {
         }
         .navigationBarBackButtonHidden()
         .toolbar(.hidden)
-        .sheet(isPresented: $showPreferensiComponent) {
-            PreferensiComponent()
-                .presentationDetents([.medium, .large])
-                .padding()
-        }
     }
 }
 

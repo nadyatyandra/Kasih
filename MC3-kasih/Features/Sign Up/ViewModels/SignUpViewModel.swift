@@ -78,14 +78,11 @@ class SignUpViewModel: ObservableObject {
     var isValidStep: Bool {
         switch signUpStep[currentStepIndex] {
         case .biodata:
-//            return !name.isEmpty && !email.isEmpty && !phoneNumber.isEmpty && city != .none
-            return true
+            return !name.isEmpty && !email.isEmpty && !phoneNumber.isEmpty && city != .none
         case .documentScreening:
-//            return ktp != nil && selfie != nil
-            return true
+            return ktp != nil && selfie != nil
         case .verification:
-//            return babyDOB != nil && babyGender != .none && religion != .none && bloodType != .none && (role == .donator ? (babyBirthWeek != 0 && babyWeight != 0.0 && vacinne != .none) : true)
-            return true
+            return babyDOB != nil && babyGender != .none && religion != .none && bloodType != .none && (role == .donator ? (babyBirthWeek != 0 && babyWeight != 0.0 && vacinne != .none) : true)
         case .healthScreening:
             return true
         case .finish:

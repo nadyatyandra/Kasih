@@ -94,7 +94,7 @@ struct VerificationFormView: View {
                         )
                     )
                     .sheet(isPresented: $showVaccinePicker){
-                        Picker("Vaksin COVID", selection: $viewModel.bloodType) {
+                        Picker("Vaksin COVID", selection: $viewModel.vacinne) {
                             ForEach(VaccineEnum.toList(), id: \.self) { vaccine in
                                 Text(vaccine.rawValue)
                                     .tag(vaccine)
