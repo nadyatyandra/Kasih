@@ -10,6 +10,7 @@ import SwiftUI
 struct AppButtonStyle: ButtonStyle {
     var isSecondary: Bool = false
     var isDisable: Bool = false
+    var isMedium: Bool = false
 
     private var backgroundColor: Color {
         return isSecondary ? Colors.white : (isDisable ? Color(uiColor: .systemGray4) : Colors.pp400)
@@ -18,7 +19,25 @@ struct AppButtonStyle: ButtonStyle {
     private var foregroundColor: Color {
         return isSecondary ? (isDisable ? Color(uiColor: .systemGray4) : Colors.pp400) : Colors.white
     }
+    
+    func getPadding() -> CGFloat {
+        if isMedium {
+            return 6.0
+        }
+        else {
+            return 12.0
+        }
+    }
 
+    func getFontSize() -> TypographyStyle {
+        if isMedium {
+            return .baseBold
+        }
+        else {
+            return .large
+        }
+    }
+    
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 8, style: .continuous)
@@ -28,10 +47,10 @@ struct AppButtonStyle: ButtonStyle {
 
             configuration.label
                 .foregroundColor(foregroundColor)
-                .typography(.large)
+                .typography(getFontSize())
                 .opacity(configuration.isPressed && !isDisable ? 0.4 : 1)
                 .animation(.easeInOut(duration: 0), value: configuration.isPressed)
-                .padding(.vertical, 12)
+                .padding(.vertical, getPadding())
                 .padding(.horizontal)
         }
     }

@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+func asd() {
+    
+}
+
 struct BigExpandableRiwayatCardComponent: View {
     var asiImg: String
     var quantity: Double
@@ -16,9 +20,34 @@ struct BigExpandableRiwayatCardComponent: View {
     var status: String?
     
     var body: some View {
+        VStack(spacing: 16) {
             Text("Permintaan Masuk, 3 Agustus 2023")
                 .progressStatus(.previous)
                 .frame(maxWidth: .infinity, alignment: .leading)
+            
+            VStack {
+                Button(action: {}) {
+                    HStack {
+                        Image("iconWhatsApp")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 25, height: 25)
+                        Text("Hubungi melalui WhatsApp")
+                    }
+                }
+                .fixedSize(horizontal: false, vertical: true)
+                .buttonStyle(AppButtonStyle(isMedium: true))
+                
+                Button("Selesai") {}
+                    .fixedSize(horizontal: false, vertical: true)
+                    .buttonStyle(AppButtonStyle(isMedium: true))
+                Button("Lapor") {}
+                    .fixedSize(horizontal: false, vertical: true)
+                    .buttonStyle(AppButtonStyle(isSecondary: true, isMedium: true))
+            }
+            .padding(.horizontal, 8)
+            .padding(.vertical, 2)
+        }
     }
 }
 

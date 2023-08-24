@@ -39,16 +39,11 @@ struct RincianPermintaanSheetComponent: View {
                     .frame(width: 324, height: 25)
                     .cornerRadius(12)
             }
-            Button {
-                
-            } label: {
-                Text("Kirim Permintaan")
-                    .foregroundColor(Colors.white)
-                    .typography(.large)
-                    .background(Colors.pp400)
-                    .cornerRadius(8)
-            }
+            Button("Kirim Permintaan") {}
+                .fixedSize(horizontal: false, vertical: true)
+                .buttonStyle(.appPrimary)
         }
+        .padding()
     }
 }
 
