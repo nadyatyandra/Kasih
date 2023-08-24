@@ -9,9 +9,8 @@ import SwiftUI
 
 struct SignUpFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
-    @State private var isComplete = false
-
     @Environment(\.dismiss) private var dismiss
+    @State private var navigate = false
     
     private var stepState: SignUpStep {
         viewModel.signUpStep[viewModel.currentStepIndex]
@@ -60,8 +59,9 @@ struct SignUpFormView: View {
             Button(isFinish ? "Selesai" : "Selanjutnya") {
                 viewModel.nextStep()
 
-                if isFinish {
-                    isComplete.toggle()
+                if viewModel.isCompleted {
+                    print("FINISH")
+                    navigate.toggle()
                 }
             }
             .disabled(!viewModel.isValidStep)
@@ -69,8 +69,7 @@ struct SignUpFormView: View {
             .buttonStyle(viewModel.isValidStep ? .appPrimary : .appPrimaryDisable)
             .padding(.top)
 
-            NavigationLink(destination: KatalogView(), isActive: $isComplete){}
-
+            NavigationLink(destination: KatalogView(), isActive: $navigate){}
         }
         .padding()
         .navigationBarBackButtonHidden()
@@ -80,6 +79,6 @@ struct SignUpFormView: View {
 
 struct SignUpFormView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpFormView(viewModel: SignUpViewModel())
+        SignUpFormView(viewModel: SignUpViewModel(userRepo: UserRepository()))
     }
 }

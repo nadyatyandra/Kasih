@@ -23,11 +23,11 @@ struct SkriningKesehatanView: View {
                 Text("dalam format JPEG, ZIP, atau PDF")
                     .typography(.base)
                 Button("Unggah Dokumen") {
-                    viewModel.isScreening.toggle()
+                    viewModel.isScreened.toggle()
                 }
                 .buttonStyle(.appSecondary)
                 .padding(.vertical)
-                if viewModel.isScreening {
+                if viewModel.isScreened {
                     ForEach(files, id: \.self) { file in
                         ZStack {
                             RoundedRectangle(cornerRadius: 8, style: .continuous)
@@ -54,6 +54,6 @@ struct SkriningKesehatanView: View {
 
 struct SkriningKesehatanView_Previews: PreviewProvider {
     static var previews: some View {
-        SkriningKesehatanView(viewModel: SignUpViewModel())
+        SkriningKesehatanView(viewModel: SignUpViewModel(userRepo: UserRepository()))
     }
 }

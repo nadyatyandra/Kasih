@@ -11,6 +11,7 @@ struct ChipComponent: View {
     let value: String
     @State var isSelected: Bool
     var isDisabled: Bool = false
+    var onTap: () -> Void
     
     var body: some View {
         ZStack {
@@ -31,6 +32,7 @@ struct ChipComponent: View {
         .onTapGesture {
             if !isDisabled {
                 isSelected.toggle()
+                onTap()
             }
         }
     }
@@ -38,6 +40,6 @@ struct ChipComponent: View {
 
 struct Chip_Previews: PreviewProvider {
     static var previews: some View {
-        ChipComponent(value: "Halo", isSelected: true)
+        ChipComponent(value: "Halo", isSelected: true){}
     }
 }

@@ -44,6 +44,6 @@ struct SkriningFormView: View {
 
 struct SkriningForm_Previews: PreviewProvider {
     static var previews: some View {
-        SkriningFormView(viewModel: SignUpViewModel())
+        SkriningFormView(viewModel: SignUpViewModel(userRepo: UserRepository()))
     }
 }

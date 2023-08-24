@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectUserRoleView: View {
-    @StateObject private var viewModel = SignUpViewModel()
+    @StateObject private var viewModel = SignUpViewModel(userRepo: UserRepository())
     @State private var showRoleSheet = false
     @State private var selectedRole: UserRoleEnum = .donator
     @State private var isLanjut = false

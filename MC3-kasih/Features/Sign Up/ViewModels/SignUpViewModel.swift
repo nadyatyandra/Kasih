@@ -18,30 +18,38 @@ enum SignUpStep: String, CaseIterable {
 }
 
 class SignUpViewModel: ObservableObject {
+    private let userRepo: UserRepository
+
+    init(userRepo: UserRepository) {
+        self.userRepo = userRepo
+    }
+
     @Published var role: UserRoleEnum?
     @Published var name = ""
     @Published var email = ""
     @Published var phoneNumber = ""
-    @Published var city = ""
+    @Published var city: CityEnum = .none
 
-    @Published var selfie: UIImage?
     @Published var ktp: UIImage?
+    @Published var selfie: UIImage?
 
     @Published var babyDOB: Date?
-    @Published var babyBirthWeek: Int = 0
-    @Published var babyWeight: Double = 0.0
     @Published var babyGender: GenderEnum = .none
+
     @Published var religion: ReligionEnum = .none
     @Published var bloodType: BloodTypeEnum = .none
     @Published var lifestyle: [String] = []
-    
+
+    // Recipient only
     @Published var recipientReason = ""
 
+    // Donator only
+    @Published var babyBirthWeek: Int = 0
+    @Published var babyWeight: Double = 0.0
+    @Published var isScreened: Bool = false
     @Published var vacinne: VaccineEnum = .none
-    @Published var donatorReason = ""
     @Published var drugs = ""
-    
-    @Published var isScreening: Bool = false
+    @Published var donatorReason = ""
 
     @Published var lifestyleChips: [Chip] = [
         Chip(value: "Halal", isSelected: false),
@@ -58,6 +66,7 @@ class SignUpViewModel: ObservableObject {
         Chip(value: "Alkohol", isSelected: false),
     ]
 
+    @Published var isCompleted = false
 
     var signUpStep: [SignUpStep] {
         return [.biodata, .documentScreening, .verification] + (role == .recipient ? [] : [.healthScreening]) + [.finish]
@@ -69,13 +78,13 @@ class SignUpViewModel: ObservableObject {
     var isValidStep: Bool {
         switch signUpStep[currentStepIndex] {
         case .biodata:
-//            return !name.isEmpty && !email.isEmpty && !phoneNumber.isEmpty && !city.isEmpty
+//            return !name.isEmpty && !email.isEmpty && !phoneNumber.isEmpty && city != .none
             return true
         case .documentScreening:
 //            return ktp != nil && selfie != nil
             return true
         case .verification:
-//            return babyDOB != nil && babyBirthWeek != 0 && babyWeight != 0.0 && babyGender != .none && religion != .none && bloodType != .none && !lifestyle.isEmpty && recipientReason.isEmpty
+//            return babyDOB != nil && babyGender != .none && religion != .none && bloodType != .none && (role == .donator ? (babyBirthWeek != 0 && babyWeight != 0.0 && vacinne != .none) : true)
             return true
         case .healthScreening:
             return true
@@ -88,7 +97,8 @@ class SignUpViewModel: ObservableObject {
         if currentStepIndex < signUpStep.count - 1 {
             currentStepIndex += 1
         } else if currentStepIndex == signUpStep.count - 1 {
-            submitForm()
+            createUser()
+            isCompleted.toggle()
         }
     }
 
@@ -149,14 +159,61 @@ class SignUpViewModel: ObservableObject {
         }
     }
 
+    func cityString() -> String {
+        if city != .none {
+            return city.rawValue
+        } else {
+            return ""
+        }
+    }
+
 
     private func resetImagePickers() {
         selfie = nil
         ktp = nil
     }
 
-    private func submitForm() {
-        // Implement your form submission logic here
-        print("Submitted")
+    private func createUser() {
+        var selfieData: Data? = nil
+        if let img = selfie {
+            selfieData = img.pngData()
+        }
+
+        var ktpData: Data? = nil
+        if let img = ktp {
+            ktpData = img.pngData()
+        }
+
+        print("LIFESTYLE: \(lifestyle)")
+
+        userRepo.createUser(
+            role: role?.rawValue,
+            name: name,
+            email: email,
+            phoneNum: phoneNumber,
+            city: city.rawValue,
+            ktp: ktpData,
+            selfie: selfieData,
+            babyDOB: babyDOB,
+            babyGender: babyGender.rawValue,
+            religion: religion.rawValue,
+            bloodType: bloodType.rawValue,
+            lifestyle: lifestyle,
+            recipientReason: recipientReason,
+            isScreened: isScreened,
+            vaccine: vacinne.rawValue,
+            drugs: drugs,
+            donatorReason: donatorReason
+        )
+    }
+
+    func handleChipSelection(chipIndex: Int) {
+        lifestyleChips[chipIndex].isSelected.toggle()
+        updateSelectedLifestyle()
+    }
+
+    private func updateSelectedLifestyle() {
+        let selectedLifestyleValues = lifestyleChips.filter { $0.isSelected }.map { $0.value }
+        lifestyle = selectedLifestyleValues
     }
 }

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct KatalogView: View {
-    @State private var city: CityEnum = .jakarta
+    @StateObject var viewModel = KatalogViewModel(userRepo: UserRepository())
     @State private var showLocationPicker = false
+    @State private var showTempUsers = false
 
     var body: some View {
         ZStack {
@@ -23,8 +24,38 @@ struct KatalogView: View {
             }
             VStack {
                 HStack {
-                    Text("Kasih")
-                        .typography(.title)
+                    Button(action: { showTempUsers.toggle() }) {
+                        Text("Kasih")
+                            .typography(.title)
+                    }
+                    .sheet(isPresented: $showTempUsers){
+                        VStack {
+                            Text("USERS")
+                            ForEach(viewModel.users, id: \.id) { user in
+                                NavigationLink {
+                                    EmptyView()
+                                } label: {
+                                    VStack(alignment: .leading) {
+                                        Text(user.name ?? "sss")
+                                            .fontWeight(.semibold)
+                                            .font(.headline)
+                                        Text("id: \(user.id?.uuidString ?? "x")")
+                                            .font(.body)
+                                        Text("baby gender: \(ReligionEnum.fromString(user.religion)?.rawValue ?? "")")
+                                            .font(.body)
+                                        ForEach(user.lifestyleList) { lifesyle in
+                                            Text("Lifestyle: \(lifesyle.name ?? "x")")
+                                                .font(.caption)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .padding()
+                        .onAppear {
+                            viewModel.loadUsers()
+                        }
+                    }
                     Spacer()
                     NavigationLink(destination: SelectUserRoleView()) {
                         Image(systemName: "person.crop.circle")
@@ -44,7 +75,7 @@ struct KatalogView: View {
                     HStack {
                         HStack {
                             Image(systemName: "location.fill")
-                            Text(city.rawValue)
+                            Text(viewModel.selectedCity.rawValue)
                         }
                         Spacer()
                         Image(systemName: "chevron.down")
@@ -59,8 +90,8 @@ struct KatalogView: View {
                     showLocationPicker.toggle()
                 }
                 .sheet(isPresented: $showLocationPicker){
-                    Picker("Lokasi", selection: $city) {
-                        ForEach(CityEnum.allCases, id: \.self) { city in
+                    Picker("Lokasi", selection: $viewModel.selectedCity) {
+                        ForEach(CityEnum.toList(), id: \.self) { city in
                             Text(city.rawValue)
                                 .tag(city)
                         }

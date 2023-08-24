@@ -98,6 +98,6 @@ struct BiodataBayiForm: View {
 
 struct BiodataBayiForm_Previews: PreviewProvider {
     static var previews: some View {
-        BiodataBayiForm(viewModel: SignUpViewModel())
+        BiodataBayiForm(viewModel: SignUpViewModel(userRepo: UserRepository()))
     }
 }
