@@ -10,10 +10,11 @@ import Foundation
 
 class RincianPermintaanSheetComponentViewModel: ObservableObject {
     @Published var jumlahProduk: Int = 0
-    @Published var tanggalPengambilan: Date?
+    @Published var tanggalPengambilan: Date = Date()
+    @Published var waktuPengambilan: Date = Date()
     
     var isValidStep: Bool {
-        jumlahProduk != 0 && tanggalPengambilan != nil
+        jumlahProduk != 0
     }
     
     func jumlahProdukString() -> String {
@@ -22,5 +23,11 @@ class RincianPermintaanSheetComponentViewModel: ObservableObject {
         } else {
             return ""
         }
+    }
+    
+    func formatTime(from date: Date) -> String? {
+        let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            return dateFormatter.string(from: date)
     }
 }

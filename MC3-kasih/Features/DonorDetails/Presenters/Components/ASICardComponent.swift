@@ -28,9 +28,9 @@ struct ASICardComponent: View {
                         .typography(.baseBold)
                     Text("Ukuran \(Int(pouchSize))mL")
                         .typography(.smallBold)
+                    Spacer()
                     Text("Produksi \(dateProd)")
                         .typography(.small)
-                    Spacer()
                 }
                 Spacer()
                 if let distance = distance {
@@ -40,19 +40,15 @@ struct ASICardComponent: View {
                 if user == nil {
                     VStack {
                         Spacer()
-                        Button {
-                            
-                        } label: {
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 8)
-                                    .foregroundColor(Colors.ab500)
-                                Image(systemName: "plus")
-                                    .font(.system(size: 24))
-                                    .foregroundColor(Colors.white)
-                                    .padding(4)
-                            }
-                            .fixedSize()
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 8)
+                                .foregroundColor(Colors.ab500)
+                            Image(systemName: "plus")
+                                .font(.system(size: 24))
+                                .foregroundColor(Colors.white)
+                                .padding(4)
                         }
+                        .fixedSize()
                         Spacer()
                     }
                     .padding(8)

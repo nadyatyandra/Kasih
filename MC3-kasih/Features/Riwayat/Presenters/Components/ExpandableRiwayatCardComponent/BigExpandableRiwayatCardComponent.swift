@@ -37,11 +37,10 @@ struct BigExpandableRiwayatCardComponent: View {
                 }
                 .fixedSize(horizontal: false, vertical: true)
                 .buttonStyle(AppButtonStyle(isMedium: true))
-                
-                Button("Selesai") {}
-                    .fixedSize(horizontal: false, vertical: true)
-                    .buttonStyle(AppButtonStyle(isMedium: true))
-                Button("Lapor") {}
+//                Button("Selesai") {}
+//                    .fixedSize(horizontal: false, vertical: true)
+//                    .buttonStyle(AppButtonStyle(isMedium: true))
+                Button("Batalkan") {}
                     .fixedSize(horizontal: false, vertical: true)
                     .buttonStyle(AppButtonStyle(isSecondary: true, isMedium: true))
             }

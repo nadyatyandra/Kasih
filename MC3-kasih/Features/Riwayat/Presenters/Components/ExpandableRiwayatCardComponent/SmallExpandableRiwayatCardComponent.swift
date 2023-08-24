@@ -29,18 +29,18 @@ struct SmallExpandableRiwayatCardComponent: View {
                     .typography(.small)
                 Spacer()
                 HStack {
-                    Text(user)
+                    Text("\(status ?? "")")
                         .typography(.smallBold)
 //                    Text(user)
 //                        .typography(.small)
                     Spacer()
-                    Text("Selesai")
-                        .foregroundColor(Colors.ab500)
-                        .typography(.smallBold)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 2)
-                        .background(Colors.ab100)
-                        .cornerRadius(4)
+//                    Text("Selesai")
+//                        .foregroundColor(Colors.ab500)
+//                        .typography(.smallBold)
+//                        .padding(.horizontal, 8)
+//                        .padding(.vertical, 2)
+//                        .background(Colors.ab100)
+//                        .cornerRadius(4)
 //                    Text("Dibatalkan")
 //                        .foregroundColor(Colors.pp500)
 //                        .typography(.smallBold)
@@ -58,6 +58,6 @@ struct SmallExpandableRiwayatCardComponent: View {
 
 struct SmallExpandableRiwayatCardComponent_Previews: PreviewProvider {
     static var previews: some View {
-        SmallExpandableRiwayatCardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Putri Marino")
+        SmallExpandableRiwayatCardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: "Putri Marino", status: "Menunggu Persetujuan")
     }
 }

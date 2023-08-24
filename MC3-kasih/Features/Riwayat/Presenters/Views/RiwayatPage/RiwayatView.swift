@@ -61,6 +61,8 @@ struct RiwayatView: View {
             }
             .padding(.horizontal, 16)
         }
+        .navigationBarBackButtonHidden()
+        .toolbar(.hidden)
     }
 }
 
