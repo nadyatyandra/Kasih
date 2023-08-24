@@ -13,7 +13,7 @@ struct ProfilCardComponent: View {
             Text("Profil Ibu")
                 .typography(.large)
                 .padding(.bottom, 2)
-            Group {
+            VStack {
                 Text("Golongan Darah")
                     .typography(.baseBold)
                 ZStack {
@@ -31,7 +31,7 @@ struct ProfilCardComponent: View {
                     .border(Colors.ab500)
                     .cornerRadius(16)
             }
-            Group {
+            VStack {
                 Text("Agama")
                     .typography(.baseBold)
                 Text("Katolik")
@@ -41,7 +41,7 @@ struct ProfilCardComponent: View {
                     .border(Colors.ab500)
                     .cornerRadius(16)
             }
-            Group {
+            VStack {
                 Text("Gaya Hidup")
                     .typography(.baseBold)
                 HStack {
@@ -71,14 +71,14 @@ struct ProfilCardComponent: View {
                         .cornerRadius(16)
                 }
             }
-            Group {
+            VStack {
                 Text("Obat dan Suplemen")
                     .typography(.baseBold)
                 Text("Vitamin C, Paracetamol, ASI Booster")
                     .typography(.small)
                     .padding(.bottom, 2)
             }
-            Group {
+            VStack {
                 Text("Alasan Mendonor")
                     .typography(.baseBold)
                 Text("Produksi ASI berlebih dan kulkas penuh")

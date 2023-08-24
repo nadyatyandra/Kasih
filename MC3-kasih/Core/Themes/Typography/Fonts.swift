@@ -19,15 +19,15 @@ enum TypographyStyle {
     case base
     case smallBold
     case small
-    
+  
     var defaultFont: String {
         return "Nunito"
     }
-    
+
     var defaultColor: Color {
         return Colors.ab500
     }
-    
+
     var size: CGFloat {
         switch self {
         case .title: return 39
@@ -38,7 +38,7 @@ enum TypographyStyle {
         case .small, .smallBold: return 13
         }
     }
-    
+
     var weight: Font.Weight {
         switch self {
         case .title, .heading2, .baseBold, .smallBold: return .bold
@@ -50,7 +50,7 @@ enum TypographyStyle {
 
 struct BaseTypography: ViewModifier {
     let type: TypographyStyle
-    
+
     func body(content: Content) -> some View {
         content
             .fontWeight(type.weight)

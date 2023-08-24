@@ -9,14 +9,14 @@
         <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="asi" inverseEntity="Transaction"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="asiSet" inverseEntity="User"/>
     </entity>
-    <entity name="Child" representedClassName="Child" syncable="YES" codeGenerationType="class">
+    <entity name="Baby" representedClassName="Baby" syncable="YES" codeGenerationType="class">
         <attribute name="bloodType" optional="YES" attributeType="String"/>
         <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="gender" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="weekOfBirth" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="weightOfBirth" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="childs" inverseEntity="User"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="baby" inverseEntity="User"/>
     </entity>
     <entity name="Lifestyle" representedClassName="Lifestyle" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -67,18 +67,21 @@
         <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="statusList" inverseEntity="Transaction"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
-        <attribute name="babyGender" optional="YES" attributeType="String"/>
+        <attribute name="donorsReason" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isLogin" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="ktpImg" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="needScreening" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="phoneNum" optional="YES" attributeType="String"/>
-        <attribute name="profileImg" optional="YES" attributeType="Binary"/>
+        <attribute name="recipientReason" optional="YES" attributeType="String"/>
         <attribute name="religion" optional="YES" attributeType="String"/>
         <attribute name="role" optional="YES" attributeType="String"/>
         <attribute name="selfieImg" optional="YES" attributeType="Binary"/>
+        <attribute name="vaksin" optional="YES" attributeType="String"/>
         <relationship name="asiSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Asi" inverseName="user" inverseEntity="Asi"/>
-        <relationship name="childs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Child" inverseName="user" inverseEntity="Child"/>
+        <relationship name="baby" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Baby" inverseName="user" inverseEntity="Baby"/>
         <relationship name="lifestyles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lifestyle" inverseName="user" inverseEntity="Lifestyle"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="user" inverseEntity="Location"/>
         <relationship name="medicalScreen" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicalScreen" inverseName="user" inverseEntity="MedicalScreen"/>
