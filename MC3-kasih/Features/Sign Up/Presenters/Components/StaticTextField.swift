@@ -12,18 +12,22 @@ struct StaticTextField: View {
     let onTap: () -> Void
 
     var body: some View {
-        Text(value)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.vertical, 12)
-            .padding(.horizontal)
-            .overlay {
-                RoundedRectangle(
-                    cornerRadius: 12,
-                    style: .continuous)
-                .stroke(Colors.ab200, lineWidth: 2)
-            }
-            .foregroundColor(Colors.ab500)
-            .onTapGesture(perform: onTap)
+        HStack {
+            Text(value)
+            Spacer()
+            Image(systemName: "chevron.down")
+        }
+        .foregroundColor(Colors.ab500)
+        .typography(.base)
+        .padding(.vertical, 12)
+        .padding(.horizontal)
+        .overlay {
+            RoundedRectangle(
+                cornerRadius: 12,
+                style: .continuous)
+            .stroke(Colors.ab200, lineWidth: 2)
+        }
+        .onTapGesture(perform: onTap)
     }
 }
 

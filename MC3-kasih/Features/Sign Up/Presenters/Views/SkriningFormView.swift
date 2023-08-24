@@ -13,28 +13,30 @@ struct SkriningFormView: View {
     @StateObject var ktpPicker = ImagePickerManager()
 
     var body: some View {
-        VStack(spacing: 24) {
-            InputFieldWrapper(
-                label: "Foto Muka",
-                inputField: AnyView(
-                    EditableScreeningImage(imagePicker: selfiePicker)
+        ScrollView {
+            VStack(spacing: 24) {
+                InputFieldWrapper(
+                    label: "Foto KTP",
+                    inputField: AnyView(
+                        EditableScreeningImage(imagePicker: ktpPicker)
+                    )
                 )
-            )
-            InputFieldWrapper(
-                label: "Foto KTP",
-                inputField: AnyView(
-                    EditableScreeningImage(imagePicker: ktpPicker)
+                InputFieldWrapper(
+                    label: "Swafoto dengan KTP",
+                    inputField: AnyView(
+                        EditableScreeningImage(imagePicker: selfiePicker)
+                    )
                 )
-            )
-        }
-        .onChange(of: selfiePicker.imageState) { state in
-            if case .success(let uiImage) = state {
-                viewModel.selfie = uiImage
             }
-        }
-        .onChange(of: ktpPicker.imageState) { state in
-            if case .success(let uiImage) = state {
-                viewModel.ktp = uiImage
+            .onChange(of: selfiePicker.imageState) { state in
+                if case .success(let uiImage) = state {
+                    viewModel.selfie = uiImage
+                }
+            }
+            .onChange(of: ktpPicker.imageState) { state in
+                if case .success(let uiImage) = state {
+                    viewModel.ktp = uiImage
+                }
             }
         }
     }

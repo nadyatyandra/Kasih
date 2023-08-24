@@ -12,7 +12,7 @@ struct InputFieldWrapper: View {
     let inputField: AnyView
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: 8) {
             Text(label)
                 .typography(.baseBold)
             inputField

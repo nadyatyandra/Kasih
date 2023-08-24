@@ -14,10 +14,15 @@ enum ReligionEnum: String, CaseIterable {
     case buddha = "Buddha"
     case hindu = "Hindu"
     case konghucu = "Konghucu"
+    case none = ""
 }
 
 extension ReligionEnum {
     static func fromString(_ string: String?) -> ReligionEnum? {
         return ReligionEnum(rawValue: string ?? "")
+    }
+
+    static func toList() -> [ReligionEnum] {
+        return [.katolik, .islam, .protestan, .buddha, .hindu, .konghucu]
     }
 }

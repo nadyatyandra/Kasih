@@ -21,7 +21,7 @@
 		C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF942A94263F004112E9 /* CoreDataStack.swift */; };
 		C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF962A94549F004112E9 /* BloodTypeEnum.swift */; };
 		C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF9A2A9457E7004112E9 /* UserExtension.swift */; };
-		C486FFA32A94B76C004112E9 /* SignUpViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA22A94B76C004112E9 /* SignUpViewModels.swift */; };
+		C486FFA32A94B76C004112E9 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA22A94B76C004112E9 /* SignUpViewModel.swift */; };
 		C486FFA52A94BB0F004112E9 /* BiodataFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA42A94BB0F004112E9 /* BiodataFormView.swift */; };
 		C486FFA72A94BB74004112E9 /* SkriningFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA62A94BB74004112E9 /* SkriningFormView.swift */; };
 		C486FFA92A94BBB5004112E9 /* VerificationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA82A94BBB5004112E9 /* VerificationFormView.swift */; };
@@ -51,6 +51,8 @@
 		C486FFE42A963AE0004112E9 /* UserRoleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFE32A963AE0004112E9 /* UserRoleEnum.swift */; };
 		C486FFE62A963E55004112E9 /* RoleInfoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFE52A963E55004112E9 /* RoleInfoSheet.swift */; };
 		C486FFE82A96516F004112E9 /* RoleOptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFE72A96516F004112E9 /* RoleOptionCard.swift */; };
+		C486FFEC2A96650D004112E9 /* WheelPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFEB2A96650D004112E9 /* WheelPickerModifier.swift */; };
+		C486FFEE2A9679D8004112E9 /* BiodataBayiForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +91,7 @@
 		C486FF942A94263F004112E9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C486FF962A94549F004112E9 /* BloodTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypeEnum.swift; sourceTree = "<group>"; };
 		C486FF9A2A9457E7004112E9 /* UserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserExtension.swift; path = "MC3-kasih/Datasources/Constants/UserExtension.swift"; sourceTree = SOURCE_ROOT; };
-		C486FFA22A94B76C004112E9 /* SignUpViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModels.swift; sourceTree = "<group>"; };
+		C486FFA22A94B76C004112E9 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C486FFA42A94BB0F004112E9 /* BiodataFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiodataFormView.swift; sourceTree = "<group>"; };
 		C486FFA62A94BB74004112E9 /* SkriningFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkriningFormView.swift; sourceTree = "<group>"; };
 		C486FFA82A94BBB5004112E9 /* VerificationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationFormView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,8 @@
 		C486FFE32A963AE0004112E9 /* UserRoleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleEnum.swift; sourceTree = "<group>"; };
 		C486FFE52A963E55004112E9 /* RoleInfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleInfoSheet.swift; sourceTree = "<group>"; };
 		C486FFE72A96516F004112E9 /* RoleOptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleOptionCard.swift; sourceTree = "<group>"; };
+		C486FFEB2A96650D004112E9 /* WheelPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerModifier.swift; sourceTree = "<group>"; };
+		C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiodataBayiForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,7 +387,7 @@
 		C486FF9E2A94B556004112E9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C486FFA22A94B76C004112E9 /* SignUpViewModels.swift */,
+				C486FFA22A94B76C004112E9 /* SignUpViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -408,6 +412,7 @@
 				C486FFCE2A96072B004112E9 /* StaticTextField.swift */,
 				C486FFE52A963E55004112E9 /* RoleInfoSheet.swift */,
 				C486FFE72A96516F004112E9 /* RoleOptionCard.swift */,
+				C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 			children = (
 				C486FFB82A94D566004112E9 /* AppButtonStyle.swift */,
 				C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */,
+				C486FFEB2A96650D004112E9 /* WheelPickerModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -619,6 +625,7 @@
 				C486FFB92A94D566004112E9 /* AppButtonStyle.swift in Sources */,
 				C486FFE02A963361004112E9 /* CityEnum.swift in Sources */,
 				C486FFD42A960C95004112E9 /* ChipsWrapper.swift in Sources */,
+				C486FFEC2A96650D004112E9 /* WheelPickerModifier.swift in Sources */,
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				C486FFCD2A9604B5004112E9 /* DatePickerSheet.swift in Sources */,
@@ -631,6 +638,7 @@
 				C486FFD22A960A5E004112E9 /* ChipComponent.swift in Sources */,
 				C486FFE22A963865004112E9 /* SelectUserRoleView.swift in Sources */,
 				C486FFDA2A962CC8004112E9 /* ReligionEnum.swift in Sources */,
+				C486FFEE2A9679D8004112E9 /* BiodataBayiForm.swift in Sources */,
 				C486FFDE2A962E53004112E9 /* VaccineEnum.swift in Sources */,
 				C486FFE42A963AE0004112E9 /* UserRoleEnum.swift in Sources */,
 				C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */,
@@ -645,7 +653,7 @@
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
 				C486FFA72A94BB74004112E9 /* SkriningFormView.swift in Sources */,
 				C486FFC02A95013B004112E9 /* InputFieldWrapper.swift in Sources */,
-				C486FFA32A94B76C004112E9 /* SignUpViewModels.swift in Sources */,
+				C486FFA32A94B76C004112E9 /* SignUpViewModel.swift in Sources */,
 				C486FFC82A95127B004112E9 /* ImagePicker.swift in Sources */,
 				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
 				C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */,

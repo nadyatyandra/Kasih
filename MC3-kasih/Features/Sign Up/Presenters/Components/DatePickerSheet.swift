@@ -37,7 +37,7 @@ struct DatePickerSheet: View {
         }
         .datePickerStyle(WheelDatePickerStyle())
         .labelsHidden()
-        .presentationDetents([.fraction(0.25)])
+        .presentationDetents([.fraction(0.3)])
         .padding()
     }
 }

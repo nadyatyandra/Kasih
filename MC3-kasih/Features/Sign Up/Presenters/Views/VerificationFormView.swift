@@ -9,27 +9,111 @@ import SwiftUI
 
 struct VerificationFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
-    @State private var showDatePicker = false
+    @State private var showReligionPicker = false
+    @State private var showBloodTypePicker = false
+    @State private var showVaccinePicker = false
+
+    private var isDonator: Bool {
+        viewModel.role == .donator
+    }
+
 
     var body: some View {
-        VStack(spacing: 24) {
-            InputFieldWrapper(
-                label: "Tanggal lahir bayi",
-                inputField: AnyView(
-                    StaticTextField(value: viewModel.babyDOB?.formattedString() ?? "")
-                    {
-                        showDatePicker.toggle()
-                    }
+        ScrollView {
+            VStack(spacing: 24) {
+                BiodataBayiForm(viewModel: viewModel)
+
+                Divider()
+
+                Text(isDonator ? "Biodata Ibu" : "Preferensi Donatur")
+                    .typography(.large)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                InputFieldWrapper(
+                    label: "Agama",
+                    inputField: AnyView(
+                        StaticTextField(value: viewModel.religionString())
+                        {
+                            showReligionPicker.toggle()
+                        }
+                    )
                 )
-            )
-            .sheet(isPresented: $showDatePicker){
-                DatePickerSheet(isPickerVisible: $showDatePicker, selectedDate: $viewModel.babyDOB, isPast: true)
+                .sheet(isPresented: $showReligionPicker){
+                    Picker("Agama", selection: $viewModel.religion) {
+                        ForEach(ReligionEnum.toList(), id: \.self) { religion in
+                            Text(religion.rawValue)
+                                .tag(religion)
+                        }
+                    }
+                    .appWheelPicker()
+                }
+
+                InputFieldWrapper(
+                    label: "Golongan Darah",
+                    inputField: AnyView(
+                        StaticTextField(value: viewModel.bloodTypeString())
+                        {
+                            showBloodTypePicker.toggle()
+                        }
+                    )
+                )
+                .sheet(isPresented: $showBloodTypePicker){
+                    Picker("Golongan Darah", selection: $viewModel.bloodType) {
+                        ForEach(BloodTypeEnum.toList(), id: \.self) { bloodType in
+                            Text(bloodType.rawValue)
+                                .tag(bloodType)
+                        }
+                    }
+                    .appWheelPicker()
+                }
+
+                InputFieldWrapper(
+                    label: "Gaya Hidup \(isDonator ? "" : "Donatur")",
+                    inputField: AnyView(
+                        ChipsWrapper(alignment: .leading) {
+                            ForEach(viewModel.lifestyleChips) { data in
+                                ChipComponent(value: data.value, isSelected: data.isSelected)
+                            }
+                        }
+                    )
+                )
+                .offset(x: -5)
+
+                if isDonator {
+                    InputFieldWrapper(
+                        label: "Vaksin COVID",
+                        inputField: AnyView(
+                            StaticTextField(value: viewModel.vaccineString())
+                            {
+                                showVaccinePicker.toggle()
+                            }
+                        )
+                    )
+                    .sheet(isPresented: $showVaccinePicker){
+                        Picker("Vaksin COVID", selection: $viewModel.bloodType) {
+                            ForEach(VaccineEnum.toList(), id: \.self) { vaccine in
+                                Text(vaccine.rawValue)
+                                    .tag(vaccine)
+                            }
+                        }
+                        .appWheelPicker()
+                    }
+
+                    InputFieldWrapper(
+                        label: "Alasan menjadi Donatur",
+                        inputField: AnyView(
+                            TextField("Alasan menjadi Donatur", text: $viewModel.donatorReason)
+                                .textFieldStyle(.app))
+                    )
+                } else {
+                    InputFieldWrapper(
+                        label: "Alasan menjadi Resipien",
+                        inputField: AnyView(
+                            TextField("Alasan menjadi Resipien", text: $viewModel.recipientReason)
+                                .textFieldStyle(.app))
+                    )
+                }
             }
-            InputFieldWrapper(
-                label: "Gaya Hidup Donatur",
-                inputField: AnyView(
-                    ChipsWrapper(chips: viewModel.lifestyleChips))
-            )
         }
     }
 }

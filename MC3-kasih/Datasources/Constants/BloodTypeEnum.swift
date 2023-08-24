@@ -20,10 +20,15 @@ enum BloodTypeEnum: String, CaseIterable {
     case typeABNegative = "AB-"
     case typeOPositive = "O+"
     case typeONegative = "O-"
+    case none = ""
 }
 
 extension BloodTypeEnum {
     static func fromString(_ string: String?) -> BloodTypeEnum? {
         return BloodTypeEnum(rawValue: string ?? "")
+    }
+
+    static func toList() -> [BloodTypeEnum] {
+        return [.typeA, .typeB, .typeAB, .typeO, .typeAPositive, .typeANegative, .typeBPositive, .typeBNegative, .typeABPositive, .typeABNegative, .typeOPositive, .typeONegative]
     }
 }

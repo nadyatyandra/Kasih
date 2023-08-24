@@ -7,55 +7,123 @@
 
 import SwiftUI
 
-struct ChipsWrapper: View {
-    var chips: [Chip]
+struct ChipsWrapper: Layout {
+    var alignment: Alignment = .center
+    var spacing: CGFloat?
 
-    var body: some View {
-        var width = CGFloat.zero
-        var height = CGFloat.zero
-        
-        return GeometryReader { geo in
-            ZStack(alignment: .topLeading, content: {
-                ForEach(chips) { data in
-                    ChipComponent(value: data.value, isSelected: data.isSelected)
-                        .padding(.all, 5)
-                        .alignmentGuide(.leading) { dimension in
-                            if (abs(width - dimension.width) > geo.size.width) {
-                                width = 0
-                                height -= dimension.height
-                            }
-                            let result = width
-                            if data.id == chips.last!.id {
-                                width = 0
-                            } else {
-                                width -= dimension.width
-                            }
-                            return result
-                        }
-                        .alignmentGuide(.top) { dimension in
-                            let result = height
-                            if data.id == chips.last!.id {
-                                height = 0
-                            }
-                            return result
-                        }
+    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout Void) -> CGSize {
+        let result = WrapperResult(
+            in: proposal.replacingUnspecifiedDimensions().width,
+            subviews: subviews,
+            alignment: alignment,
+            spacing: spacing
+        )
+        return result.bounds
+    }
+
+    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout Void) {
+        let result = WrapperResult(
+            in: proposal.replacingUnspecifiedDimensions().width,
+            subviews: subviews,
+            alignment: alignment,
+            spacing: spacing
+        )
+        for row in result.rows {
+            let rowXOffset = (bounds.width - row.frame.width) * alignment.horizontal.percent
+            for index in row.range {
+                let xPos = rowXOffset + row.frame.minX + row.xOffsets[index - row.range.lowerBound] + bounds.minX
+                let rowYAlignment = (row.frame.height - subviews[index].sizeThatFits(.unspecified).height) *
+                alignment.vertical.percent
+                let yPos = row.frame.minY + rowYAlignment + bounds.minY
+                subviews[index].place(at: CGPoint(x: xPos, y: yPos), anchor: .topLeading, proposal: .unspecified)
+            }
+        }
+    }
+
+    struct WrapperResult {
+        var bounds = CGSize.zero
+        var rows = [Row]()
+
+        struct Row {
+            var range: Range<Int>
+            var xOffsets: [Double]
+            var frame: CGRect
+        }
+
+        init(in maxPossibleWidth: Double, subviews: Subviews, alignment: Alignment, spacing: CGFloat?) {
+            var itemsInRow = 0
+            var remainingWidth = maxPossibleWidth.isFinite ? maxPossibleWidth : .greatestFiniteMagnitude
+            var rowMinY = 0.0
+            var rowHeight = 0.0
+            var xOffsets: [Double] = []
+            for (index, subview) in zip(subviews.indices, subviews) {
+                let idealSize = subview.sizeThatFits(.unspecified)
+                if index != 0 && widthInRow(index: index, idealWidth: idealSize.width) > remainingWidth {
+                    finalizeRow(index: max(index - 1, 0), idealSize: idealSize)
                 }
-            })
+                addToRow(index: index, idealSize: idealSize)
+
+                if index == subviews.count - 1 {
+                    finalizeRow(index: index, idealSize: idealSize)
+                }
+            }
+
+            func spacingBefore(index: Int) -> Double {
+                guard itemsInRow > 0 else { return 0 }
+                return spacing ?? subviews[index - 1].spacing.distance(to: subviews[index].spacing, along: .horizontal)
+            }
+
+            func widthInRow(index: Int, idealWidth: Double) -> Double {
+                idealWidth + spacingBefore(index: index)
+            }
+
+            func addToRow(index: Int, idealSize: CGSize) {
+                let width = widthInRow(index: index, idealWidth: idealSize.width)
+
+                xOffsets.append(maxPossibleWidth - remainingWidth + spacingBefore(index: index))
+                remainingWidth -= width
+                rowHeight = max(rowHeight, idealSize.height)
+                itemsInRow += 1
+            }
+
+            func finalizeRow(index: Int, idealSize: CGSize) {
+                let rowWidth = maxPossibleWidth - remainingWidth
+                rows.append(
+                    Row(
+                        range: index - max(itemsInRow - 1, 0) ..< index + 1,
+                        xOffsets: xOffsets,
+                        frame: CGRect(x: 0, y: rowMinY, width: rowWidth, height: rowHeight)
+                    )
+                )
+                bounds.width = max(bounds.width, rowWidth)
+                let ySpacing = spacing ?? ViewSpacing().distance(to: ViewSpacing(), along: .vertical)
+                bounds.height += rowHeight + (rows.count > 1 ? ySpacing : 0)
+                rowMinY += rowHeight + ySpacing
+                itemsInRow = 0
+                rowHeight = 0
+                xOffsets.removeAll()
+                remainingWidth = maxPossibleWidth
+            }
         }
     }
 }
 
-struct ChipsWrapperView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChipsWrapper(
-            chips:
-                [
-                    Chip(value: "hahaahah", isSelected: true),
-                    Chip(value: "hehehee", isSelected: false),
-                    Chip(value: "hihih", isSelected: false),
-                    Chip(value: "hohosss", isSelected: true),
-                    Chip(value: "huhuuuhu", isSelected: false)
-                ]
-        )
+private extension HorizontalAlignment {
+    var percent: Double {
+        switch self {
+        case .leading: return 0
+        case .trailing: return 1
+        default: return 0.5
+        }
+    }
+}
+
+private extension VerticalAlignment {
+    var percent: Double {
+        switch self {
+        case .top: return 0
+        case .bottom: return 1
+        default: return 0.5
+        }
     }
 }

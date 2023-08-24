@@ -16,10 +16,15 @@ enum VaccineEnum: String, CaseIterable {
     case booster1 = "Booster 1"
     case booster2 = "Booster 2"
     case booster3 = "Booster 3"
+    case none = ""
 }
 
 extension VaccineEnum {
     static func fromString(_ string: String?) -> VaccineEnum? {
         return VaccineEnum(rawValue: string ?? "")
+    }
+
+    static func toList() -> [VaccineEnum] {
+        return [.vaksin1, .vaksin2, .vaksin3, .booster1, .booster2, .booster3]
     }
 }
