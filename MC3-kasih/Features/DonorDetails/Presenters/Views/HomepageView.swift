@@ -12,7 +12,7 @@ struct HomepageView: View {
         TabView {
             KatalogView()
                 .tabItem {
-                    Label("Katalog", systemImage: "tray.and.arrow.down.fill")
+                    Label("Katalog", systemImage: "rectangle.grid.1x2.fill")
                 }
             RiwayatView()
                 .tabItem {

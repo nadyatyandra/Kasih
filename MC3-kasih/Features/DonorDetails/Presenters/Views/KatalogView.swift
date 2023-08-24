@@ -23,7 +23,7 @@ struct KatalogView: View {
             VStack {
                 HStack {
                     Text("Kasih")
-                        .typography(.title())
+                        .typography(.title)
                     Spacer()
                     Button {
                         
@@ -40,7 +40,7 @@ struct KatalogView: View {
                     .cornerRadius(12)
                 HStack {
                     Text("Donatur ASI")
-                        .typography(.heading2())
+                        .typography(.heading2)
                     Spacer()
                     Button {
                         
@@ -51,7 +51,7 @@ struct KatalogView: View {
                                 .font(.system(size: 15.0))
                             Text("Preferensi")
                                 .foregroundColor(Colors.white)
-                                .typography(.small())
+                                .typography(.small)
                         }
                         .padding(.horizontal, 8)
                         .padding(.vertical, 2)

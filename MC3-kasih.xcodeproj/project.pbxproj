@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040795052A96F81A00718B3F /* RiwayatComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040795042A96F81A00718B3F /* RiwayatComponent.swift */; };
+		040795082A96FD9400718B3F /* BigExpandableRiwayatCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040795072A96FD9400718B3F /* BigExpandableRiwayatCardComponent.swift */; };
+		04667A5A2A9644C0008E333D /* SmallExpandableRiwayatCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04667A592A9644C0008E333D /* SmallExpandableRiwayatCardComponent.swift */; };
+		04667A612A965E30008E333D /* CollapsibleComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04667A602A965E30008E333D /* CollapsibleComponent.swift */; };
+		04667A642A96676F008E333D /* BerlangsungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04667A632A96676F008E333D /* BerlangsungView.swift */; };
+		04667A662A966776008E333D /* SelesaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04667A652A966776008E333D /* SelesaiView.swift */; };
+		04667A682A96693D008E333D /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04667A672A96693D008E333D /* Progress.swift */; };
 		048AAF4C2A94DAE000B4652C /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AAF4B2A94DAE000B4652C /* HomepageView.swift */; };
 		048AAF502A94E13E00B4652C /* DetailDonorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AAF4F2A94E13E00B4652C /* DetailDonorView.swift */; };
 		048AAF522A94E25A00B4652C /* RiwayatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AAF512A94E25A00B4652C /* RiwayatView.swift */; };
@@ -50,6 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040795042A96F81A00718B3F /* RiwayatComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiwayatComponent.swift; sourceTree = "<group>"; };
+		040795072A96FD9400718B3F /* BigExpandableRiwayatCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigExpandableRiwayatCardComponent.swift; sourceTree = "<group>"; };
+		04667A592A9644C0008E333D /* SmallExpandableRiwayatCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallExpandableRiwayatCardComponent.swift; sourceTree = "<group>"; };
+		04667A602A965E30008E333D /* CollapsibleComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsibleComponent.swift; sourceTree = "<group>"; };
+		04667A632A96676F008E333D /* BerlangsungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlangsungView.swift; sourceTree = "<group>"; };
+		04667A652A966776008E333D /* SelesaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelesaiView.swift; sourceTree = "<group>"; };
+		04667A672A96693D008E333D /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		048AAF4B2A94DAE000B4652C /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
 		048AAF4F2A94E13E00B4652C /* DetailDonorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDonorView.swift; sourceTree = "<group>"; };
 		048AAF512A94E25A00B4652C /* RiwayatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiwayatView.swift; sourceTree = "<group>"; };
@@ -104,6 +118,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040795062A96FD2500718B3F /* ExpandableRiwayatCardComponent */ = {
+			isa = PBXGroup;
+			children = (
+				04667A592A9644C0008E333D /* SmallExpandableRiwayatCardComponent.swift */,
+				040795072A96FD9400718B3F /* BigExpandableRiwayatCardComponent.swift */,
+			);
+			path = ExpandableRiwayatCardComponent;
+			sourceTree = "<group>";
+		};
+		04667A5B2A965C57008E333D /* Riwayat */ = {
+			isa = PBXGroup;
+			children = (
+				04667A5C2A965C60008E333D /* View Models */,
+				04667A5D2A965C6F008E333D /* Presenters */,
+			);
+			path = Riwayat;
+			sourceTree = "<group>";
+		};
+		04667A5C2A965C60008E333D /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		04667A5D2A965C6F008E333D /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				04667A5F2A965C98008E333D /* Components */,
+				04667A5E2A965C93008E333D /* Views */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		04667A5E2A965C93008E333D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04667A622A96675D008E333D /* RiwayatPage */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04667A5F2A965C98008E333D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				040795062A96FD2500718B3F /* ExpandableRiwayatCardComponent */,
+				04667A602A965E30008E333D /* CollapsibleComponent.swift */,
+				040795042A96F81A00718B3F /* RiwayatComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		04667A622A96675D008E333D /* RiwayatPage */ = {
+			isa = PBXGroup;
+			children = (
+				048AAF512A94E25A00B4652C /* RiwayatView.swift */,
+				04667A632A96676F008E333D /* BerlangsungView.swift */,
+				04667A652A966776008E333D /* SelesaiView.swift */,
+			);
+			path = RiwayatPage;
+			sourceTree = "<group>";
+		};
 		048AAF572A9501B100B4652C /* DetailDonorPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +229,6 @@
 			children = (
 				048AAF4B2A94DAE000B4652C /* HomepageView.swift */,
 				048AAF552A95011100B4652C /* KatalogView.swift */,
-				048AAF512A94E25A00B4652C /* RiwayatView.swift */,
 				048AAF572A9501B100B4652C /* DetailDonorPage */,
 			);
 			path = Views;
@@ -208,6 +283,7 @@
 			children = (
 				04A0B8F82A94746F00B1E58B /* Nunito.ttf */,
 				04A0B8F62A9473D500B1E58B /* Fonts.swift */,
+				04667A672A96693D008E333D /* Progress.swift */,
 			);
 			path = Typography;
 			sourceTree = "<group>";
@@ -300,6 +376,7 @@
 		C486FF4E2A942280004112E9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				04667A5B2A965C57008E333D /* Riwayat */,
 				04A0B8ED2A946F4C00B1E58B /* DonorDetails */,
 			);
 			path = Features;
@@ -472,18 +549,25 @@
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				048AAF592A9501D400B4652C /* DetailDonaturView.swift in Sources */,
+				040795052A96F81A00718B3F /* RiwayatComponent.swift in Sources */,
 				C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
+				04667A682A96693D008E333D /* Progress.swift in Sources */,
 				048AAF522A94E25A00B4652C /* RiwayatView.swift in Sources */,
 				048AAF562A95011100B4652C /* KatalogView.swift in Sources */,
 				04A0B8F52A94707F00B1E58B /* Colors.swift in Sources */,
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
 				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
+				04667A642A96676F008E333D /* BerlangsungView.swift in Sources */,
+				04667A5A2A9644C0008E333D /* SmallExpandableRiwayatCardComponent.swift in Sources */,
 				048AAF5B2A9501DF00B4652C /* ASITersediaView.swift in Sources */,
 				048AAF502A94E13E00B4652C /* DetailDonorView.swift in Sources */,
 				048AAF5F2A950FC800B4652C /* RincianPermintaanSheetComponent.swift in Sources */,
 				048AAF5D2A95087900B4652C /* ProfilCardComponent.swift in Sources */,
 				C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */,
+				04667A662A966776008E333D /* SelesaiView.swift in Sources */,
+				04667A612A965E30008E333D /* CollapsibleComponent.swift in Sources */,
+				040795082A96FD9400718B3F /* BigExpandableRiwayatCardComponent.swift in Sources */,
 				048AAF542A94ECBC00B4652C /* ASICardComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

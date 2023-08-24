@@ -19,13 +19,13 @@ struct DetailDonorView: View {
                     .mask(Circle())
                 VStack(alignment: .leading) {
                     Text("Rachmaniar")
-                        .typography(.heading2())
+                        .typography(.heading2)
                     Text("Kesehatan Terverifikasi")
-                        .typography(.small())
+                        .typography(.small)
                     Text("3km darimu")
-                        .typography(.small())
+                        .typography(.small)
                     Text("Telah berdonasi kepada 3 bayi")
-                        .typography(.small())
+                        .typography(.small)
                 }
             }
             Picker("", selection: $menu) {
