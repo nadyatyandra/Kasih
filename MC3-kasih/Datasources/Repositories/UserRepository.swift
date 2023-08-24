@@ -21,6 +21,17 @@ class UserRepository {
         }
     }
 
+    func getLoggedInUser() -> User? {
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        request.predicate = NSPredicate(format: "isLogin == true")
+
+        do {
+            return try stack.viewContext.fetch(request).first
+        } catch {
+            return nil
+        }
+    }
+
     func createUser(
         role: String?,
         name: String?,
@@ -62,6 +73,13 @@ class UserRepository {
 
         addLifestyles(to: user, lifestyles: lifestyle)
 
+        user.isLogin = true
+
+        stack.saveContext()
+    }
+
+    func logOut(_ user: User){
+        user.isLogin = false
         stack.saveContext()
     }
 

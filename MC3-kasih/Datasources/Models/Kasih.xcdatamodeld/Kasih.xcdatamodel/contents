@@ -9,9 +9,6 @@
         <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="asi" inverseEntity="Transaction"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="asiSet" inverseEntity="User"/>
     </entity>
-    <entity name="Authentication" representedClassName="Authentication" syncable="YES" codeGenerationType="class">
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="auth" inverseEntity="User"/>
-    </entity>
     <entity name="Baby" representedClassName="Baby" syncable="YES" codeGenerationType="class">
         <attribute name="bloodType" optional="YES" attributeType="String"/>
         <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -45,6 +42,7 @@
         <attribute name="drugs" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isLogin" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isScreened" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="ktpImg" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -55,7 +53,6 @@
         <attribute name="selfieImg" optional="YES" attributeType="Binary"/>
         <attribute name="vaksin" optional="YES" attributeType="String"/>
         <relationship name="asiSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Asi" inverseName="user" inverseEntity="Asi"/>
-        <relationship name="auth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Authentication" inverseName="user" inverseEntity="Authentication"/>
         <relationship name="baby" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Baby" inverseName="user" inverseEntity="Baby"/>
         <relationship name="lifestyles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lifestyle" inverseName="user" inverseEntity="Lifestyle"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="buyer" inverseEntity="Transaction"/>

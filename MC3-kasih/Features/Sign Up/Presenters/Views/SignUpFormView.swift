@@ -70,7 +70,6 @@ struct SignUpFormView: View {
             .padding(.top)
 
             NavigationLink(destination: KatalogView(), isActive: $navigate){}
-
         }
         .padding()
         .navigationBarBackButtonHidden()
