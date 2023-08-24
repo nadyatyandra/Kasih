@@ -25,16 +25,17 @@ struct ASICardComponent: View {
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
                     Text("\(Int(quantity)) Kantong (\(Int(pouchSize))mL)")
-                        .typography(.baseBold())
+                        .typography(.baseBold)
                     Text("Produksi \(dateProd)")
-                        .typography(.small())
+                        .typography(.small)
                     Spacer()
                     if user == nil {
                         Button {
                             
                         } label: {
                             Text("Kirim Permintaan")
-                                .typography(.small(color: Colors.white))
+                                .foregroundColor(Colors.white)
+                                .typography(.small)
                                 .background(Colors.pp400)
                                 .cornerRadius(4)
                                 .padding(.top, 2)
@@ -44,7 +45,7 @@ struct ASICardComponent: View {
                 Spacer()
                 if let distance = distance {
                     Text("\(Int(distance))km")
-                        .typography(.small())
+                        .typography(.small)
                 }
             }
             .padding(.leading, 16)

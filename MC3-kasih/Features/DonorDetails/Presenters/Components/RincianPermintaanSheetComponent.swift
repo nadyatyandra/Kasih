@@ -11,10 +11,10 @@ struct RincianPermintaanSheetComponent: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Rincian Permintaan")
-                .typography(.large())
+                .typography(.large)
             Group {
                 Text("Jumlah Produk")
-                    .typography(.baseBold())
+                    .typography(.baseBold)
                 RoundedRectangle(cornerRadius: 12)
                     .foregroundColor(Colors.white)
                     .border(Colors.ab500)
@@ -23,7 +23,7 @@ struct RincianPermintaanSheetComponent: View {
             }
             Group {
                 Text("Tanggal Pengambilan")
-                    .typography(.baseBold())
+                    .typography(.baseBold)
                 RoundedRectangle(cornerRadius: 12)
                     .foregroundColor(Colors.white)
                     .border(Colors.ab500)
@@ -32,7 +32,7 @@ struct RincianPermintaanSheetComponent: View {
             }
             Group {
                 Text("Waktu Pengambilan")
-                    .typography(.baseBold())
+                    .typography(.baseBold)
                 RoundedRectangle(cornerRadius: 12)
                     .foregroundColor(Colors.white)
                     .border(Colors.ab500)
@@ -44,7 +44,7 @@ struct RincianPermintaanSheetComponent: View {
             } label: {
                 Text("Kirim Permintaan")
                     .foregroundColor(Colors.white)
-                    .typography(.large())
+                    .typography(.large)
                     .background(Colors.pp400)
                     .cornerRadius(8)
             }

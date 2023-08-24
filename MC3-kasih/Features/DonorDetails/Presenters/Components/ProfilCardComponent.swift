@@ -11,78 +11,78 @@ struct ProfilCardComponent: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Profil Ibu")
-                .typography(.large())
+                .typography(.large)
                 .padding(.bottom, 2)
-            Group {
+            VStack {
                 Text("Golongan Darah")
-                    .typography(.baseBold())
+                    .typography(.baseBold)
                 ZStack {
                     Capsule()
                     Text("AB+")
-                        .typography(.small())
+                        .typography(.small)
                         .padding(.horizontal)
                         .padding(.vertical, 4)
                 }
                 .fixedSize(horizontal: true, vertical: true)
                 Text("AB+")
-                    .typography(.small())
+                    .typography(.small)
                     .padding(.horizontal, 8)
                     .background(Colors.white)
                     .border(Colors.ab500)
                     .cornerRadius(16)
             }
-            Group {
+            VStack {
                 Text("Agama")
-                    .typography(.baseBold())
+                    .typography(.baseBold)
                 Text("Katolik")
-                    .typography(.small())
+                    .typography(.small)
                     .padding(.horizontal, 8)
                     .background(Colors.white)
                     .border(Colors.ab500)
                     .cornerRadius(16)
             }
-            Group {
+            VStack {
                 Text("Gaya Hidup")
-                    .typography(.baseBold())
+                    .typography(.baseBold)
                 HStack {
                     Text("Kacang-kacangan")
-                        .typography(.small())
+                        .typography(.small)
                         .padding(.horizontal, 8)
                         .background(Colors.white)
                         .border(Colors.ab500)
                         .cornerRadius(16)
                     Text("Gluten")
-                        .typography(.small())
+                        .typography(.small)
                         .padding(.horizontal, 8)
                         .background(Colors.white)
                         .border(Colors.ab500)
                         .cornerRadius(16)
                     Text("Seafood")
-                        .typography(.small())
+                        .typography(.small)
                         .padding(.horizontal, 8)
                         .background(Colors.white)
                         .border(Colors.ab500)
                         .cornerRadius(16)
                     Text("Merokok")
-                        .typography(.small())
+                        .typography(.small)
                         .padding(.horizontal, 8)
                         .background(Colors.white)
                         .border(Colors.ab500)
                         .cornerRadius(16)
                 }
             }
-            Group {
+            VStack {
                 Text("Obat dan Suplemen")
-                    .typography(.baseBold())
+                    .typography(.baseBold)
                 Text("Vitamin C, Paracetamol, ASI Booster")
-                    .typography(.small())
+                    .typography(.small)
                     .padding(.bottom, 2)
             }
-            Group {
+            VStack {
                 Text("Alasan Mendonor")
-                    .typography(.baseBold())
+                    .typography(.baseBold)
                 Text("Produksi ASI berlebih dan kulkas penuh")
-                    .typography(.small())
+                    .typography(.small)
                     .padding(.bottom, 2)
             }
         }
