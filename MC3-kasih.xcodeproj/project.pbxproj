@@ -26,6 +26,8 @@
 		04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0B8F62A9473D500B1E58B /* Fonts.swift */; };
 		04A0B8F92A94746F00B1E58B /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A0B8F82A94746F00B1E58B /* Nunito.ttf */; };
 		04D5FAA62A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */; };
+		04D5FAAB2A974ECE00063926 /* TambahASIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAAA2A974ECE00063926 /* TambahASIView.swift */; };
+		04D5FAAF2A97504A00063926 /* TambahASIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */; };
 		04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */; };
 		04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE63D2A8B3392009BACC5 /* ContentView.swift */; };
 		04DCE6402A8B3392009BACC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DCE63F2A8B3392009BACC5 /* Assets.xcassets */; };
@@ -109,6 +111,8 @@
 		04A0B8F82A94746F00B1E58B /* Nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nunito.ttf; sourceTree = "<group>"; };
 		04A0B8FA2A9474AC00B1E58B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RincianPermintaanSheetComponentViewModel.swift; sourceTree = "<group>"; };
+		04D5FAAA2A974ECE00063926 /* TambahASIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahASIView.swift; sourceTree = "<group>"; };
+		04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahASIViewModel.swift; sourceTree = "<group>"; };
 		04DCE6382A8B3392009BACC5 /* MC3-kasih.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC3-kasih.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihApp.swift; sourceTree = "<group>"; };
 		04DCE63D2A8B3392009BACC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -363,6 +367,47 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		04D5FAA72A974E8B00063926 /* Tambah ASI */ = {
+			isa = PBXGroup;
+			children = (
+				04D5FAA82A974E9500063926 /* View Models */,
+				04D5FAAC2A974EE700063926 /* Views */,
+			);
+			path = "Tambah ASI";
+			sourceTree = "<group>";
+		};
+		04D5FAA82A974E9500063926 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		04D5FAA92A974E9A00063926 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				04D5FAAA2A974ECE00063926 /* TambahASIView.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		04D5FAAC2A974EE700063926 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04D5FAAD2A974EEE00063926 /* Components */,
+				04D5FAA92A974E9A00063926 /* Presenters */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04D5FAAD2A974EEE00063926 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		04DCE62F2A8B3392009BACC5 = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +488,7 @@
 		C486FF4E2A942280004112E9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				04D5FAA72A974E8B00063926 /* Tambah ASI */,
 				04667A5B2A965C57008E333D /* Riwayat */,
 				C486FF9D2A94B54A004112E9 /* Sign Up */,
 				04A0B8ED2A946F4C00B1E58B /* DonorDetails */,
@@ -750,6 +796,7 @@
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				C486FFCD2A9604B5004112E9 /* DatePickerSheet.swift in Sources */,
 				C486FFC22A951124004112E9 /* ImagePickerManager.swift in Sources */,
+				04D5FAAF2A97504A00063926 /* TambahASIViewModel.swift in Sources */,
 				C486FFA52A94BB0F004112E9 /* BiodataFormView.swift in Sources */,
 				C486FFB62A94CCCD004112E9 /* BackButton.swift in Sources */,
 				C486FFAB2A94BBDA004112E9 /* SignUpFormView.swift in Sources */,
@@ -762,6 +809,7 @@
 				C486FFDE2A962E53004112E9 /* VaccineEnum.swift in Sources */,
 				C486FFE42A963AE0004112E9 /* UserRoleEnum.swift in Sources */,
 				C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */,
+				04D5FAAB2A974ECE00063926 /* TambahASIView.swift in Sources */,
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				048AAF592A9501D400B4652C /* DetailDonaturView.swift in Sources */,
