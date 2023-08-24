@@ -30,6 +30,38 @@
 		C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF942A94263F004112E9 /* CoreDataStack.swift */; };
 		C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF962A94549F004112E9 /* BloodTypeEnum.swift */; };
 		C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF9A2A9457E7004112E9 /* UserExtension.swift */; };
+		C486FFA32A94B76C004112E9 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA22A94B76C004112E9 /* SignUpViewModel.swift */; };
+		C486FFA52A94BB0F004112E9 /* BiodataFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA42A94BB0F004112E9 /* BiodataFormView.swift */; };
+		C486FFA72A94BB74004112E9 /* SkriningFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA62A94BB74004112E9 /* SkriningFormView.swift */; };
+		C486FFA92A94BBB5004112E9 /* VerificationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFA82A94BBB5004112E9 /* VerificationFormView.swift */; };
+		C486FFAB2A94BBDA004112E9 /* SignUpFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFAA2A94BBDA004112E9 /* SignUpFormView.swift */; };
+		C486FFAD2A94BC50004112E9 /* SignUpStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFAC2A94BC50004112E9 /* SignUpStepper.swift */; };
+		C486FFB22A94BDBB004112E9 /* StepDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFAF2A94BDBB004112E9 /* StepDivider.swift */; };
+		C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB12A94BDBB004112E9 /* StepIndicator.swift */; };
+		C486FFB62A94CCCD004112E9 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB52A94CCCD004112E9 /* BackButton.swift */; };
+		C486FFB92A94D566004112E9 /* AppButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFB82A94D566004112E9 /* AppButtonStyle.swift */; };
+		C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBA2A94E51F004112E9 /* FinishFormView.swift */; };
+		C486FFBD2A94F365004112E9 /* AppTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */; };
+		C486FFC02A95013B004112E9 /* InputFieldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */; };
+		C486FFC22A951124004112E9 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFC12A951124004112E9 /* ImagePickerManager.swift */; };
+		C486FFC52A951193004112E9 /* ScreeningImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFC42A951193004112E9 /* ScreeningImagePicker.swift */; };
+		C486FFC82A95127B004112E9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFC72A95127B004112E9 /* ImagePicker.swift */; };
+		C486FFCB2A9601C7004112E9 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFCA2A9601C7004112E9 /* DateExtension.swift */; };
+		C486FFCD2A9604B5004112E9 /* DatePickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFCC2A9604B5004112E9 /* DatePickerSheet.swift */; };
+		C486FFCF2A96072B004112E9 /* StaticTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFCE2A96072B004112E9 /* StaticTextField.swift */; };
+		C486FFD22A960A5E004112E9 /* ChipComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFD12A960A5E004112E9 /* ChipComponent.swift */; };
+		C486FFD42A960C95004112E9 /* ChipsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFD32A960C95004112E9 /* ChipsWrapper.swift */; };
+		C486FFD82A960D98004112E9 /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFD72A960D98004112E9 /* Chip.swift */; };
+		C486FFDA2A962CC8004112E9 /* ReligionEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFD92A962CC8004112E9 /* ReligionEnum.swift */; };
+		C486FFDC2A962E14004112E9 /* GenderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFDB2A962E14004112E9 /* GenderEnum.swift */; };
+		C486FFDE2A962E53004112E9 /* VaccineEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFDD2A962E53004112E9 /* VaccineEnum.swift */; };
+		C486FFE02A963361004112E9 /* CityEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFDF2A963361004112E9 /* CityEnum.swift */; };
+		C486FFE22A963865004112E9 /* SelectUserRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFE12A963865004112E9 /* SelectUserRoleView.swift */; };
+		C486FFE42A963AE0004112E9 /* UserRoleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFE32A963AE0004112E9 /* UserRoleEnum.swift */; };
+		C486FFE62A963E55004112E9 /* RoleInfoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFE52A963E55004112E9 /* RoleInfoSheet.swift */; };
+		C486FFE82A96516F004112E9 /* RoleOptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFE72A96516F004112E9 /* RoleOptionCard.swift */; };
+		C486FFEC2A96650D004112E9 /* WheelPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFEB2A96650D004112E9 /* WheelPickerModifier.swift */; };
+		C486FFEE2A9679D8004112E9 /* BiodataBayiForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +109,38 @@
 		C486FF942A94263F004112E9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C486FF962A94549F004112E9 /* BloodTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypeEnum.swift; sourceTree = "<group>"; };
 		C486FF9A2A9457E7004112E9 /* UserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserExtension.swift; path = "MC3-kasih/Datasources/Constants/UserExtension.swift"; sourceTree = SOURCE_ROOT; };
+		C486FFA22A94B76C004112E9 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		C486FFA42A94BB0F004112E9 /* BiodataFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiodataFormView.swift; sourceTree = "<group>"; };
+		C486FFA62A94BB74004112E9 /* SkriningFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkriningFormView.swift; sourceTree = "<group>"; };
+		C486FFA82A94BBB5004112E9 /* VerificationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationFormView.swift; sourceTree = "<group>"; };
+		C486FFAA2A94BBDA004112E9 /* SignUpFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFormView.swift; sourceTree = "<group>"; };
+		C486FFAC2A94BC50004112E9 /* SignUpStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStepper.swift; sourceTree = "<group>"; };
+		C486FFAF2A94BDBB004112E9 /* StepDivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDivider.swift; sourceTree = "<group>"; };
+		C486FFB12A94BDBB004112E9 /* StepIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepIndicator.swift; sourceTree = "<group>"; };
+		C486FFB52A94CCCD004112E9 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		C486FFB82A94D566004112E9 /* AppButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButtonStyle.swift; sourceTree = "<group>"; };
+		C486FFBA2A94E51F004112E9 /* FinishFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFormView.swift; sourceTree = "<group>"; };
+		C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldStyle.swift; sourceTree = "<group>"; };
+		C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldWrapper.swift; sourceTree = "<group>"; };
+		C486FFC12A951124004112E9 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		C486FFC42A951193004112E9 /* ScreeningImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreeningImagePicker.swift; sourceTree = "<group>"; };
+		C486FFC72A95127B004112E9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C486FFCA2A9601C7004112E9 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		C486FFCC2A9604B5004112E9 /* DatePickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSheet.swift; sourceTree = "<group>"; };
+		C486FFCE2A96072B004112E9 /* StaticTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTextField.swift; sourceTree = "<group>"; };
+		C486FFD12A960A5E004112E9 /* ChipComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipComponent.swift; sourceTree = "<group>"; };
+		C486FFD32A960C95004112E9 /* ChipsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsWrapper.swift; sourceTree = "<group>"; };
+		C486FFD72A960D98004112E9 /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		C486FFD92A962CC8004112E9 /* ReligionEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReligionEnum.swift; sourceTree = "<group>"; };
+		C486FFDB2A962E14004112E9 /* GenderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderEnum.swift; sourceTree = "<group>"; };
+		C486FFDD2A962E53004112E9 /* VaccineEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineEnum.swift; sourceTree = "<group>"; };
+		C486FFDF2A963361004112E9 /* CityEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityEnum.swift; sourceTree = "<group>"; };
+		C486FFE12A963865004112E9 /* SelectUserRoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectUserRoleView.swift; sourceTree = "<group>"; };
+		C486FFE32A963AE0004112E9 /* UserRoleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoleEnum.swift; sourceTree = "<group>"; };
+		C486FFE52A963E55004112E9 /* RoleInfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleInfoSheet.swift; sourceTree = "<group>"; };
+		C486FFE72A96516F004112E9 /* RoleOptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleOptionCard.swift; sourceTree = "<group>"; };
+		C486FFEB2A96650D004112E9 /* WheelPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerModifier.swift; sourceTree = "<group>"; };
+		C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiodataBayiForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +181,7 @@
 		04A0B8E42A946E1500B1E58B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C486FFC92A9601B5004112E9 /* Extensions */,
 				04A0B8F02A94700C00B1E58B /* Themes */,
 				04A0B8EE2A946FBD00B1E58B /* Resources */,
 				C486FF4D2A942277004112E9 /* Utilities */,
@@ -197,6 +262,7 @@
 		04A0B8F02A94700C00B1E58B /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				C486FFB72A94D55B004112E9 /* Modifiers */,
 				04A0B8F32A94706C00B1E58B /* Colors */,
 				04A0B8F22A94702600B1E58B /* Typography */,
 			);
@@ -292,6 +358,7 @@
 		C486FF4D2A942277004112E9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C486FFC32A95112A004112E9 /* Picker */,
 				04A0B8EF2A946FE600B1E58B /* CoreData */,
 			);
 			path = Utilities;
@@ -300,6 +367,8 @@
 		C486FF4E2A942280004112E9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C486FF9D2A94B54A004112E9 /* Sign Up */,
+				04A0B8ED2A946F4C00B1E58B /* Demo */,
 				04A0B8ED2A946F4C00B1E58B /* DonorDetails */,
 			);
 			path = Features;
@@ -309,6 +378,11 @@
 			isa = PBXGroup;
 			children = (
 				C486FF962A94549F004112E9 /* BloodTypeEnum.swift */,
+				C486FFD92A962CC8004112E9 /* ReligionEnum.swift */,
+				C486FFDF2A963361004112E9 /* CityEnum.swift */,
+				C486FFDB2A962E14004112E9 /* GenderEnum.swift */,
+				C486FFDD2A962E53004112E9 /* VaccineEnum.swift */,
+				C486FFE32A963AE0004112E9 /* UserRoleEnum.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -335,6 +409,117 @@
 				C486FF9A2A9457E7004112E9 /* UserExtension.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		C486FF9D2A94B54A004112E9 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				C486FF9F2A94B55C004112E9 /* Presenters */,
+				C486FF9E2A94B556004112E9 /* ViewModels */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		C486FF9E2A94B556004112E9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFA22A94B76C004112E9 /* SignUpViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C486FF9F2A94B55C004112E9 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFA12A94B56C004112E9 /* Views */,
+				C486FFA02A94B565004112E9 /* Components */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		C486FFA02A94B565004112E9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFAE2A94BDBB004112E9 /* SignUpStepper */,
+				C486FFB52A94CCCD004112E9 /* BackButton.swift */,
+				C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */,
+				C486FFC42A951193004112E9 /* ScreeningImagePicker.swift */,
+				C486FFCC2A9604B5004112E9 /* DatePickerSheet.swift */,
+				C486FFCE2A96072B004112E9 /* StaticTextField.swift */,
+				C486FFE52A963E55004112E9 /* RoleInfoSheet.swift */,
+				C486FFE72A96516F004112E9 /* RoleOptionCard.swift */,
+				C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C486FFA12A94B56C004112E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFE12A963865004112E9 /* SelectUserRoleView.swift */,
+				C486FFAA2A94BBDA004112E9 /* SignUpFormView.swift */,
+				C486FFA42A94BB0F004112E9 /* BiodataFormView.swift */,
+				C486FFA62A94BB74004112E9 /* SkriningFormView.swift */,
+				C486FFA82A94BBB5004112E9 /* VerificationFormView.swift */,
+				C486FFBA2A94E51F004112E9 /* FinishFormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C486FFAE2A94BDBB004112E9 /* SignUpStepper */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFAF2A94BDBB004112E9 /* StepDivider.swift */,
+				C486FFAC2A94BC50004112E9 /* SignUpStepper.swift */,
+				C486FFB12A94BDBB004112E9 /* StepIndicator.swift */,
+			);
+			path = SignUpStepper;
+			sourceTree = "<group>";
+		};
+		C486FFB72A94D55B004112E9 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFB82A94D566004112E9 /* AppButtonStyle.swift */,
+				C486FFBC2A94F365004112E9 /* AppTextFieldStyle.swift */,
+				C486FFEB2A96650D004112E9 /* WheelPickerModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		C486FFC32A95112A004112E9 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFD02A960A51004112E9 /* ChipsPicker */,
+				C486FFC62A95126F004112E9 /* ImagePicker */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		C486FFC62A95126F004112E9 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFC72A95127B004112E9 /* ImagePicker.swift */,
+				C486FFC12A951124004112E9 /* ImagePickerManager.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		C486FFC92A9601B5004112E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFCA2A9601C7004112E9 /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C486FFD02A960A51004112E9 /* ChipsPicker */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFD12A960A5E004112E9 /* ChipComponent.swift */,
+				C486FFD32A960C95004112E9 /* ChipsWrapper.swift */,
+				C486FFD72A960D98004112E9 /* Chip.swift */,
+			);
+			path = ChipsPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,16 +653,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C486FFAD2A94BC50004112E9 /* SignUpStepper.swift in Sources */,
+				C486FFBD2A94F365004112E9 /* AppTextFieldStyle.swift in Sources */,
+				C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */,
+				C486FFA92A94BBB5004112E9 /* VerificationFormView.swift in Sources */,
+				C486FFE82A96516F004112E9 /* RoleOptionCard.swift in Sources */,
+				C486FFB92A94D566004112E9 /* AppButtonStyle.swift in Sources */,
+				C486FFE02A963361004112E9 /* CityEnum.swift in Sources */,
+				C486FFD42A960C95004112E9 /* ChipsWrapper.swift in Sources */,
+				C486FFEC2A96650D004112E9 /* WheelPickerModifier.swift in Sources */,
+				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
+				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
+				C486FFCD2A9604B5004112E9 /* DatePickerSheet.swift in Sources */,
+				C486FFC22A951124004112E9 /* ImagePickerManager.swift in Sources */,
+				C486FFA52A94BB0F004112E9 /* BiodataFormView.swift in Sources */,
+				C486FFB62A94CCCD004112E9 /* BackButton.swift in Sources */,
+				C486FFAB2A94BBDA004112E9 /* SignUpFormView.swift in Sources */,
+				C486FFCB2A9601C7004112E9 /* DateExtension.swift in Sources */,
+				C486FFE62A963E55004112E9 /* RoleInfoSheet.swift in Sources */,
+				C486FFD22A960A5E004112E9 /* ChipComponent.swift in Sources */,
+				C486FFE22A963865004112E9 /* SelectUserRoleView.swift in Sources */,
+				C486FFDA2A962CC8004112E9 /* ReligionEnum.swift in Sources */,
+				C486FFEE2A9679D8004112E9 /* BiodataBayiForm.swift in Sources */,
+				C486FFDE2A962E53004112E9 /* VaccineEnum.swift in Sources */,
+				C486FFE42A963AE0004112E9 /* UserRoleEnum.swift in Sources */,
+				C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */,
 				048AAF4C2A94DAE000B4652C /* HomepageView.swift in Sources */,
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				048AAF592A9501D400B4652C /* DetailDonaturView.swift in Sources */,
 				C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */,
+				C486FFCF2A96072B004112E9 /* StaticTextField.swift in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
+				C486FFD82A960D98004112E9 /* Chip.swift in Sources */,
+				C486FFDC2A962E14004112E9 /* GenderEnum.swift in Sources */,
+				C486FFB22A94BDBB004112E9 /* StepDivider.swift in Sources */,
+				C486FFC52A951193004112E9 /* ScreeningImagePicker.swift in Sources */,
 				048AAF522A94E25A00B4652C /* RiwayatView.swift in Sources */,
 				048AAF562A95011100B4652C /* KatalogView.swift in Sources */,
 				04A0B8F52A94707F00B1E58B /* Colors.swift in Sources */,
 				04DCE63C2A8B3392009BACC5 /* MC3_kasihApp.swift in Sources */,
+				C486FFA72A94BB74004112E9 /* SkriningFormView.swift in Sources */,
+				C486FFC02A95013B004112E9 /* InputFieldWrapper.swift in Sources */,
+				C486FFA32A94B76C004112E9 /* SignUpViewModel.swift in Sources */,
+				C486FFC82A95127B004112E9 /* ImagePicker.swift in Sources */,
 				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
 				048AAF5B2A9501DF00B4652C /* ASITersediaView.swift in Sources */,
 				048AAF502A94E13E00B4652C /* DetailDonorView.swift in Sources */,

@@ -20,6 +20,9 @@ enum TypographyStyle {
     case smallBold(color: Color = Colors.ab500)
     case small(color: Color = Colors.ab500)
     
+    var defaultColor: Color {
+        return Colors.ab500
+
     var defaultFont: String {
         return "Nunito"
     }
@@ -51,8 +54,8 @@ struct BaseTypography: ViewModifier {
     func body(content: Content) -> some View {
         content
             .fontWeight(type.weight)
-            .font(Font.custom(type.defaultFont, size: type.size))
             .foregroundColor(color)
+            .font(Font.custom(type.defaultFont, size: type.size))
     }
 }
 
