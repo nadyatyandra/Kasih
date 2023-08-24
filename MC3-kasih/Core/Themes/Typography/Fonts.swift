@@ -19,7 +19,7 @@ enum TypographyStyle {
     case base
     case smallBold
     case small
-
+  
     var defaultFont: String {
         return "Nunito"
     }

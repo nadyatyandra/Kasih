@@ -14,12 +14,11 @@ struct HomepageView: View {
             Group {
                 KatalogView()
                     .tabItem {
-                        Label("Favorites", systemImage: "heart")
+                        Label("Katalog", systemImage: "rectangle.grid.1x2.fill")
                     }
-
                 RiwayatView()
                     .tabItem {
-                        Label("Rivers", systemImage: "water.waves")
+                        Label("Riwayat", systemImage: "note.text")
                     }
             }
             .toolbarBackground(Colors.pp200, for: .tabBar)
