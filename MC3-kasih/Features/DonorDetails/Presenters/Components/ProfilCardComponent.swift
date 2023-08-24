@@ -20,7 +20,7 @@ struct ProfilCardComponent: View {
                     Text("Golongan Darah")
                         .typography(.baseBold)
                     HStack {
-                        ChipComponent(value: "AB+", isSelected: false, isDisabled: true)
+                        ChipComponent(value: "AB+", isSelected: false, isDisabled: true){}
                         Spacer()
                     }
                     .offset(y: -8)
@@ -29,7 +29,7 @@ struct ProfilCardComponent: View {
                     Text("Agama")
                         .typography(.baseBold)
                     HStack {
-                        ChipComponent(value: "Katolik", isSelected: false, isDisabled: true)
+                        ChipComponent(value: "Katolik", isSelected: false, isDisabled: true){}
                         Spacer()
                     }
                     .offset(y: -8)
@@ -40,7 +40,7 @@ struct ProfilCardComponent: View {
                     HStack {
                         ChipsWrapper(alignment: .leading) {
                             ForEach(0 ..< 5) { data in
-                                ChipComponent(value: "Kacang-kacangan", isSelected: false, isDisabled: true)
+                                ChipComponent(value: "Kacang-kacangan", isSelected: false, isDisabled: true){}
                             }
                         }
                         Spacer()

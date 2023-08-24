@@ -17,7 +17,6 @@ struct VerificationFormView: View {
         viewModel.role == .donator
     }
 
-
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
@@ -72,8 +71,11 @@ struct VerificationFormView: View {
                     inputField: AnyView(
                         HStack {
                             ChipsWrapper(alignment: .leading) {
-                                ForEach(viewModel.lifestyleChips) { data in
-                                    ChipComponent(value: data.value, isSelected: data.isSelected)
+                                ForEach(viewModel.lifestyleChips.indices, id: \.self) { index in
+                                    ChipComponent(value: viewModel.lifestyleChips[index].value, isSelected: viewModel.lifestyleChips[index].isSelected)
+                                    {
+                                        viewModel.handleChipSelection(chipIndex: index)
+                                    }
                                 }
                             }
                             Spacer()
@@ -122,6 +124,6 @@ struct VerificationFormView: View {
 
 struct VerificationForm_Previews: PreviewProvider {
     static var previews: some View {
-        VerificationFormView(viewModel: SignUpViewModel())
+        VerificationFormView(viewModel: SignUpViewModel(userRepo: UserRepository()))
     }
 }

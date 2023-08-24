@@ -69,6 +69,8 @@
 		C486FFE82A96516F004112E9 /* RoleOptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFE72A96516F004112E9 /* RoleOptionCard.swift */; };
 		C486FFEC2A96650D004112E9 /* WheelPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFEB2A96650D004112E9 /* WheelPickerModifier.swift */; };
 		C486FFEE2A9679D8004112E9 /* BiodataBayiForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */; };
+		C4FB5D092A97526E0052C349 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB5D082A97526E0052C349 /* UserRepository.swift */; };
+		C4FB5D162A979D5C0052C349 /* KatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB5D152A979D5C0052C349 /* KatalogViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,8 @@
 		C486FFE72A96516F004112E9 /* RoleOptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleOptionCard.swift; sourceTree = "<group>"; };
 		C486FFEB2A96650D004112E9 /* WheelPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerModifier.swift; sourceTree = "<group>"; };
 		C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiodataBayiForm.swift; sourceTree = "<group>"; };
+		C4FB5D082A97526E0052C349 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		C4FB5D152A979D5C0052C349 /* KatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatalogViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,7 +297,6 @@
 		04A0B8E92A946EEB00B1E58B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				048AAF552A95011100B4652C /* KatalogView.swift */,
 				048AAF572A9501B100B4652C /* DetailDonorPage */,
 			);
 			path = Views;
@@ -443,6 +446,7 @@
 		C486FF4E2A942280004112E9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C4FB5D102A979D220052C349 /* Katalog */,
 				04667A5B2A965C57008E333D /* Riwayat */,
 				C486FF9D2A94B54A004112E9 /* Sign Up */,
 				04A0B8ED2A946F4C00B1E58B /* DonorDetails */,
@@ -466,6 +470,7 @@
 		C486FF912A94253E004112E9 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				C4FB5D082A97526E0052C349 /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -606,6 +611,48 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		C4FB5D102A979D220052C349 /* Katalog */ = {
+			isa = PBXGroup;
+			children = (
+				C4FB5D122A979D390052C349 /* ViewModels */,
+				C4FB5D132A979D420052C349 /* Presenters */,
+			);
+			name = Katalog;
+			path = DonorDetails/Presenters/Views/Katalog;
+			sourceTree = "<group>";
+		};
+		C4FB5D112A979D2F0052C349 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				048AAF552A95011100B4652C /* KatalogView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C4FB5D122A979D390052C349 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C4FB5D152A979D5C0052C349 /* KatalogViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C4FB5D132A979D420052C349 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				C4FB5D142A979D490052C349 /* Components */,
+				C4FB5D112A979D2F0052C349 /* Views */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		C4FB5D142A979D490052C349 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -737,6 +784,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FB5D092A97526E0052C349 /* UserRepository.swift in Sources */,
 				C486FFAD2A94BC50004112E9 /* SignUpStepper.swift in Sources */,
 				C486FFBD2A94F365004112E9 /* AppTextFieldStyle.swift in Sources */,
 				C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */,
@@ -760,6 +808,7 @@
 				C486FFDA2A962CC8004112E9 /* ReligionEnum.swift in Sources */,
 				C486FFEE2A9679D8004112E9 /* BiodataBayiForm.swift in Sources */,
 				C486FFDE2A962E53004112E9 /* VaccineEnum.swift in Sources */,
+				C4FB5D162A979D5C0052C349 /* KatalogViewModel.swift in Sources */,
 				C486FFE42A963AE0004112E9 /* UserRoleEnum.swift in Sources */,
 				C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */,
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,

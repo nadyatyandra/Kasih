@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BiodataFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
+    @State private var showCityPicker = false
     
     var body: some View {
         ScrollView {
@@ -20,7 +21,7 @@ struct BiodataFormView: View {
                             .textFieldStyle(.app))
                 )
                 InputFieldWrapper(
-                    label: "Nomor Telepon",
+                    label: "Email",
                     inputField: AnyView(
                         TextField("Email", text: $viewModel.email)
                             .keyboardType(.emailAddress)
@@ -33,12 +34,25 @@ struct BiodataFormView: View {
                             .keyboardType(.numberPad)
                             .textFieldStyle(.app))
                 )
+
                 InputFieldWrapper(
-                    label: "Lokasi",
+                    label: "Kota",
                     inputField: AnyView(
-                        TextField("Lokasi", text: $viewModel.city)
-                            .textFieldStyle(.app))
+                        StaticTextField(value: viewModel.cityString())
+                        {
+                            showCityPicker.toggle()
+                        }
+                    )
                 )
+                .sheet(isPresented: $showCityPicker){
+                    Picker("Kota", selection: $viewModel.city) {
+                        ForEach(CityEnum.toList(), id: \.self) { city in
+                            Text(city.rawValue)
+                                .tag(city)
+                        }
+                    }
+                    .appWheelPicker()
+                }
             }
         }
     }
@@ -47,6 +61,6 @@ struct BiodataFormView: View {
 
 struct BiodataForm_Previews: PreviewProvider {
     static var previews: some View {
-        BiodataFormView(viewModel: SignUpViewModel())
+        BiodataFormView(viewModel: SignUpViewModel(userRepo: UserRepository()))
     }
 }

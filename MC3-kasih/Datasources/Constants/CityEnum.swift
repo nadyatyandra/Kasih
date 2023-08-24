@@ -13,10 +13,15 @@ enum CityEnum: String, CaseIterable {
     case depok = "Depok"
     case tangerang = "Tangerang"
     case bekasi = "Bekasi"
+    case none = ""
 }
 
 extension CityEnum {
     static func fromString(_ string: String?) -> CityEnum? {
         return CityEnum(rawValue: string ?? "")
+    }
+
+    static func toList() -> [CityEnum] {
+        return [.jakarta, .bogor, .depok, .tangerang, .bekasi]
     }
 }
