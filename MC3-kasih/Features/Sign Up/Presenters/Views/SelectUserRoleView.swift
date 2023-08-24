@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct SelectUserRoleView: View {
-    @Binding var path: NavigationPath
     @StateObject private var viewModel = SignUpViewModel()
     @State private var showRoleSheet = false
     @State private var selectedRole: UserRoleEnum = .donator
-
+    @State private var isLanjut = false
     @Environment(\.dismiss) private var dismiss
-
 
     var body: some View {
         VStack {
@@ -36,28 +34,26 @@ struct SelectUserRoleView: View {
             }
             .sheet(isPresented: $showRoleSheet) {
                 RoleInfoSheet(role: selectedRole) {
+                    isLanjut.toggle()
                     viewModel.role = selectedRole
-                    path.append("SignUpFormView")
                 }
                 .presentationDetents([.medium])
                 .padding()
             }
-
             Spacer()
+
+            NavigationLink(destination:
+                            SignUpFormView(viewModel: viewModel),
+                           isActive: $isLanjut){}
         }
         .padding()
         .navigationBarBackButtonHidden()
         .toolbar(.hidden)
-        .navigationDestination(for: String.self) { view in
-            if view == "SignUpFormView" {
-                SignUpFormView(viewModel: viewModel)
-            }
-        }
     }
 }
 
 struct SelectUserRoleView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectUserRoleView(path: .constant(NavigationPath()))
+        SelectUserRoleView()
     }
 }

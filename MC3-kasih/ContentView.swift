@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var path = NavigationPath()
-
+    
     var body: some View {
-        NavigationStack(path: $path) {
-            HomepageView()
-//            SelectUserRoleView(path: $path)
+        NavigationStack() {
+            TabView {
+                Group {
+                    KatalogView()
+                        .tabItem {
+                            Label("Katalog", systemImage: "rectangle.grid.1x2.fill")
+                        }
+                    RiwayatView()
+                        .tabItem {
+                            Label("Riwayat", systemImage: "note.text")
+                        }
+                }
+                .toolbarBackground(Colors.pp200, for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
+            }
         }
     }
 }

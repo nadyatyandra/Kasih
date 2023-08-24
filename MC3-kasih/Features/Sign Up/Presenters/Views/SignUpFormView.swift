@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SignUpFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
+    @State private var isComplete = false
+
     @Environment(\.dismiss) private var dismiss
     
     private var stepState: SignUpStep {
@@ -57,11 +59,18 @@ struct SignUpFormView: View {
             Spacer()
             Button(isFinish ? "Selesai" : "Selanjutnya") {
                 viewModel.nextStep()
+
+                if isFinish {
+                    isComplete.toggle()
+                }
             }
             .disabled(!viewModel.isValidStep)
             .fixedSize(horizontal: false, vertical: true)
             .buttonStyle(viewModel.isValidStep ? .appPrimary : .appPrimaryDisable)
             .padding(.top)
+
+            NavigationLink(destination: KatalogView(), isActive: $isComplete){}
+
         }
         .padding()
         .navigationBarBackButtonHidden()

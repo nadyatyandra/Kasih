@@ -14,7 +14,6 @@
 		04667A642A96676F008E333D /* BerlangsungView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04667A632A96676F008E333D /* BerlangsungView.swift */; };
 		04667A662A966776008E333D /* SelesaiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04667A652A966776008E333D /* SelesaiView.swift */; };
 		04667A682A96693D008E333D /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04667A672A96693D008E333D /* Progress.swift */; };
-		048AAF4C2A94DAE000B4652C /* HomepageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AAF4B2A94DAE000B4652C /* HomepageView.swift */; };
 		048AAF502A94E13E00B4652C /* DetailDonorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AAF4F2A94E13E00B4652C /* DetailDonorView.swift */; };
 		048AAF522A94E25A00B4652C /* RiwayatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AAF512A94E25A00B4652C /* RiwayatView.swift */; };
 		048AAF542A94ECBC00B4652C /* ASICardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AAF532A94ECBC00B4652C /* ASICardComponent.swift */; };
@@ -96,7 +95,6 @@
 		04667A632A96676F008E333D /* BerlangsungView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BerlangsungView.swift; sourceTree = "<group>"; };
 		04667A652A966776008E333D /* SelesaiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelesaiView.swift; sourceTree = "<group>"; };
 		04667A672A96693D008E333D /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
-		048AAF4B2A94DAE000B4652C /* HomepageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageView.swift; sourceTree = "<group>"; };
 		048AAF4F2A94E13E00B4652C /* DetailDonorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDonorView.swift; sourceTree = "<group>"; };
 		048AAF512A94E25A00B4652C /* RiwayatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiwayatView.swift; sourceTree = "<group>"; };
 		048AAF532A94ECBC00B4652C /* ASICardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASICardComponent.swift; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 		04A0B8E92A946EEB00B1E58B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				048AAF4B2A94DAE000B4652C /* HomepageView.swift */,
 				048AAF552A95011100B4652C /* KatalogView.swift */,
 				048AAF572A9501B100B4652C /* DetailDonorPage */,
 			);
@@ -762,7 +759,6 @@
 				C486FFDE2A962E53004112E9 /* VaccineEnum.swift in Sources */,
 				C486FFE42A963AE0004112E9 /* UserRoleEnum.swift in Sources */,
 				C486FFBB2A94E51F004112E9 /* FinishFormView.swift in Sources */,
-				048AAF4C2A94DAE000B4652C /* HomepageView.swift in Sources */,
 				04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */,
 				C486FF9B2A9457E7004112E9 /* UserExtension.swift in Sources */,
 				048AAF592A9501D400B4652C /* DetailDonaturView.swift in Sources */,

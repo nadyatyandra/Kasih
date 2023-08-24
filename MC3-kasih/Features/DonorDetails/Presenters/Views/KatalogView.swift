@@ -26,8 +26,7 @@ struct KatalogView: View {
                     Text("Kasih")
                         .typography(.title)
                     Spacer()
-                    Button {
-                    } label: {
+                    NavigationLink(destination: SelectUserRoleView()) {
                         Image(systemName: "person.crop.circle")
                             .font(.system(size: 40))
                             .foregroundColor(Colors.ab500)
@@ -98,6 +97,8 @@ struct KatalogView: View {
             }
             .padding(.horizontal)
         }
+        .navigationBarBackButtonHidden()
+        .toolbar(.hidden)
     }
 }
 
