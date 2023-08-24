@@ -20,7 +20,7 @@ struct BiodataFormView: View {
                             .textFieldStyle(.app))
                 )
                 InputFieldWrapper(
-                    label: "Nomor Telepon",
+                    label: "Email",
                     inputField: AnyView(
                         TextField("Email", text: $viewModel.email)
                             .keyboardType(.emailAddress)

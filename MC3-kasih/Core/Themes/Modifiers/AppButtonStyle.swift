@@ -11,13 +11,15 @@ struct AppButtonStyle: ButtonStyle {
     var isSecondary: Bool = false
     var isDisable: Bool = false
     var isMedium: Bool = false
+    var isApple: Bool = false
+    var isGoogle: Bool = false
 
     private var backgroundColor: Color {
-        return isSecondary ? Colors.white : (isDisable ? Color(uiColor: .systemGray4) : Colors.pp400)
+        return isApple ? Colors.black : (isSecondary || isGoogle ? Colors.white : (isDisable ? Color(uiColor: .systemGray4) : Colors.pp400))
     }
 
     private var foregroundColor: Color {
-        return isSecondary ? (isDisable ? Color(uiColor: .systemGray4) : Colors.pp400) : Colors.white
+        return isGoogle ? Colors.ab500 : (isSecondary ? (isDisable ? Color(uiColor: .systemGray4) : Colors.pp400) : Colors.white)
     }
     
     func getPadding() -> CGFloat {

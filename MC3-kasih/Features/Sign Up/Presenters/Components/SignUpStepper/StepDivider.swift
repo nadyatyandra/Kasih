@@ -9,11 +9,21 @@ import SwiftUI
 
 struct StepDivider: View {
     let isActive: Bool
+    var isSignIn: Bool = false
+    
+    func getHeight() -> CGFloat {
+        if isSignIn {
+            return 2.0
+        }
+        else {
+            return 6.0
+        }
+    }
 
     var body: some View {
         Capsule()
-            .fill(isActive ? Colors.ab400 : Colors.white)
-            .frame(height: 6)
+            .fill(isSignIn ? Colors.ab500 : (isActive ? Colors.ab400 : Colors.white))
+            .frame(height: getHeight())
             .fixedSize(horizontal: false, vertical: true)
     }
 }

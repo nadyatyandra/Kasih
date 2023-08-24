@@ -50,13 +50,11 @@ struct RincianPermintaanSheetComponent: View {
                 DatePickerSheet(isPickerVisible: $showTanggalPengambilanPicker, selectedDate: $viewModel.tanggalPengambilan)
             }
             
-            Button("Kirim Permintaan") {
-                
-            }
-            .disabled(!viewModel.isValidStep)
-            .fixedSize(horizontal: false, vertical: true)
-            .buttonStyle(viewModel.isValidStep ? .appPrimary : .appPrimaryDisable)
-            .padding(.top)
+            Button("Kirim Permintaan") {}
+                .disabled(!viewModel.isValidStep)
+                .fixedSize(horizontal: false, vertical: true)
+                .buttonStyle(viewModel.isValidStep ? .appPrimary : .appPrimaryDisable)
+                .padding(.top)
         }
     }
 }

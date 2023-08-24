@@ -25,6 +25,8 @@
 		04A0B8F52A94707F00B1E58B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0B8F42A94707F00B1E58B /* Colors.swift */; };
 		04A0B8F72A9473D500B1E58B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0B8F62A9473D500B1E58B /* Fonts.swift */; };
 		04A0B8F92A94746F00B1E58B /* Nunito.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04A0B8F82A94746F00B1E58B /* Nunito.ttf */; };
+		04C520352A97A6840060322B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C520342A97A6840060322B /* SignInViewModel.swift */; };
+		04C520372A97A6940060322B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C520362A97A6940060322B /* SignInView.swift */; };
 		04D5FAA62A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */; };
 		04D5FAAB2A974ECE00063926 /* TambahASIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAAA2A974ECE00063926 /* TambahASIView.swift */; };
 		04D5FAAF2A97504A00063926 /* TambahASIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */; };
@@ -111,6 +113,8 @@
 		04A0B8F62A9473D500B1E58B /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		04A0B8F82A94746F00B1E58B /* Nunito.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nunito.ttf; sourceTree = "<group>"; };
 		04A0B8FA2A9474AC00B1E58B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		04C520342A97A6840060322B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		04C520362A97A6940060322B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		04D5FAA52A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RincianPermintaanSheetComponentViewModel.swift; sourceTree = "<group>"; };
 		04D5FAAA2A974ECE00063926 /* TambahASIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahASIView.swift; sourceTree = "<group>"; };
 		04D5FAAE2A97504A00063926 /* TambahASIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahASIViewModel.swift; sourceTree = "<group>"; };
@@ -369,6 +373,47 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		04C5202F2A97A5A10060322B /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				04C520302A97A5BB0060322B /* Presenters */,
+				04C520312A97A5C50060322B /* ViewModels */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		04C520302A97A5BB0060322B /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				04C520332A97A5E50060322B /* Views */,
+				04C520322A97A5DE0060322B /* Components */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		04C520312A97A5C50060322B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04C520342A97A6840060322B /* SignInViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		04C520322A97A5DE0060322B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		04C520332A97A5E50060322B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04C520362A97A6940060322B /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		04D5FAA72A974E8B00063926 /* Tambah ASI */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +537,7 @@
 			children = (
 				04D5FAA72A974E8B00063926 /* Tambah ASI */,
 				04667A5B2A965C57008E333D /* Riwayat */,
+				04C5202F2A97A5A10060322B /* Sign In */,
 				C486FF9D2A94B54A004112E9 /* Sign Up */,
 				04A0B8ED2A946F4C00B1E58B /* DonorDetails */,
 			);
@@ -786,6 +832,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C520352A97A6840060322B /* SignInViewModel.swift in Sources */,
 				C486FFAD2A94BC50004112E9 /* SignUpStepper.swift in Sources */,
 				C486FFBD2A94F365004112E9 /* AppTextFieldStyle.swift in Sources */,
 				C486FFB42A94BDBC004112E9 /* StepIndicator.swift in Sources */,
@@ -821,6 +868,7 @@
 				C486FFCF2A96072B004112E9 /* StaticTextField.swift in Sources */,
 				04DCE63E2A8B3392009BACC5 /* ContentView.swift in Sources */,
 				04667A682A96693D008E333D /* Progress.swift in Sources */,
+				04C520372A97A6940060322B /* SignInView.swift in Sources */,
 				C486FFD82A960D98004112E9 /* Chip.swift in Sources */,
 				C486FFDC2A962E14004112E9 /* GenderEnum.swift in Sources */,
 				04D5FAA62A9742D600063926 /* RincianPermintaanSheetComponentViewModel.swift in Sources */,

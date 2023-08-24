@@ -42,6 +42,7 @@ struct DetailDonorView: View {
                             .typography(.small)
                     }
                     .padding()
+                    Spacer()
                 }
                 Picker("", selection: $menu) {
                     Text("ASI Tersedia")
