@@ -262,6 +262,7 @@
 		04A0B8F02A94700C00B1E58B /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				C486FFEF2A96FEFD004112E9 /* Components */,
 				C486FFB72A94D55B004112E9 /* Modifiers */,
 				04A0B8F32A94706C00B1E58B /* Colors */,
 				04A0B8F22A94702600B1E58B /* Typography */,
@@ -368,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				C486FF9D2A94B54A004112E9 /* Sign Up */,
-				04A0B8ED2A946F4C00B1E58B /* Demo */,
 				04A0B8ED2A946F4C00B1E58B /* DonorDetails */,
 			);
 			path = Features;
@@ -441,11 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				C486FFAE2A94BDBB004112E9 /* SignUpStepper */,
-				C486FFB52A94CCCD004112E9 /* BackButton.swift */,
-				C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */,
 				C486FFC42A951193004112E9 /* ScreeningImagePicker.swift */,
-				C486FFCC2A9604B5004112E9 /* DatePickerSheet.swift */,
-				C486FFCE2A96072B004112E9 /* StaticTextField.swift */,
 				C486FFE52A963E55004112E9 /* RoleInfoSheet.swift */,
 				C486FFE72A96516F004112E9 /* RoleOptionCard.swift */,
 				C486FFED2A9679D8004112E9 /* BiodataBayiForm.swift */,
@@ -520,6 +516,17 @@
 				C486FFD72A960D98004112E9 /* Chip.swift */,
 			);
 			path = ChipsPicker;
+			sourceTree = "<group>";
+		};
+		C486FFEF2A96FEFD004112E9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C486FFBF2A95013B004112E9 /* InputFieldWrapper.swift */,
+				C486FFCC2A9604B5004112E9 /* DatePickerSheet.swift */,
+				C486FFCE2A96072B004112E9 /* StaticTextField.swift */,
+				C486FFB52A94CCCD004112E9 /* BackButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct HomepageView: View {
+
     var body: some View {
         TabView {
-            KatalogView()
-                .tabItem {
-                    Label("Katalog", systemImage: "tray.and.arrow.down.fill")
-                }
-            RiwayatView()
-                .tabItem {
-                    Label("Riwayat", systemImage: "note.text")
-                }
+            Group {
+                KatalogView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "heart")
+                    }
+
+                RiwayatView()
+                    .tabItem {
+                        Label("Rivers", systemImage: "water.waves")
+                    }
+            }
+            .toolbarBackground(Colors.pp200, for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
         }
     }
 }

@@ -12,7 +12,8 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack(path: $path) {
-            SelectUserRoleView(path: $path)
+            HomepageView()
+//            SelectUserRoleView(path: $path)
         }
     }
 }
