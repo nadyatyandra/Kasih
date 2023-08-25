@@ -87,9 +87,8 @@ struct TambahASIView: View {
                     .sheet(isPresented: $showBulanProduksiPicker){
                         DatePickerSheet(isPickerVisible: $showBulanProduksiPicker, selectedDate: $viewModel.bulanProduksi)
                     }
-                    
-                    Button("Selanjutnya") {
-                        
+                    NavigationLink(destination: KatalogView()) {
+                        Text("Selanjutnya")
                     }
                     .disabled(!viewModel.isValidStep)
                     .fixedSize(horizontal: false, vertical: true)
@@ -104,6 +103,8 @@ struct TambahASIView: View {
             }
         }
         .padding()
+        .navigationBarBackButtonHidden()
+        .toolbar(.hidden)
     }
 }
 
