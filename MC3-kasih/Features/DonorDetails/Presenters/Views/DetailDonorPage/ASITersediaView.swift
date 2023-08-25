@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct ASITersediaView: View {
+    @EnvironmentObject private var authViewModel: AutheticationViewModel
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
                 ForEach(0 ..< 5) { item in
                     NavigationLink(destination: RincianPermintaanSheetComponent()) {
-                        ASICardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023")
+                        ASICardComponent(asiImg: "placeholder", quantity: 20.0, pouchSize: 25.0, dateProd: "Agustus 2023", user: authViewModel.isRecipient ? nil : "Susi Susanti")
                     }
                 }
-                NavigationLink(destination: TambahASIView()) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            .stroke(style: StrokeStyle(lineWidth: 1, dash: [8]))
-                            .foregroundColor(Colors.ab500)
-                        Text("Tambah ASI")
-                            .typography(.baseBold)
-                            .padding(32)
+                if !authViewModel.isRecipient {
+                    NavigationLink(destination: TambahASIView()) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .stroke(style: StrokeStyle(lineWidth: 1, dash: [8]))
+                                .foregroundColor(Colors.ab500)
+                            Text("Tambah ASI")
+                                .typography(.baseBold)
+                                .padding(32)
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
                     }
-                    .fixedSize(horizontal: false, vertical: true)
                 }
             }
         }
@@ -35,5 +39,6 @@ struct ASITersediaView: View {
 struct ASITersediaView_Previews: PreviewProvider {
     static var previews: some View {
         ASITersediaView()
+            .environmentObject(AutheticationViewModel())
     }
 }

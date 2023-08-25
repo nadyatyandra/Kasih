@@ -41,6 +41,7 @@
 		04DCE64D2A8B3392009BACC5 /* MC3_kasihTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE64C2A8B3392009BACC5 /* MC3_kasihTests.swift */; };
 		04DCE6572A8B3392009BACC5 /* MC3_kasihUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */; };
 		04DCE6592A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */; };
+		04FD82FF2A9844CC00094E2B /* AutheticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD82FE2A9844CC00094E2B /* AutheticationViewModel.swift */; };
 		C486FF4A2A94134A004112E9 /* Kasih.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C486FF482A94134A004112E9 /* Kasih.xcdatamodeld */; };
 		C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF942A94263F004112E9 /* CoreDataStack.swift */; };
 		C486FF972A94549F004112E9 /* BloodTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C486FF962A94549F004112E9 /* BloodTypeEnum.swift */; };
@@ -137,6 +138,7 @@
 		04DCE6522A8B3392009BACC5 /* MC3-kasihUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MC3-kasihUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DCE6562A8B3392009BACC5 /* MC3_kasihUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihUITests.swift; sourceTree = "<group>"; };
 		04DCE6582A8B3392009BACC5 /* MC3_kasihUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MC3_kasihUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04FD82FE2A9844CC00094E2B /* AutheticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutheticationViewModel.swift; sourceTree = "<group>"; };
 		C486FF492A94134A004112E9 /* Kasih.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kasih.xcdatamodel; sourceTree = "<group>"; };
 		C486FF942A94263F004112E9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		C486FF962A94549F004112E9 /* BloodTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodTypeEnum.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			children = (
 				04DCE63B2A8B3392009BACC5 /* MC3_kasihApp.swift */,
 				04DCE63D2A8B3392009BACC5 /* ContentView.swift */,
+				04FD82FE2A9844CC00094E2B /* AutheticationViewModel.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -944,6 +947,7 @@
 				C486FFC02A95013B004112E9 /* InputFieldWrapper.swift in Sources */,
 				C486FFA32A94B76C004112E9 /* SignUpViewModel.swift in Sources */,
 				C486FFC82A95127B004112E9 /* ImagePicker.swift in Sources */,
+				04FD82FF2A9844CC00094E2B /* AutheticationViewModel.swift in Sources */,
 				C486FF952A94263F004112E9 /* CoreDataStack.swift in Sources */,
 				04667A642A96676F008E333D /* BerlangsungView.swift in Sources */,
 				04667A5A2A9644C0008E333D /* SmallExpandableRiwayatCardComponent.swift in Sources */,

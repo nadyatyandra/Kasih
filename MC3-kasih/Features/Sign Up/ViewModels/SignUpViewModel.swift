@@ -117,7 +117,7 @@ class SignUpViewModel: ObservableObject {
     }
 
     func babyBirthWeightString() -> String {
-        if babyBirthWeek != 0 {
+        if babyWeight != 0 {
             return String(format: "%.1f Kg", babyWeight)
         } else {
             return ""

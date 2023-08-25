@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignUpFormView: View {
     @ObservedObject var viewModel: SignUpViewModel
+    @EnvironmentObject var authViewModel: AutheticationViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var navigate = false
     
@@ -60,6 +61,7 @@ struct SignUpFormView: View {
                 viewModel.nextStep()
 
                 if viewModel.isCompleted {
+                    authViewModel.isRecipient = viewModel.role == .recipient ? true : false
                     print("FINISH")
                     navigate.toggle()
                 }
@@ -80,5 +82,6 @@ struct SignUpFormView: View {
 struct SignUpFormView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpFormView(viewModel: SignUpViewModel(userRepo: UserRepository()))
+            .environmentObject(AutheticationViewModel())
     }
 }
