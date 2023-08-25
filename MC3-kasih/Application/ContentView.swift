@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = AutheticationViewModel()
     
     var body: some View {
         NavigationStack() {
@@ -26,6 +27,7 @@ struct ContentView: View {
                 .toolbarBackground(.visible, for: .tabBar)
             }
         }
+        .environmentObject(viewModel)
     }
 }
 
